@@ -1,0 +1,10 @@
+.env*
+!.env.example
+.convex/
+.vercel/
+.next/
+node_modules/
+test-results/
+playwright-report/
+tsconfig.tsbuildinfo
+benchmarks/results/runs/

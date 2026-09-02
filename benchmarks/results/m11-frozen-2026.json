@@ -1,0 +1,1895 @@
+{
+  "schemaVersion": "m11-benchmark-v1",
+  "runId": "2026-09-02T08:15:53.543Z",
+  "binding": {
+    "dataVersion": "2026-09-01T21:14:22+05:30",
+    "ruleVersion": "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points",
+    "snapshotFingerprint": "sha256-9b2449140b8985c984a8a4af5a2882a3ebdc9333d94a55b9681a4c4f8f52f2ca",
+    "gitState": "UNAVAILABLE: workspace has no Git metadata"
+  },
+  "environment": {
+    "measuredAtUtc": "2026-09-02T08:15:53.543Z",
+    "localTimeZone": "Asia/Calcutta",
+    "os": "win32 10.0.26200",
+    "architecture": "x64",
+    "cpuModel": "13th Gen Intel(R) Core(TM) i7-13700H",
+    "logicalCores": 20,
+    "totalMemoryBytes": 16868794368,
+    "nodeVersion": "v24.19.0",
+    "mode": "production NODE_ENV; direct TypeScript engine via tsx",
+    "command": "npm run benchmark:m11",
+    "backgroundLoad": "Uncontrolled local workstation background load; no CI isolation, concurrency, load, network, Convex, or UI measurement."
+  },
+  "method": {
+    "setupAndIo": "Module loading, frozen snapshot setup, child startup, and artifact I/O are outside timed regions.",
+    "warmup": "3 untimed calculations per isolated class worker.",
+    "timing": "performance.now high-resolution wall time; 20 repeated iterations per contender.",
+    "memory": "Each class runs in an isolated child. Peak RSS is process-wide since child start; heap used is bracketed before/after measured work.",
+    "difficulty": "All approved contenders are covered. Leader, close rivals, and lower contenders cover different standing gaps and pruning pressure; every successful case has the same maximum frozen 12-session/22-driver symbolic structure.",
+    "rawPaths": "The relation is symbolic. Raw finishing-order paths are not enumerated or materialized."
+  },
+  "classes": [
+    {
+      "kind": "DRIVER",
+      "warmupIterations": 3,
+      "iterationsPerCase": 20,
+      "cases": [
+        {
+          "id": "Lando Norris",
+          "standingPoints": 159,
+          "rawTimingsMs": [
+            24.627499999999998,
+            26.489700000000028,
+            22.872799999999984,
+            23.410199999999975,
+            23.999600000000044,
+            20.62360000000001,
+            20.53019999999998,
+            19.034100000000024,
+            19.68679999999995,
+            19.62729999999999,
+            19.456099999999992,
+            19.852999999999952,
+            18.997799999999984,
+            22.027600000000007,
+            19.383100000000013,
+            20.934599999999932,
+            19.72109999999998,
+            20.90160000000003,
+            18.834999999999923,
+            22.827199999999948
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 18.834999999999923,
+            "medianMs": 20.53019999999998,
+            "p95Ms": 24.627499999999998,
+            "maxMs": 26.489700000000028
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9893000000000711,
+            "medianMs": 2.247799999999984,
+            "p95Ms": 2.612899999999968,
+            "maxMs": 3.0739999999999554
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Oscar Piastri",
+          "standingPoints": 104,
+          "rawTimingsMs": [
+            18.804499999999962,
+            19.768299999999954,
+            21.112700000000018,
+            23.998899999999935,
+            22.44259999999997,
+            20.31020000000001,
+            24.45870000000002,
+            21.820500000000038,
+            19.720500000000015,
+            18.59050000000002,
+            18.529800000000023,
+            18.968600000000038,
+            19.26380000000006,
+            18.813299999999913,
+            19.152500000000032,
+            19.02800000000002,
+            18.39379999999983,
+            19.989000000000033,
+            18.453500000000076,
+            19.24389999999994
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 18.39379999999983,
+            "medianMs": 19.24389999999994,
+            "p95Ms": 23.998899999999935,
+            "maxMs": 24.45870000000002
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.974999999999909,
+            "medianMs": 2.2346999999999753,
+            "p95Ms": 2.9069999999999254,
+            "maxMs": 3.0708000000000766
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26707,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "George Russell",
+          "standingPoints": 183,
+          "rawTimingsMs": [
+            17.96939999999995,
+            19.007900000000063,
+            18.75319999999988,
+            18.22790000000009,
+            20.622500000000173,
+            19.142799999999852,
+            19.236000000000104,
+            19.185300000000097,
+            19.598399999999856,
+            17.98609999999985,
+            18.566700000000083,
+            19.416500000000042,
+            22.020899999999983,
+            22.341199999999844,
+            18.495599999999968,
+            19.062799999999925,
+            19.039099999999962,
+            20.087800000000016,
+            18.93730000000005,
+            18.973700000000008
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.96939999999995,
+            "medianMs": 19.039099999999962,
+            "p95Ms": 22.020899999999983,
+            "maxMs": 22.341199999999844
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9400000000000546,
+            "medianMs": 2.088799999999992,
+            "p95Ms": 2.4675999999999476,
+            "maxMs": 2.5400999999999385
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Kimi Antonelli",
+          "standingPoints": 242,
+          "rawTimingsMs": [
+            18.79139999999984,
+            19.426600000000008,
+            18.729100000000017,
+            19.04379999999992,
+            18.642200000000003,
+            19.664099999999962,
+            18.335800000000063,
+            19.080799999999954,
+            18.054099999999835,
+            18.641200000000026,
+            18.610799999999927,
+            21.648099999999886,
+            21.03379999999993,
+            18.928900000000112,
+            18.213600000000042,
+            27.246599999999944,
+            22.19040000000018,
+            18.277399999999943,
+            18.978900000000067,
+            19.414800000000014
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 18.054099999999835,
+            "medianMs": 18.928900000000112,
+            "p95Ms": 22.19040000000018,
+            "maxMs": 27.246599999999944
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.916400000000067,
+            "medianMs": 2.0398999999999887,
+            "p95Ms": 2.2703999999998814,
+            "maxMs": 2.7346000000000004
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Charles Leclerc",
+          "standingPoints": 155,
+          "rawTimingsMs": [
+            18.614299999999957,
+            19.2038,
+            18.102300000000014,
+            18.879199999999855,
+            19.27170000000001,
+            17.85900000000015,
+            18.693899999999985,
+            19.026999999999816,
+            17.677200000000084,
+            18.527900000000045,
+            18.797000000000025,
+            18.058899999999994,
+            17.96939999999995,
+            18.195799999999963,
+            18.08299999999963,
+            17.026299999999992,
+            18.48799999999983,
+            17.751600000000053,
+            18.42540000000008,
+            19.46140000000014
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.026299999999992,
+            "medianMs": 18.42540000000008,
+            "p95Ms": 19.27170000000001,
+            "maxMs": 19.46140000000014
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.86200000000008,
+            "medianMs": 1.9977000000001226,
+            "p95Ms": 2.184300000000121,
+            "maxMs": 2.559199999999919
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26709,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Lewis Hamilton",
+          "standingPoints": 183,
+          "rawTimingsMs": [
+            18.6242000000002,
+            19.314499999999953,
+            18.416799999999967,
+            18.864500000000135,
+            17.75759999999991,
+            18.66249999999991,
+            18.483300000000327,
+            19.059700000000248,
+            18.666600000000017,
+            18.767299999999977,
+            18.20380000000023,
+            18.65000000000009,
+            18.142700000000332,
+            17.645600000000286,
+            18.0317,
+            18.890399999999772,
+            18.233600000000024,
+            19.165199999999913,
+            19.29449999999997,
+            19.5311999999999
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.645600000000286,
+            "medianMs": 18.65000000000009,
+            "p95Ms": 19.314499999999953,
+            "maxMs": 19.5311999999999
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.8807999999999083,
+            "medianMs": 1.9699000000000524,
+            "p95Ms": 2.1239999999997963,
+            "maxMs": 2.177900000000136
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Max Verstappen",
+          "standingPoints": 112,
+          "rawTimingsMs": [
+            18.799199999999928,
+            18.914999999999964,
+            17.884900000000016,
+            18.415700000000015,
+            18.078599999999824,
+            18.522599999999784,
+            18.82029999999986,
+            19.06959999999981,
+            19.004599999999755,
+            19.650500000000193,
+            19.313600000000406,
+            19.679999999999836,
+            19.4067,
+            18.885399999999663,
+            19.292899999999918,
+            17.701900000000023,
+            18.26339999999982,
+            18.571399999999812,
+            33.65339999999969,
+            31.851200000000063
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.701900000000023,
+            "medianMs": 18.885399999999663,
+            "p95Ms": 31.851200000000063,
+            "maxMs": 33.65339999999969
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.8653999999996813,
+            "medianMs": 2.020400000000336,
+            "p95Ms": 3.158400000000256,
+            "maxMs": 3.8263999999999214
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Isack Hadjar",
+          "standingPoints": 68,
+          "rawTimingsMs": [
+            32.22519999999986,
+            33.50480000000016,
+            31.536099999999806,
+            31.88339999999971,
+            33.17309999999998,
+            32.60539999999992,
+            32.835999999999785,
+            32.565900000000056,
+            33.54989999999998,
+            34.792399999999816,
+            34.860999999999876,
+            32.43899999999985,
+            33.811399999999594,
+            32.36680000000024,
+            32.507100000000264,
+            40.76389999999992,
+            36.38279999999986,
+            33.56719999999996,
+            25.38869999999997,
+            29.222800000000007
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 25.38869999999997,
+            "medianMs": 32.60539999999992,
+            "p95Ms": 36.38279999999986,
+            "maxMs": 40.76389999999992
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 2.5428000000001703,
+            "medianMs": 3.3125999999997475,
+            "p95Ms": 4.848199999999906,
+            "maxMs": 8.452800000000025
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Liam Lawson",
+          "standingPoints": 49,
+          "rawTimingsMs": [
+            33.4336000000003,
+            38.84960000000001,
+            43.42280000000028,
+            33.71280000000024,
+            37.68339999999989,
+            31.26220000000012,
+            33.634199999999964,
+            32.01560000000018,
+            31.8442,
+            35.05439999999999,
+            30.909099999999853,
+            32.7512999999999,
+            31.431400000000394,
+            31.04790000000048,
+            32.725100000000566,
+            31.980400000000373,
+            31.855000000000473,
+            31.818699999999808,
+            33.33590000000004,
+            31.004399999999805
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 30.909099999999853,
+            "medianMs": 32.01560000000018,
+            "p95Ms": 38.84960000000001,
+            "maxMs": 43.42280000000028
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.10950000000048,
+            "medianMs": 3.2899999999999636,
+            "p95Ms": 4.755499999999756,
+            "maxMs": 6.46369999999979
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26705,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Arvid Lindblad",
+          "standingPoints": 23,
+          "rawTimingsMs": [
+            34.89000000000033,
+            31.631600000000617,
+            36.11830000000009,
+            32.86209999999937,
+            28.46180000000004,
+            31.628600000000006,
+            31.39310000000023,
+            33.200299999999515,
+            31.80489999999918,
+            31.301800000000185,
+            36.465799999999945,
+            30.51389999999992,
+            33.079899999999725,
+            32.84359999999924,
+            33.1864000000005,
+            32.35429999999997,
+            32.39630000000034,
+            31.736899999999878,
+            31.437299999999595,
+            32.36239999999998
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 28.46180000000004,
+            "medianMs": 32.35429999999997,
+            "p95Ms": 36.11830000000009,
+            "maxMs": 36.465799999999945
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 2.088999999999942,
+            "medianMs": 3.284700000000157,
+            "p95Ms": 3.7955000000001746,
+            "maxMs": 4.452100000000428
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Pierre Gasly",
+          "standingPoints": 44,
+          "rawTimingsMs": [
+            32.378999999999905,
+            33.55420000000049,
+            33.993900000000394,
+            30.9375,
+            23.324899999999616,
+            31.52939999999944,
+            33.88239999999951,
+            43.38299999999981,
+            38.1266999999998,
+            31.156400000000758,
+            31.10699999999997,
+            31.679700000000594,
+            31.931900000000496,
+            31.11660000000029,
+            32.23710000000028,
+            31.265699999999924,
+            30.472799999999552,
+            31.93199999999979,
+            31.906200000000354,
+            34.3711000000003
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 23.324899999999616,
+            "medianMs": 31.906200000000354,
+            "p95Ms": 38.1266999999998,
+            "maxMs": 43.38299999999981
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 2.7956999999996697,
+            "medianMs": 3.1804000000001906,
+            "p95Ms": 3.8398999999999432,
+            "maxMs": 3.9884000000001834
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Franco Colapinto",
+          "standingPoints": 19,
+          "rawTimingsMs": [
+            31.50799999999981,
+            32.80320000000029,
+            32.35429999999997,
+            33.95979999999963,
+            31.901499999999942,
+            31.123999999999796,
+            31.280300000000352,
+            31.178899999999885,
+            31.723400000000765,
+            31.153800000000047,
+            31.772100000000137,
+            31.967399999999543,
+            31.451999999999316,
+            32.662600000000566,
+            34.0027999999993,
+            32.534200000000055,
+            32.53930000000037,
+            33.26209999999992,
+            32.19589999999971,
+            35.02360000000044
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 31.123999999999796,
+            "medianMs": 31.967399999999543,
+            "p95Ms": 34.0027999999993,
+            "maxMs": 35.02360000000044
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.1005000000004657,
+            "medianMs": 3.4844999999995707,
+            "p95Ms": 4.0505999999995765,
+            "maxMs": 4.250299999999697
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26710,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Esteban Ocon",
+          "standingPoints": 3,
+          "rawTimingsMs": [
+            31.538700000000063,
+            32.017799999999625,
+            30.532200000000557,
+            32.305599999999686,
+            31.163300000000163,
+            30.701599999999416,
+            30.74069999999938,
+            31.014000000000124,
+            32.32749999999942,
+            30.42540000000008,
+            30.653299999999945,
+            34.833300000000236,
+            32.03480000000036,
+            33.60979999999927,
+            31.4378999999999,
+            31.34730000000036,
+            30.703199999999924,
+            30.609699999999975,
+            31.081900000000132,
+            31.5613000000003
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 30.42540000000008,
+            "medianMs": 31.163300000000163,
+            "p95Ms": 33.60979999999927,
+            "maxMs": 34.833300000000236
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.0729999999994106,
+            "medianMs": 3.2656999999999243,
+            "p95Ms": 4.005900000000111,
+            "maxMs": 4.097899999999754
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Oliver Bearman",
+          "standingPoints": 18,
+          "rawTimingsMs": [
+            30.1850000000004,
+            31.121500000000196,
+            31.58299999999963,
+            32.643699999999626,
+            32.124800000000505,
+            30.651499999999942,
+            33.96889999999985,
+            31.58140000000003,
+            32.30539999999928,
+            35.210399999999936,
+            31.676300000000083,
+            30.980000000000473,
+            30.302200000000084,
+            31.31999999999971,
+            30.592800000000352,
+            38.25700000000052,
+            28.239400000000387,
+            18.20679999999993,
+            19.031299999999646,
+            28.22320000000036
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 18.20679999999993,
+            "medianMs": 31.121500000000196,
+            "p95Ms": 35.210399999999936,
+            "maxMs": 38.25700000000052
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.8822999999993044,
+            "medianMs": 3.208599999999933,
+            "p95Ms": 3.9205000000001746,
+            "maxMs": 6.427400000000489
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26708,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Nico Hulkenberg",
+          "standingPoints": 6,
+          "rawTimingsMs": [
+            30.981400000000576,
+            29.879300000000512,
+            31.199099999999817,
+            30.41570000000047,
+            30.87379999999939,
+            31.735200000000077,
+            39.523700000000645,
+            29.834399999999732,
+            36.32890000000043,
+            33.79240000000027,
+            33.74380000000019,
+            34.63619999999992,
+            34.01140000000032,
+            35.703700000000026,
+            32.57930000000033,
+            29.635700000000725,
+            32.24189999999999,
+            30.64559999999983,
+            31.98610000000008,
+            30.304700000000594
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 29.635700000000725,
+            "medianMs": 31.735200000000077,
+            "p95Ms": 36.32890000000043,
+            "maxMs": 39.523700000000645
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.10570000000007,
+            "medianMs": 3.193899999999303,
+            "p95Ms": 3.6270999999997002,
+            "maxMs": 3.7408000000004904
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26709,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Gabriel Bortoleto",
+          "standingPoints": 10,
+          "rawTimingsMs": [
+            31.22729999999865,
+            31.91320000000087,
+            33.172599999999875,
+            31.714500000000044,
+            32.110500000000684,
+            29.461699999999837,
+            33.21309999999903,
+            33.72809999999845,
+            32.76640000000043,
+            35.96740000000136,
+            29.95389999999861,
+            25.989000000001397,
+            24.473400000000765,
+            29.991400000000795,
+            30.586100000000442,
+            31.311900000000605,
+            31.487600000000384,
+            30.71559999999954,
+            32.81579999999849,
+            30.378200000001016
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 24.473400000000765,
+            "medianMs": 31.311900000000605,
+            "p95Ms": 33.72809999999845,
+            "maxMs": 35.96740000000136
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 2.7427000000006956,
+            "medianMs": 3.1825000000008004,
+            "p95Ms": 4.08009999999922,
+            "maxMs": 4.264100000000326
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26711,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Alexander Albon",
+          "standingPoints": 5,
+          "rawTimingsMs": [
+            32.897399999999834,
+            32.85939999999937,
+            32.33679999999913,
+            33.77970000000096,
+            32.33140000000094,
+            36.65970000000016,
+            32.23529999999846,
+            34.027500000000146,
+            31.296000000000276,
+            30.495700000001307,
+            33.834500000000844,
+            34.4484999999986,
+            34.75169999999889,
+            27.0640999999996,
+            31.829200000000128,
+            30.92500000000109,
+            31.516499999999724,
+            31.94800000000032,
+            32.15850000000137,
+            30.905500000000757
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 27.0640999999996,
+            "medianMs": 32.23529999999846,
+            "p95Ms": 34.75169999999889,
+            "maxMs": 36.65970000000016
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.0687999999991007,
+            "medianMs": 3.163699999999153,
+            "p95Ms": 4.0174000000006345,
+            "maxMs": 4.166800000000876
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26709,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Carlos Sainz",
+          "standingPoints": 6,
+          "rawTimingsMs": [
+            38.672199999999066,
+            31.3179999999993,
+            24.924399999999878,
+            31.763300000000527,
+            31.887799999998606,
+            30.900800000001254,
+            31.800999999999476,
+            31.119700000001103,
+            33.84510000000046,
+            30.820799999999508,
+            31.03690000000097,
+            37.62079999999878,
+            30.94499999999971,
+            30.804799999999886,
+            29.710299999998824,
+            31.269399999999223,
+            30.342399999999543,
+            30.283900000000358,
+            37.76670000000013,
+            32.70720000000074
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 24.924399999999878,
+            "medianMs": 31.119700000001103,
+            "p95Ms": 37.76670000000013,
+            "maxMs": 38.672199999999066
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.0697000000000116,
+            "medianMs": 3.2206999999998516,
+            "p95Ms": 4.190599999999904,
+            "maxMs": 4.8968000000004395
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Fernando Alonso",
+          "standingPoints": 3,
+          "rawTimingsMs": [
+            31.861899999999878,
+            32.20429999999942,
+            31.8734000000004,
+            31.51639999999861,
+            34.910400000000664,
+            29.49489999999969,
+            32.423399999999674,
+            31.284999999999854,
+            32.113499999999476,
+            35.20119999999952,
+            33.052300000001196,
+            33.52089999999953,
+            34.97990000000027,
+            32.67900000000009,
+            33.6846000000005,
+            30.9487999999983,
+            30.751000000000204,
+            31.563000000000102,
+            30.651700000000346,
+            31.180199999998877
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 29.49489999999969,
+            "medianMs": 31.8734000000004,
+            "p95Ms": 34.97990000000027,
+            "maxMs": 35.20119999999952
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.083099999999831,
+            "medianMs": 3.171200000000681,
+            "p95Ms": 3.30409999999938,
+            "maxMs": 3.4429999999993015
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26709,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Lance Stroll",
+          "standingPoints": 0,
+          "rawTimingsMs": [
+            36.10939999999937,
+            31.424199999999473,
+            31.251899999999296,
+            31.64379999999983,
+            31.791699999999764,
+            40.46569999999883,
+            34.77610000000095,
+            32.32040000000052,
+            33.51130000000012,
+            32.391599999999016,
+            32.14760000000024,
+            31.310100000000602,
+            31.8020000000015,
+            31.81050000000141,
+            31.06129999999939,
+            33.556400000001304,
+            31.74619999999959,
+            31.717999999998938,
+            31.38379999999961,
+            30.803499999999985
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 30.803499999999985,
+            "medianMs": 31.791699999999764,
+            "p95Ms": 36.10939999999937,
+            "maxMs": 40.46569999999883
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.0869999999995343,
+            "medianMs": 3.242000000000189,
+            "p95Ms": 4.2629999999990105,
+            "maxMs": 5.471400000000358
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Sergio Perez",
+          "standingPoints": 0,
+          "rawTimingsMs": [
+            33.19810000000143,
+            31.11989999999969,
+            30.451900000000023,
+            31.233799999999974,
+            31.128899999999703,
+            29.677899999998772,
+            36.58339999999953,
+            31.50540000000001,
+            31.30249999999978,
+            32.292199999999866,
+            33.629800000000614,
+            32.75849999999991,
+            34.427200000000084,
+            31.437799999999697,
+            31.662100000001374,
+            34.181000000000495,
+            34.13500000000022,
+            30.644500000000335,
+            26.504899999999907,
+            31.357599999999366
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 26.504899999999907,
+            "medianMs": 31.437799999999697,
+            "p95Ms": 34.427200000000084,
+            "maxMs": 36.58339999999953
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 2.0001000000011118,
+            "medianMs": 3.2198000000007596,
+            "p95Ms": 3.616700000000492,
+            "maxMs": 3.6428000000014435
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26706,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Valtteri Bottas",
+          "standingPoints": 0,
+          "rawTimingsMs": [
+            30.826200000001336,
+            34.56399999999849,
+            31.1770000000015,
+            27.584799999998722,
+            31.062200000000303,
+            31.278400000001056,
+            33.11069999999927,
+            30.24330000000009,
+            31.341199999998935,
+            30.47400000000016,
+            32.04280000000108,
+            35.06840000000011,
+            31.363600000000588,
+            30.219100000000253,
+            29.752699999999095,
+            32.825300000000425,
+            30.93080000000009,
+            31.73739999999998,
+            31.445999999999913,
+            32.367599999999584
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 27.584799999998722,
+            "medianMs": 31.278400000001056,
+            "p95Ms": 34.56399999999849,
+            "maxMs": 35.06840000000011
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.052299999999377,
+            "medianMs": 3.1939999999995052,
+            "p95Ms": 3.4904999999998836,
+            "maxMs": 4.456499999998414
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 26709,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        }
+      ],
+      "memory": {
+        "heapUsedBeforeBytes": 11072680,
+        "heapUsedAfterBytes": 72479384,
+        "processPeakRssBytes": 254058496,
+        "semantics": "Process-wide peak RSS since isolated worker start; heap values bracket measured work. These are not precise per-request allocations."
+      }
+    },
+    {
+      "kind": "CONSTRUCTOR",
+      "warmupIterations": 3,
+      "iterationsPerCase": 20,
+      "cases": [
+        {
+          "id": "Aston Martin Aramco F1 Team",
+          "standingPoints": 3,
+          "rawTimingsMs": [
+            25.062299999999993,
+            24.745499999999993,
+            23.419399999999996,
+            22.13409999999999,
+            21.3596,
+            18.757300000000043,
+            18.154899999999998,
+            18.32740000000001,
+            18.12360000000001,
+            18.581999999999994,
+            18.37639999999999,
+            18.17180000000002,
+            18.268500000000017,
+            18.046100000000024,
+            17.889800000000037,
+            20.583000000000027,
+            21.578499999999963,
+            17.312099999999987,
+            19.467200000000048,
+            18.67560000000003
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.312099999999987,
+            "medianMs": 18.581999999999994,
+            "p95Ms": 24.745499999999993,
+            "maxMs": 25.062299999999993
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9568000000000438,
+            "medianMs": 2.2035999999999945,
+            "p95Ms": 2.918700000000001,
+            "maxMs": 2.932799999999986
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25263,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Atlassian Williams F1 Team",
+          "standingPoints": 11,
+          "rawTimingsMs": [
+            19.85990000000004,
+            18.4461,
+            20.428499999999985,
+            19.75720000000001,
+            18.16579999999999,
+            17.80759999999998,
+            17.651399999999967,
+            18.74879999999996,
+            17.799100000000067,
+            18.345699999999965,
+            19.90269999999998,
+            21.154899999999998,
+            18.712599999999952,
+            22.14639999999997,
+            19.279899999999998,
+            22.238900000000058,
+            19.36519999999996,
+            21.11779999999999,
+            20.914999999999964,
+            20.305900000000065
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.651399999999967,
+            "medianMs": 19.36519999999996,
+            "p95Ms": 22.14639999999997,
+            "maxMs": 22.238900000000058
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9891000000000076,
+            "medianMs": 2.2706000000000586,
+            "p95Ms": 3.509900000000016,
+            "maxMs": 3.852800000000002
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25262,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Audi Revolut F1 Team",
+          "standingPoints": 16,
+          "rawTimingsMs": [
+            19.93380000000002,
+            21.0548,
+            19.245300000000157,
+            20.21810000000005,
+            20.405099999999948,
+            19.931299999999965,
+            19.75890000000004,
+            19.16469999999981,
+            19.445699999999988,
+            19.654800000000023,
+            18.396900000000187,
+            18.703199999999924,
+            17.537000000000035,
+            17.761299999999892,
+            17.807800000000043,
+            18.42989999999986,
+            17.59789999999998,
+            18.401499999999942,
+            17.773599999999988,
+            18.907700000000204
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.537000000000035,
+            "medianMs": 18.907700000000204,
+            "p95Ms": 20.405099999999948,
+            "maxMs": 21.0548
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.8593000000000757,
+            "medianMs": 2.1098000000001775,
+            "p95Ms": 2.461999999999989,
+            "maxMs": 2.533900000000017
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25256,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "BWT Alpine F1 Team",
+          "standingPoints": 63,
+          "rawTimingsMs": [
+            18.10290000000009,
+            17.45180000000005,
+            17.349500000000035,
+            18.85419999999999,
+            17.718099999999822,
+            18.100099999999884,
+            18.018800000000056,
+            18.96419999999989,
+            18.25999999999999,
+            18.535500000000184,
+            17.856199999999944,
+            18.336000000000013,
+            17.87169999999992,
+            19.121200000000044,
+            19.586799999999812,
+            19.767200000000003,
+            20.558199999999943,
+            21.350099999999884,
+            20.746900000000096,
+            19.791500000000042
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.349500000000035,
+            "medianMs": 18.336000000000013,
+            "p95Ms": 20.746900000000096,
+            "maxMs": 21.350099999999884
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9067000000000007,
+            "medianMs": 2.0440000000000964,
+            "p95Ms": 2.404700000000048,
+            "maxMs": 2.89020000000005
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25254,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Cadillac Formula 1 Team",
+          "standingPoints": 0,
+          "rawTimingsMs": [
+            18.847099999999955,
+            21.733799999999974,
+            18.361400000000003,
+            20.249499999999898,
+            21.375800000000027,
+            19.330299999999852,
+            18.407199999999875,
+            17.83269999999993,
+            18.429000000000087,
+            17.754500000000007,
+            17.704999999999927,
+            18.998499999999922,
+            18.202800000000025,
+            19.693700000000035,
+            18.770099999999957,
+            19.33479999999986,
+            18.332799999999907,
+            18.611699999999928,
+            18.510099999999966,
+            19.015200000000277
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.704999999999927,
+            "medianMs": 18.611699999999928,
+            "p95Ms": 21.375800000000027,
+            "maxMs": 21.733799999999974
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9594999999999345,
+            "medianMs": 2.0871000000001914,
+            "p95Ms": 2.4087999999999283,
+            "maxMs": 2.519600000000082
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25259,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "McLaren Mastercard F1 Team",
+          "standingPoints": 263,
+          "rawTimingsMs": [
+            17.909799999999905,
+            18.45789999999988,
+            17.459899999999834,
+            18.421100000000024,
+            18.008699999999862,
+            18.601400000000012,
+            19.291299999999865,
+            18.10030000000006,
+            20.21230000000014,
+            20.01260000000002,
+            18.776800000000094,
+            18.627199999999903,
+            19.241700000000037,
+            18.210900000000038,
+            19.778800000000047,
+            17.645600000000286,
+            17.873000000000047,
+            17.019399999999678,
+            17.88000000000011,
+            16.61999999999989
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 16.61999999999989,
+            "medianMs": 18.210900000000038,
+            "p95Ms": 20.01260000000002,
+            "maxMs": 20.21230000000014
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.9181000000003223,
+            "medianMs": 2.0047999999997046,
+            "p95Ms": 2.4909999999999854,
+            "maxMs": 2.8269000000000233
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25262,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Mercedes-AMG PETRONAS F1 Team",
+          "standingPoints": 425,
+          "rawTimingsMs": [
+            17.90079999999989,
+            17.447099999999864,
+            19.826600000000326,
+            19.25630000000001,
+            20.30410000000029,
+            19.85680000000002,
+            21.39519999999993,
+            18.77489999999989,
+            19.64720000000034,
+            19.560399999999845,
+            19.397699999999986,
+            17.686299999999846,
+            17.800300000000334,
+            17.308500000000095,
+            18.20679999999993,
+            17.391899999999623,
+            17.301500000000033,
+            17.08929999999964,
+            17.11239999999998,
+            19.420200000000023
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 17.08929999999964,
+            "medianMs": 18.20679999999993,
+            "p95Ms": 20.30410000000029,
+            "maxMs": 21.39519999999993
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.85550000000012,
+            "medianMs": 2.050199999999677,
+            "p95Ms": 2.6538000000000466,
+            "maxMs": 3.021400000000085
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25265,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Oracle Red Bull Racing",
+          "standingPoints": 186,
+          "rawTimingsMs": [
+            16.616799999999785,
+            17.153999999999996,
+            17.177599999999984,
+            17.71680000000015,
+            17.228799999999865,
+            17.641799999999876,
+            18.10620000000017,
+            21.784499999999753,
+            30.552000000000135,
+            31.3779999999997,
+            32.19569999999976,
+            32.90560000000005,
+            30.58640000000014,
+            30.079699999999775,
+            31.88480000000027,
+            31.847399999999652,
+            31.641999999999825,
+            30.09439999999995,
+            35.240099999999984,
+            33.62779999999975
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 16.616799999999785,
+            "medianMs": 30.09439999999995,
+            "p95Ms": 33.62779999999975,
+            "maxMs": 35.240099999999984
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.800000000000182,
+            "medianMs": 3.09900000000016,
+            "p95Ms": 3.546100000000024,
+            "maxMs": 4.072299999999814
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25258,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Scuderia Ferrari HP",
+          "standingPoints": 338,
+          "rawTimingsMs": [
+            31.698699999999917,
+            30.46810000000005,
+            31.117999999999938,
+            32.315900000000056,
+            30.034999999999854,
+            30.333799999999883,
+            30.107500000000073,
+            32.072799999999916,
+            29.5920000000001,
+            31.285499999999956,
+            30.027100000000246,
+            32.634000000000015,
+            33.35289999999986,
+            31.33159999999998,
+            29.95789999999988,
+            30.48070000000007,
+            29.66910000000007,
+            31.434299999999894,
+            31.74409999999989,
+            30.222000000000207
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 29.5920000000001,
+            "medianMs": 30.48070000000007,
+            "p95Ms": 32.634000000000015,
+            "maxMs": 33.35289999999986
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.000999999999749,
+            "medianMs": 3.1525000000001455,
+            "p95Ms": 3.5604999999995925,
+            "maxMs": 3.5635999999999513
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25255,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "TGR Haas F1 Team",
+          "standingPoints": 21,
+          "rawTimingsMs": [
+            30.207099999999627,
+            30.439800000000105,
+            30.11640000000034,
+            31.32129999999961,
+            31.19760000000042,
+            29.853300000000672,
+            29.8704000000007,
+            31.293899999999667,
+            29.579900000000634,
+            37.59519999999975,
+            35.17839999999978,
+            32.40129999999954,
+            33.85399999999936,
+            30.727100000000064,
+            32.03219999999965,
+            30.94550000000072,
+            30.158000000000357,
+            30.64890000000014,
+            30.5032999999994,
+            31.060100000000602
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 29.579900000000634,
+            "medianMs": 30.727100000000064,
+            "p95Ms": 35.17839999999978,
+            "maxMs": 37.59519999999975
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.025399999999536,
+            "medianMs": 3.350199999999859,
+            "p95Ms": 4.6878999999999,
+            "maxMs": 5.822299999999814
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25252,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        },
+        {
+          "id": "Visa Cash App Racing Bulls F1 Team",
+          "standingPoints": 66,
+          "rawTimingsMs": [
+            31.351400000000467,
+            30.312200000000303,
+            29.470399999999245,
+            33.41640000000007,
+            35.15809999999965,
+            30.22530000000006,
+            34.590799999999945,
+            29.99200000000019,
+            29.93409999999949,
+            30.045599999999467,
+            30.189799999999195,
+            30.495600000000195,
+            29.900899999999638,
+            29.586200000000645,
+            30.513200000000325,
+            31.75250000000051,
+            30.575200000000223,
+            32.24420000000009,
+            29.71860000000015,
+            30.348799999999756
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 29.470399999999245,
+            "medianMs": 30.312200000000303,
+            "p95Ms": 34.590799999999945,
+            "maxMs": 35.15809999999965
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 3.1576999999997497,
+            "medianMs": 3.299599999999373,
+            "p95Ms": 4.91530000000057,
+            "maxMs": 5.326000000000022
+          },
+          "correctness": "VERIFIED",
+          "size": {
+            "sessions": 12,
+            "entrants": 22,
+            "variables": 264,
+            "constraints": 12,
+            "canonicalBytes": 25270,
+            "detailedGroups": 2,
+            "compactRules": 1,
+            "samples": 20,
+            "unavailableSamples": 1,
+            "rawPaths": "NOT_MATERIALIZED_SYMBOLIC_RELATION"
+          }
+        }
+      ],
+      "memory": {
+        "heapUsedBeforeBytes": 12652960,
+        "heapUsedAfterBytes": 35780536,
+        "processPeakRssBytes": 156532736,
+        "semantics": "Process-wide peak RSS since isolated worker start; heap values bracket measured work. These are not precise per-request allocations."
+      }
+    },
+    {
+      "kind": "STALE_FAILURE",
+      "warmupIterations": 3,
+      "iterationsPerCase": 20,
+      "cases": [
+        {
+          "id": "Lando Norris",
+          "standingPoints": null,
+          "rawTimingsMs": [
+            2.017300000000006,
+            2.337699999999998,
+            2.067999999999998,
+            2.387599999999992,
+            1.9074999999999989,
+            2.5157999999999987,
+            2.1099000000000103,
+            2.5741000000000014,
+            1.7552999999999912,
+            2.1352000000000118,
+            1.814700000000002,
+            2.1724999999999994,
+            1.8486000000000047,
+            1.9336999999999875,
+            1.968500000000006,
+            1.6447000000000003,
+            1.6706000000000074,
+            2.0353000000000065,
+            1.8203000000000031,
+            1.9046999999999912
+          ],
+          "stats": {
+            "iterations": 20,
+            "minMs": 1.6447000000000003,
+            "medianMs": 1.968500000000006,
+            "p95Ms": 2.5157999999999987,
+            "maxMs": 2.5741000000000014
+          },
+          "relationConstructionStats": {
+            "iterations": 20,
+            "minMs": 1.6459000000000117,
+            "medianMs": 1.9698999999999955,
+            "p95Ms": 2.5172000000000025,
+            "maxMs": 2.575400000000002
+          },
+          "outcome": "STALE_SNAPSHOT"
+        }
+      ],
+      "memory": {
+        "heapUsedBeforeBytes": 9803024,
+        "heapUsedAfterBytes": 9797312,
+        "processPeakRssBytes": 73056256,
+        "semantics": "Process-wide peak RSS since isolated worker start; heap values bracket measured work. These are not precise per-request allocations."
+      }
+    }
+  ],
+  "promisePolicy": {
+    "definedBeforeResults": {
+      "minimumIterationsPerCase": 20,
+      "maximumP95Ms": 1000,
+      "maximumSingleMs": 2000,
+      "maximumMaxToMedianRatio": 3,
+      "maximumPeakRssMb": 512,
+      "requiredCoverage": "all 22 drivers and all 11 constructors",
+      "requiresLoadTesting": true,
+      "publishedThresholdMargin": "150% of observed worst maximum"
+    },
+    "evidence": {
+      "coverageComplete": true,
+      "iterationsPerCase": 20,
+      "worstP95Ms": 38.84960000000001,
+      "worstMaxMs": 43.42280000000028,
+      "worstMedianMs": 32.60539999999992,
+      "peakRssMb": 242.2890625,
+      "loadTested": false
+    },
+    "decision": {
+      "decision": "WITHHOLD",
+      "reasons": [
+        "No concurrent load, network, Convex, or UI timing was measured."
+      ]
+    }
+  },
+  "priorRunComparison": {
+    "priorRunId": "2026-09-02T08:12:33.096Z",
+    "priorWorstP95Ms": 38.10279999999966,
+    "currentWorstP95Ms": 38.84960000000001,
+    "note": "Previous retained artifact was compared before replacement; neither run was selected by speed."
+  }
+}

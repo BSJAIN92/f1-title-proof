@@ -1,0 +1,437 @@
+{
+  "cutoff": "2026-09-01T21:14:22+05:30",
+  "documents": [
+    {
+      "id": "australia_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_australian_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 691586,
+      "sha256": "16943737DFAF0FEE2143A1EA01EB35BD5A64B67E63A795D73FD58D708DCA4A99"
+    },
+    {
+      "id": "china_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_chinese_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 695756,
+      "sha256": "C576A8EBC3D6523A8CB83FDF4888A5E28A3B3369BC4D8C4E26447BAEFA05E730"
+    },
+    {
+      "id": "japan_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_japanese_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 2077768,
+      "sha256": "03B72E8C56BE09BC5A0644C63C202CBC0DCFF7B6DD46EE44AA8FCD817D865C5D"
+    },
+    {
+      "id": "miami_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_miami_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 562549,
+      "sha256": "BC83B23AC1D4EB81669BD04B448FFAF4C55C75509D9B699168641DD96F378122"
+    },
+    {
+      "id": "canada_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_canadian_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 693729,
+      "sha256": "BB67B0F3CAE1D0EA2A5CDDB4FED2BEB8E9AC25AF9B565E04C6096188BC4B7952"
+    },
+    {
+      "id": "monaco_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/documents/doc_100_-_2026_monaco_grand_prix_-_revised_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 244190,
+      "sha256": "0E6E852CF7F16E116F836B5EBB42B86031D9B1521336355524173FC1813E9CA6"
+    },
+    {
+      "id": "barcelona_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 709571,
+      "sha256": "0A349B60329514BFAB4C4A7C18A88C6C995ED0F7FA1648DB77DDEFBBC8F4FED0"
+    },
+    {
+      "id": "austria_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_austrian_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 684071,
+      "sha256": "5864368637DBDD7770E7806669AF479954ED096EF9F8D90E0B7ED36F594BCB84"
+    },
+    {
+      "id": "great_britain_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 700339,
+      "sha256": "8A183EF065D82883895EC90D0906FFC0CE512C0A902992C18666196013F0DB63"
+    },
+    {
+      "id": "belgium_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_belgian_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 562841,
+      "sha256": "2C2D819C53D6FD4135B8544473379EEE4BEB030E2C858D8A4B123A7B795F4DCD"
+    },
+    {
+      "id": "hungary_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_hungarian_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 561622,
+      "sha256": "32AFE1A052582B6DB3760F7DAF0830556A5BC456D239939CA7A20E46F2D0B243"
+    },
+    {
+      "id": "netherlands_race",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_dutch_grand_prix_-_final_race_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 535955,
+      "sha256": "6AA5D9ED2815892B6F234346FFAC6BB623977EAE84CC1A21C7801C9D151A0A5C"
+    },
+    {
+      "id": "china_sprint",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_chinese_grand_prix_-_final_sprint_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 696331,
+      "sha256": "0B74F574FB568E2510111CA284EDBE08986D241FBD18411D3AEC95C2A07D9689"
+    },
+    {
+      "id": "miami_sprint",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_miami_grand_prix_-_final_sprint_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 558792,
+      "sha256": "FA60E931B7412D778D1CA6DC209EC81BE95F1E3D5C1C5B92FC21E0A826A56680"
+    },
+    {
+      "id": "canada_sprint",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_canadian_grand_prix_-_final_sprint_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 685584,
+      "sha256": "4E297A1C9CDACB37BB859A86DB7B1E512965AE5048E7C71CB2DC25810C78FA8A"
+    },
+    {
+      "id": "great_britain_sprint",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_final_sprint_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 695579,
+      "sha256": "9DDB4A582CBE82E83A37E20DD0550BED6BFD22011E82ACCE51891E6327D70154"
+    },
+    {
+      "id": "netherlands_sprint",
+      "category": "final-session-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_dutch_grand_prix_-_final_sprint_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 533285,
+      "sha256": "8E72D267FB09D20E1A1BA82A26E9188068D2A4E5576E4F00FB0F63F3575EAE33"
+    },
+    {
+      "id": "australia_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_australian_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 687834,
+      "sha256": "F71F4D807D2016394DAD7646A10EB404BD2F18D7D85741509CFBF842D8AACC4F"
+    },
+    {
+      "id": "china_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_chinese_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 704691,
+      "sha256": "1A472F3605ED23FB3AC5E6F9CF37E0ECF2A8632A59A60BB662C21D47EF37B4A7"
+    },
+    {
+      "id": "japan_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_japanese_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 565917,
+      "sha256": "4CA4B176210EA43454FA0B0BD0407F5B49EED6B7D9F2DF8A25E39D3D8FF3F9E5"
+    },
+    {
+      "id": "miami_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_miami_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 561700,
+      "sha256": "60FA7F48E50209A8E2797BC281E6088743BF1FF7849F3C8832A073ECD49D5E71"
+    },
+    {
+      "id": "canada_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_canadian_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 689738,
+      "sha256": "25CAFBA38D890DACAFD1276BF142824C41A2A2C76A5FD07816930451FAA4BE46"
+    },
+    {
+      "id": "monaco_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_monaco_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 696956,
+      "sha256": "3CC1FD7FD48ACB3AC1207BB810163FC8A3CDEADA699629DF857D47198D8D0DAD"
+    },
+    {
+      "id": "barcelona_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 706421,
+      "sha256": "92C63EA27519C9EA3C92EB6DDF80F5B9D79D8EB58A6BF5C2DF65820C58EEFCBC"
+    },
+    {
+      "id": "austria_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_austrian_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 686664,
+      "sha256": "20588B7F8A7CDC16930E9A3838731AC0B73F795AF025CA6DEFEEBDFF0D8B048C"
+    },
+    {
+      "id": "great_britain_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 701460,
+      "sha256": "6CB7D4AF65707A1CEC79F75094780A2F79FDF722785EFD3F1FD1EFAB2070629D"
+    },
+    {
+      "id": "belgium_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_belgian_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 564225,
+      "sha256": "4490C9BD73E2541AB67B618127C7013894ED0DB4225F73D8ABEB096F5C7DC5E5"
+    },
+    {
+      "id": "hungary_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_hungarian_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 562916,
+      "sha256": "B238634B1E9ABFB46852E1623CE61F8E7205D8046FEFCC104CAC39C2B53FBD9C"
+    },
+    {
+      "id": "netherlands_qualifying",
+      "category": "final-qualifying-classification",
+      "url": "https://www.fia.com/system/files/decision-document/2026_dutch_grand_prix_-_final_qualifying_classification.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 535970,
+      "sha256": "4FF8D4717F89AA83FA3A3C01CA545DF6E34915079937752D567CE7B5EB528BDD"
+    },
+    {
+      "id": "fiaCalendar",
+      "category": "snapshot-support",
+      "url": "https://www.fia.com/events/fia-formula-one-world-championship/season-2026/2026-fia-formula-one-world-championship",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "text/html; charset=utf-8"
+      ],
+      "byteLength": 113598,
+      "sha256": "435DB1CACBAAEB84999B6CACC0151E07119185DD07C43F8D9B023A1EBAEDCE28"
+    },
+    {
+      "id": "fiaSprintCalendar",
+      "category": "snapshot-support",
+      "url": "https://www.fia.com/news/fia-and-formula-1-announce-2026-sprint-calendar",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "text/html; charset=utf-8"
+      ],
+      "byteLength": 87745,
+      "sha256": "4A27693D68A07C178D72A313D198CF79EB2AEE60C4A9560FE33B46D733A7A9FB"
+    },
+    {
+      "id": "fiaRulesSectionA",
+      "category": "snapshot-support",
+      "url": "https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_a_general_provisions_-_iss_03_-_2026-06-25.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 972269,
+      "sha256": "6CE8C9420DDB8194E1B5EA8F678DBBDCB4BB2094780E636324B709EE70D276D6"
+    },
+    {
+      "id": "fiaRulesSectionB",
+      "category": "snapshot-support",
+      "url": "https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_b_sporting_-_iss_08_-_2026-08-05_7.pdf",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "application/pdf"
+      ],
+      "byteLength": 1328277,
+      "sha256": "CBE329807D7803A4DB511F80D829DE1212D0C6A1C3B327CDDB1B841823BAA9FD"
+    },
+    {
+      "id": "f1DriverStandings",
+      "category": "snapshot-support",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "text/html; charset=utf-8"
+      ],
+      "byteLength": 413792,
+      "sha256": "2C986077305985A83BDE7F7D07A73F3C69B4B5352813915FEBA7460D4DC77F64"
+    },
+    {
+      "id": "f1ConstructorStandings",
+      "category": "snapshot-support",
+      "url": "https://www.formula1.com/en/results/2026/team",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "text/html; charset=utf-8"
+      ],
+      "byteLength": 324920,
+      "sha256": "9B92868ABCC8D6B8D6357CFF88A9A1A6B3053D8672387F49DDECD51A638DD43C"
+    },
+    {
+      "id": "f1RegularDrivers",
+      "category": "snapshot-support",
+      "url": "https://www.formula1.com/en/drivers",
+      "retrievedAt": "2026-09-01T21:14:22+05:30",
+      "httpStatus": 200,
+      "contentType": [
+        "text/html; charset=utf-8"
+      ],
+      "byteLength": 504024,
+      "sha256": "97C5BF841DA55F01EE55D34F26F78B43BDC8A24F57AA21EF1D71B6523AB7D6C9"
+    }
+  ]
+}

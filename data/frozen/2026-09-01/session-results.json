@@ -1,0 +1,4678 @@
+{
+  "sources": {
+    "australia_race": "https://www.fia.com/system/files/decision-document/2026_australian_grand_prix_-_final_race_classification.pdf",
+    "china_race": "https://www.fia.com/system/files/decision-document/2026_chinese_grand_prix_-_final_race_classification.pdf",
+    "japan_race": "https://www.fia.com/system/files/decision-document/2026_japanese_grand_prix_-_final_race_classification.pdf",
+    "miami_race": "https://www.fia.com/system/files/decision-document/2026_miami_grand_prix_-_final_race_classification.pdf",
+    "canada_race": "https://www.fia.com/system/files/decision-document/2026_canadian_grand_prix_-_final_race_classification.pdf",
+    "monaco_race": "https://www.fia.com/system/files/documents/doc_100_-_2026_monaco_grand_prix_-_revised_final_race_classification.pdf",
+    "barcelona_race": "https://www.fia.com/system/files/decision-document/2026_barcelona-catalunya_grand_prix_-_final_race_classification.pdf",
+    "austria_race": "https://www.fia.com/system/files/decision-document/2026_austrian_grand_prix_-_final_race_classification.pdf",
+    "great_britain_race": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_final_race_classification.pdf",
+    "belgium_race": "https://www.fia.com/system/files/decision-document/2026_belgian_grand_prix_-_final_race_classification.pdf",
+    "hungary_race": "https://www.fia.com/system/files/decision-document/2026_hungarian_grand_prix_-_final_race_classification.pdf",
+    "netherlands_race": "https://www.fia.com/system/files/decision-document/2026_dutch_grand_prix_-_final_race_classification.pdf",
+    "china_sprint": "https://www.fia.com/system/files/decision-document/2026_chinese_grand_prix_-_final_sprint_classification.pdf",
+    "miami_sprint": "https://www.fia.com/system/files/decision-document/2026_miami_grand_prix_-_final_sprint_classification.pdf",
+    "canada_sprint": "https://www.fia.com/system/files/decision-document/2026_canadian_grand_prix_-_final_sprint_classification.pdf",
+    "great_britain_sprint": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_final_sprint_classification.pdf",
+    "netherlands_sprint": "https://www.fia.com/system/files/decision-document/2026_dutch_grand_prix_-_final_sprint_classification.pdf"
+  },
+  "events": [
+    {
+      "event": "australia",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 25,
+          "fia_detail": "1:23:06.801 220.992 1:22.670 21 25"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 18,
+          "fia_detail": "1:23:09.775 2.974 2.974 220.860 1:22.417 57 18"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 15,
+          "fia_detail": "1:23:22.320 15.519 12.545 220.307 1:22.579 38 15"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 12,
+          "fia_detail": "1:23:22.945 16.144 0.625 220.279 1:22.423 55 12"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 10,
+          "fia_detail": "1:23:58.542 51.741 35.597 218.723 1:22.358 53 10"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 58,
+          "awarded_points": 8,
+          "fia_detail": "1:24:01.418 54.617 2.876 218.598 1:22.091 43 8"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 6,
+          "fia_detail": "1:23:11.394 1 LAP 1 LAP 216.982 1:24.020 22 6"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 4,
+          "fia_detail": "1:23:18.617 1 LAP 7.223 216.669 1:24.182 21 4"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 2,
+          "fia_detail": "1:23:19.576 1 LAP 0.959 216.627 1:23.257 45 2"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 1,
+          "fia_detail": "1:23:35.828 1 LAP 16.252 215.925 1:24.486 56 1"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 0,
+          "fia_detail": "1:23:36.651 1 LAP 0.823 215.890 1:24.424 25"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 0,
+          "fia_detail": "1:24:02.876 1 LAP 26.225 214.767 1:24.375 36"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 0,
+          "fia_detail": "1:24:03.974 1 LAP 1.098 214.720 1:23.783 47"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:23:15.288 2 LAPS 1 LAP 213.009 1:22.926 48"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:23:43.687 2 LAPS 28.399 211.805 1:23.590 52"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:23:14.651 3 LAPS 1 LAP 209.232 1:26.070 47"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 43,
+          "awarded_points": 0,
+          "fia_detail": "1:24:27.834 15 LAPS 161.219 1:25.410 36"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 21,
+          "awarded_points": 0,
+          "fia_detail": "48:25.789 DNF 137.317 1:25.713 15"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 15,
+          "awarded_points": 0,
+          "fia_detail": "24:31.911 DNF 193.633 1:27.364 8"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 10,
+          "awarded_points": 0,
+          "fia_detail": "14:25.525 DNF 219.529 1:25.239 9"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        }
+      ]
+    },
+    {
+      "event": "china",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 25,
+          "fia_detail": "1:33:15.607 196.267 1:35.275 52 25"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 18,
+          "fia_detail": "1:33:21.122 5.515 5.515 196.074 1:35.400 56 18"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 15,
+          "fia_detail": "1:33:40.874 25.267 19.752 195.385 1:36.092 55 15"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 12,
+          "fia_detail": "1:33:44.501 28.894 3.627 195.259 1:36.011 56 12"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 10,
+          "fia_detail": "1:34:12.875 57.268 28.374 194.279 1:36.429 56 10"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 8,
+          "fia_detail": "1:34:15.254 59.647 2.379 194.197 1:36.505 53 8"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 6,
+          "fia_detail": "1:34:36.195 80.588 20.941 193.481 1:37.096 56 6"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 4,
+          "fia_detail": "1:34:42.854 87.247 6.659 193.254 1:37.311 46 4"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 2,
+          "fia_detail": "1:33:27.280 1 LAP 1 LAP 192.359 1:37.981 51 2"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 1,
+          "fia_detail": "1:33:28.010 1 LAP 0.730 192.334 1:36.783 35 1"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:33:36.716 1 LAP 8.706 192.036 1:36.180 38"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:33:38.435 1 LAP 1.719 191.977 1:36.099 46"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:34:11.765 1 LAP 33.330 190.845 1:38.393 55"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:34:21.863 1 LAP 10.098 190.505 1:35.964 54"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:34:30.248 1 LAP 8.385 190.223 1:38.523 50"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 45,
+          "awarded_points": 0,
+          "fia_detail": "1:17:26.297 DNF 189.909 1:37.046 39"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 32,
+          "awarded_points": 0,
+          "fia_detail": "56:39.583 DNF 184.514 1:39.721 25"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 9,
+          "awarded_points": 0,
+          "fia_detail": "15:19.929 DNF 191.241 1:40.883 9"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        }
+      ]
+    },
+    {
+      "event": "japan",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 25,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 18,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 15,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 12,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 10,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 8,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 6,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 4,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 2,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 1,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 53,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 20,
+          "classification": "20",
+          "status": "CLASSIFIED",
+          "laps": 51,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 30,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 20,
+          "awarded_points": 0,
+          "fia_detail": "manual extraction from vertical-layout FINAL FIA PDF"
+        }
+      ]
+    },
+    {
+      "event": "miami",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 25,
+          "fia_detail": "1:33:19.273 198.235 1:31.968 34 25"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 18,
+          "fia_detail": "1:33:22.537 3.264 3.264 198.119 1:31.869 35 18"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 15,
+          "fia_detail": "1:33:46.365 27.092 23.828 197.280 1:31.949 30 15"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 12,
+          "fia_detail": "1:34:02.324 43.051 15.959 196.722 1:32.446 53 12"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 10,
+          "fia_detail": "1:34:08.222 48.949 5.898 196.517 1:33.110 24 10"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 8,
+          "fia_detail": "1:34:13.026 53.753 4.804 196.350 1:32.676 29 8"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 6,
+          "fia_detail": "1:34:21.144 61.871 8.118 196.068 1:33.035 33 6"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 4,
+          "fia_detail": "1:34:23.518 64.245 2.374 195.986 1:32.515 44 4"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 2,
+          "fia_detail": "1:34:41.345 82.072 17.827 195.371 1:33.026 30 2"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 57,
+          "awarded_points": 1,
+          "fia_detail": "1:34:50.245 90.972 8.900 195.066 1:33.784 30 1"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:33:25.673 1 LAP 1 LAP 194.533 1:33.744 28"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:33:28.626 1 LAP 2.953 194.430 1:33.500 55"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:33:33.146 1 LAP 4.520 194.274 1:33.712 33"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:34:04.054 1 LAP 30.908 193.210 1:34.058 30"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:34:34.237 1 LAP 30.183 192.182 1:34.594 45"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:34:36.786 1 LAP 2.549 192.096 1:34.895 31"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:34:41.904 1 LAP 5.118 191.923 1:34.716 56"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:34:27.528 2 LAPS 1 LAP 188.972 1:36.080 16"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 7,
+          "awarded_points": 0,
+          "fia_detail": "13:59.996 DNF 161.683 1:34.523 4"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 6,
+          "awarded_points": 0,
+          "fia_detail": "11:15.852 DNF 172.124 1:34.814 3"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 4,
+          "awarded_points": 0,
+          "fia_detail": "6:30.721 DNF 198.003 1:34.856 4"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 4,
+          "awarded_points": 0,
+          "fia_detail": "6:35.716 DNF 195.503 1:34.833 4"
+        }
+      ]
+    },
+    {
+      "event": "canada",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 25,
+          "fia_detail": "1:28:15.758 201.590 1:14.210 68 25"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 18,
+          "fia_detail": "1:28:26.526 10.768 10.768 201.181 1:14.573 61 18"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 15,
+          "fia_detail": "1:28:27.034 11.276 0.508 201.161 1:14.398 68 15"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 12,
+          "fia_detail": "1:28:59.909 44.151 32.875 199.923 1:15.297 37 12"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 10,
+          "fia_detail": "1:28:20.791 1 LAP 1 LAP 198.437 1:14.578 67 10"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 8,
+          "fia_detail": "1:28:35.268 1 LAP 14.477 197.896 1:15.462 67 8"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 6,
+          "fia_detail": "1:28:49.993 1 LAP 14.725 197.349 1:15.604 59 6"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 4,
+          "fia_detail": "1:28:50.330 1 LAP 0.337 197.337 1:15.390 67 4"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 2,
+          "fia_detail": "1:29:13.772 1 LAP 23.442 196.473 1:15.852 65 2"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 67,
+          "awarded_points": 1,
+          "fia_detail": "1:29:14.807 1 LAP 1.035 196.435 1:16.002 64 1"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 0,
+          "fia_detail": "1:28:28.457 2 LAPS 1 LAP 195.192 1:15.456 61"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 0,
+          "fia_detail": "1:28:29.940 2 LAPS 1.483 195.138 1:16.275 57"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 0,
+          "fia_detail": "1:28:36.914 2 LAPS 6.974 194.882 1:16.221 50"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 0,
+          "fia_detail": "1:29:24.393 2 LAPS 47.479 193.157 1:16.577 64"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:28:34.155 4 LAPS 2 LAPS 189.075 1:18.721 39"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:29:09.148 4 LAPS 34.993 187.838 1:17.725 59"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 39,
+          "awarded_points": 0,
+          "fia_detail": "53:36.890 DNF 190.334 1:16.915 37"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 38,
+          "awarded_points": 0,
+          "fia_detail": "50:53.221 DNF 195.395 1:15.845 36"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 29,
+          "awarded_points": 0,
+          "fia_detail": "37:11.054 DNF 204.068 1:15.477 16"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "31:30.980 DNF 190.954 1:19.635 10"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 11,
+          "awarded_points": 0,
+          "fia_detail": "14:56.653 DNF 192.600 1:17.221 11"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        }
+      ]
+    },
+    {
+      "event": "monaco",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 25,
+          "fia_detail": "2:23:31.243 108.814 1:13.481 76 25"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 18,
+          "fia_detail": "2:23:37.514 6.271 6.271 108.735 1:14.643 74 18"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 15,
+          "fia_detail": "2:23:51.612 20.369 14.098 108.557 1:15.497 77 15"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 12,
+          "fia_detail": "2:23:54.637 23.394 3.025 108.519 1:15.669 77 12"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 10,
+          "fia_detail": "2:23:55.504 24.261 0.867 108.508 1:15.816 76 10"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 8,
+          "fia_detail": "2:23:57.796 26.553 2.292 108.480 1:15.754 76 8"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 6,
+          "fia_detail": "2:24:00.253 29.010 2.457 108.449 1:15.908 76 6"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 4,
+          "fia_detail": "2:24:04.656 33.413 4.403 108.394 1:16.393 78 4"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 2,
+          "fia_detail": "2:24:08.383 37.140 3.727 108.347 1:16.914 77 2"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 1,
+          "fia_detail": "2:24:13.142 41.899 4.759 108.287 1:17.120 77 1"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 0,
+          "fia_detail": "2:24:13.991 42.748 0.849 108.277 1:16.803 46"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 0,
+          "fia_detail": "2:24:14.596 43.353 0.605 108.269 1:15.773 56"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 0,
+          "fia_detail": "2:24:15.345 44.102 0.749 108.260 1:16.332 15"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 0,
+          "fia_detail": "2:24:20.207 48.964 4.862 108.199 1:16.316 74"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 78,
+          "awarded_points": 0,
+          "fia_detail": "2:24:20.396 49.153 0.189 108.197 1:16.891 78"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "DNF",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "2:13:32.889 DNF 104.946 1:18.022 51"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:25:42.849 DNF 149.497 1:15.964 53"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 56,
+          "awarded_points": 0,
+          "fia_detail": "1:15:16.761 DNF 148.942 1:18.845 36"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 43,
+          "awarded_points": 0,
+          "fia_detail": "56:36.709 DNF 152.078 1:17.670 34"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 27,
+          "awarded_points": 0,
+          "fia_detail": "36:57.098 DNF 146.297 1:18.475 22"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 15,
+          "awarded_points": 0,
+          "fia_detail": "21:03.117 DNF 142.661 1:20.494 8"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNF"
+        }
+      ]
+    },
+    {
+      "event": "barcelona",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 25,
+          "fia_detail": "1:32:28.105 199.356 1:20.122 44 25"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 18,
+          "fia_detail": "1:32:47.666 19.561 19.561 198.655 1:20.640 43 18"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 15,
+          "fia_detail": "1:32:51.824 23.719 4.158 198.507 1:20.232 37 15"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 12,
+          "fia_detail": "1:33:08.602 40.497 16.778 197.911 1:20.230 42 12"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 66,
+          "awarded_points": 10,
+          "fia_detail": "1:33:26.766 58.661 18.164 197.270 1:20.835 46 10"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 65,
+          "awarded_points": 8,
+          "fia_detail": "1:32:52.732 1 LAP 1 LAP 195.466 1:20.150 60 8"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 65,
+          "awarded_points": 6,
+          "fia_detail": "1:33:23.894 1 LAP 31.162 194.379 1:21.960 43 6"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 65,
+          "awarded_points": 4,
+          "fia_detail": "1:33:40.329 1 LAP 16.435 193.811 1:22.691 45 4"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 65,
+          "awarded_points": 2,
+          "fia_detail": "1:33:46.179 1 LAP 5.850 193.609 1:21.914 45 2"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 65,
+          "awarded_points": 1,
+          "fia_detail": "1:33:47.972 1 LAP 1.793 193.548 1:22.449 43 1"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:32:54.792 2 LAPS 1 LAP 192.387 1:21.446 55"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:32:55.971 2 LAPS 1.179 192.346 1:22.061 58"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 64,
+          "awarded_points": 0,
+          "fia_detail": "1:33:27.254 2 LAPS 31.283 191.273 1:21.643 63"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 63,
+          "awarded_points": 0,
+          "fia_detail": "1:32:35.874 3 LAPS 1 LAP 190.024 1:22.820 43"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 15,
+          "classification": "15",
+          "status": "DNF",
+          "laps": 62,
+          "awarded_points": 0,
+          "fia_detail": "1:27:31.697 DNF 197.838 1:20.379 47"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "DNF",
+          "laps": 61,
+          "awarded_points": 0,
+          "fia_detail": "1:25:03.909 DNF 200.282 1:20.704 46"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "DNF",
+          "laps": 60,
+          "awarded_points": 0,
+          "fia_detail": "1:26:37.448 DNF 193.452 1:22.419 43"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:33:09.120 11 LAPS 164.897 1:21.744 54"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 37,
+          "awarded_points": 0,
+          "fia_detail": "54:01.274 DNF 191.239 1:25.366 27"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 29,
+          "awarded_points": 0,
+          "fia_detail": "41:37.595 DNF 194.481 1:23.447 2"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 15,
+          "awarded_points": 0,
+          "fia_detail": "22:35.070 DNF 185.248 1:25.745 3"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 5,
+          "awarded_points": 0,
+          "fia_detail": "7:29.057 DNF 185.661 1:25.904 3"
+        }
+      ]
+    },
+    {
+      "event": "austria",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 25,
+          "fia_detail": "1:26:37.979 212.639 1:10.683 49 25"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 18,
+          "fia_detail": "1:26:39.590 1.611 1.611 212.573 1:10.483 57 18"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 15,
+          "fia_detail": "1:26:39.965 1.986 0.375 212.557 1:10.374 59 15"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 12,
+          "fia_detail": "1:26:59.788 21.809 19.823 211.750 1:10.595 45 12"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 10,
+          "fia_detail": "1:27:04.372 26.393 4.584 211.564 1:10.946 45 10"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 8,
+          "fia_detail": "1:27:07.378 29.399 3.006 211.443 1:10.947 42 8"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 6,
+          "fia_detail": "1:27:09.484 31.505 2.106 211.358 1:10.652 55 6"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 4,
+          "fia_detail": "1:27:23.638 45.659 14.154 210.787 1:10.606 67 4"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 2,
+          "fia_detail": "1:26:53.313 1 LAP 1 LAP 209.026 1:11.547 55 2"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 1,
+          "fia_detail": "1:26:57.009 1 LAP 3.696 208.878 1:11.587 56 1"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "1:27:08.294 1 LAP 11.285 208.427 1:11.866 59"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "1:27:16.463 1 LAP 8.169 208.102 1:11.634 55"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "1:27:17.230 1 LAP 0.767 208.071 1:11.466 54"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "1:27:40.656 1 LAP 23.426 207.145 1:12.207 54"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "1:27:43.626 1 LAP 2.970 207.028 1:11.795 49"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:27:03.911 2 LAPS 1 LAP 205.621 1:12.979 37"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:27:06.061 2 LAPS 2.150 205.536 1:13.137 43"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:26:42.812 3 LAPS 1 LAP 203.461 1:12.501 52"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 45,
+          "awarded_points": 0,
+          "fia_detail": "58:08.585 DNF 200.763 1:13.796 30"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:03.534 DNF 205.192 1:13.694 22"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 4,
+          "awarded_points": 0,
+          "fia_detail": "5:17.371 DNF 194.921 1:14.448 3"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 2,
+          "awarded_points": 0,
+          "fia_detail": "2:51.764 DNF 178.822"
+        }
+      ]
+    },
+    {
+      "event": "great_britain",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 25,
+          "fia_detail": "1:27:11.335 210.713 1:32.871 43 25"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 18,
+          "fia_detail": "1:27:11.762 0.427 0.427 210.696 1:32.489 36 18"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 15,
+          "fia_detail": "1:27:12.107 0.772 0.345 210.682 1:32.309 25 15"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 12,
+          "fia_detail": "1:27:12.484 1.149 0.377 210.667 1:32.625 45 12"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 10,
+          "fia_detail": "1:27:12.933 1.598 0.449 210.649 1:32.268 40 10"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 8,
+          "fia_detail": "1:27:13.358 2.023 0.425 210.632 1:33.648 45 8"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 6,
+          "fia_detail": "1:27:13.549 2.214 0.191 210.624 1:33.632 29 6"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 4,
+          "fia_detail": "1:27:13.748 2.413 0.199 210.616 1:33.650 30 4"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 2,
+          "fia_detail": "1:27:14.564 3.229 0.816 210.583 1:34.281 25 2"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 1,
+          "fia_detail": "1:27:14.780 3.445 0.216 210.574 1:34.179 44 1"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:15.349 4.014 0.569 210.551 1:32.917 42"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:16.580 5.245 1.231 210.502 1:34.455 31"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:16.847 5.512 0.267 210.491 1:34.792 43"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:18.738 7.403 1.891 210.415 1:35.520 44"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:19.340 8.005 0.602 210.391 1:31.777 37"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:27:19.497 8.162 0.157 210.385 1:35.893 31"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 51,
+          "awarded_points": 0,
+          "fia_detail": "1:27:15.726 1 LAP 0.377 206.486 1:32.734 51"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 51,
+          "awarded_points": 0,
+          "fia_detail": "1:27:16.315 1 LAP 0.589 206.462 1:35.827 50"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 51,
+          "awarded_points": 0,
+          "fia_detail": "1:27:18.085 1 LAP 1.770 206.393 1:37.232 41"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 20,
+          "classification": "20",
+          "status": "DNF",
+          "laps": 46,
+          "awarded_points": 0,
+          "fia_detail": "1:13:16.703 DNF 221.772 1:32.101 40"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 43,
+          "awarded_points": 0,
+          "fia_detail": "1:13:07.820 DNF 207.721 1:33.867 42"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 36,
+          "awarded_points": 0,
+          "fia_detail": "58:39.432 DNF 216.793 1:33.433 36"
+        }
+      ]
+    },
+    {
+      "event": "belgium",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 25,
+          "fia_detail": "1:24:42.479 218.199 1:49.098 41 25"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 18,
+          "fia_detail": "1:24:44.431 1.952 1.952 218.115 1:49.333 23 18"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 15,
+          "fia_detail": "1:24:54.065 11.586 9.634 217.703 1:49.618 23 15"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 12,
+          "fia_detail": "1:24:59.724 17.245 5.659 217.461 1:49.454 33 12"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 10,
+          "fia_detail": "1:25:01.467 18.988 1.743 217.387 1:49.562 23 10"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 8,
+          "fia_detail": "1:25:05.786 23.307 4.319 217.203 1:49.298 44 8"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 6,
+          "fia_detail": "1:25:06.493 24.014 0.707 217.173 1:48.890 44 6"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 4,
+          "fia_detail": "1:25:31.619 49.140 25.126 216.110 1:50.334 22 4"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 2,
+          "fia_detail": "1:25:32.885 50.406 1.266 216.056 1:50.536 23 2"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 1,
+          "fia_detail": "1:25:58.516 76.037 25.631 214.983 1:51.162 42 1"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:25:59.470 76.991 0.954 214.943 1:51.101 39"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:00.002 77.523 0.532 214.921 1:51.075 44"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:00.827 78.348 0.825 214.886 1:50.503 41"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:16.944 94.465 16.117 214.217 1:51.109 22"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:27.163 104.684 10.219 213.795 1:51.894 21"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:28.335 105.856 1.172 213.747 1:51.363 24"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 44,
+          "awarded_points": 0,
+          "fia_detail": "1:26:33.404 110.925 5.069 213.539 1:51.900 44"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 43,
+          "awarded_points": 0,
+          "fia_detail": "1:25:43.458 1 LAP 1 LAP 210.710 1:52.011 35"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 42,
+          "awarded_points": 0,
+          "fia_detail": "1:25:03.327 2 LAPS 1 LAP 207.426 1:52.948 34"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 25,
+          "awarded_points": 0,
+          "fia_detail": "52:00.581 DNF 201.860 1:53.980 21"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 13,
+          "awarded_points": 0,
+          "fia_detail": "28:34.226 DNF 190.959 1:53.520 10"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNF"
+        }
+      ]
+    },
+    {
+      "event": "hungary",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 25,
+          "fia_detail": "1:39:56.180 184.095 1:22.491 64 25"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 18,
+          "fia_detail": "1:40:11.260 15.080 15.080 183.633 1:23.433 66 18"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 15,
+          "fia_detail": "1:40:14.908 18.728 3.648 183.522 1:22.415 58 15"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 12,
+          "fia_detail": "1:40:20.020 23.840 5.112 183.366 1:22.000 58 12"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 10,
+          "fia_detail": "1:40:20.720 24.540 0.700 183.344 1:22.300 59 10"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 8,
+          "fia_detail": "1:40:51.668 55.488 30.948 182.407 1:23.218 45 8"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 6,
+          "fia_detail": "1:40:53.683 57.503 2.015 182.346 1:22.589 58 6"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 4,
+          "fia_detail": "1:40:24.213 1 LAP 1 LAP 180.620 1:23.900 64 4"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 2,
+          "fia_detail": "1:40:26.562 1 LAP 2.349 180.550 1:23.964 67 2"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 1,
+          "fia_detail": "1:40:47.230 1 LAP 20.668 179.933 1:25.931 47 1"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:40:48.208 1 LAP 0.978 179.903 1:24.783 33"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:40:49.609 1 LAP 1.401 179.862 1:22.871 57"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:41:00.008 1 LAP 10.399 179.553 1:24.718 57"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 69,
+          "awarded_points": 0,
+          "fia_detail": "1:41:02.232 1 LAP 2.224 179.487 1:23.679 57"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:40:00.056 2 LAPS 1 LAP 178.719 1:24.624 40"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:40:09.039 2 LAPS 8.983 178.451 1:25.889 62"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:40:48.909 2 LAPS 39.870 177.275 1:25.403 57"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:40:49.153 2 LAPS 0.244 177.268 1:24.864 56"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 68,
+          "awarded_points": 0,
+          "fia_detail": "1:40:53.378 2 LAPS 4.225 177.144 1:25.884 24"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 55,
+          "awarded_points": 0,
+          "fia_detail": "1:18:46.133 DNF 183.510 1:23.896 35"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 48,
+          "awarded_points": 0,
+          "fia_detail": "1:13:00.942 DNF 172.769 1:26.342 23"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 13,
+          "awarded_points": 0,
+          "fia_detail": "19:29.260 DNF 175.227 1:27.959 4"
+        }
+      ]
+    },
+    {
+      "event": "netherlands",
+      "session": "race",
+      "rows": [
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 25,
+          "fia_detail": "2:04:44.859 147.461 1:14.321 49 25"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 18,
+          "fia_detail": "2:04:56.395 11.536 11.536 147.234 1:14.571 59 18"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 15,
+          "fia_detail": "2:05:00.765 15.906 4.370 147.149 1:15.393 46 15"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 12,
+          "fia_detail": "2:05:01.614 16.755 0.849 147.132 1:14.566 61 12"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 10,
+          "fia_detail": "2:05:02.117 17.258 0.503 147.122 1:14.230 60 10"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 8,
+          "fia_detail": "2:05:17.191 32.332 15.074 146.827 1:14.303 61 8"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 72,
+          "awarded_points": 6,
+          "fia_detail": "2:06:04.774 79.915 47.583 145.904 1:15.435 61 6"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 4,
+          "fia_detail": "2:05:20.908 1 LAP 1 LAP 144.716 1:16.048 62 4"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 2,
+          "fia_detail": "2:05:33.252 1 LAP 12.344 144.479 1:16.946 59 2"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 1,
+          "fia_detail": "2:05:34.499 1 LAP 1.247 144.455 1:16.220 58 1"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 0,
+          "fia_detail": "2:05:50.539 1 LAP 11.358 144.148 1:16.653 60"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 0,
+          "fia_detail": "2:05:51.094 1 LAP 0.555 144.137 1:15.515 57"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "2:05:05.393 2 LAPS 1 LAP 142.972 1:15.578 48"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "2:05:43.441 2 LAPS 38.048 142.251 1:17.523 70"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 70,
+          "awarded_points": 0,
+          "fia_detail": "2:05:55.130 2 LAPS 11.689 142.031 1:17.328 69"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "DNF",
+          "laps": 66,
+          "awarded_points": 0,
+          "fia_detail": "2:00:09.329 DNF 140.337 1:17.147 51"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 61,
+          "awarded_points": 0,
+          "fia_detail": "1:54:18.678 DNF 136.334 1:17.822 60"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 52,
+          "awarded_points": 0,
+          "fia_detail": "1:40:05.935 DNF 132.715 1:17.588 48"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 45,
+          "awarded_points": 0,
+          "fia_detail": "1:31:12.197 DNF 126.047 1:17.883 37"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 2,
+          "awarded_points": 0,
+          "fia_detail": "4:11.491 DNF 121.130"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNF"
+        },
+        {
+          "driver": "Yuki Tsunoda",
+          "car": 22,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 71,
+          "awarded_points": 0,
+          "fia_detail": "1 LAP"
+        }
+      ]
+    },
+    {
+      "event": "china",
+      "session": "sprint",
+      "rows": [
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 8,
+          "fia_detail": "33:38.998 184.331 1:35.101 18 8"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 7,
+          "fia_detail": "33:39.672 0.674 0.674 184.269 1:34.753 18 7"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 6,
+          "fia_detail": "33:41.552 2.554 1.880 184.098 1:34.926 18 6"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 5,
+          "fia_detail": "33:43.431 4.433 1.879 183.927 1:35.708 19 5"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 4,
+          "fia_detail": "33:44.686 5.688 1.255 183.813 1:34.760 18 4"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 3,
+          "fia_detail": "33:45.807 6.809 1.121 183.711 1:35.635 19 3"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 2,
+          "fia_detail": "33:49.898 10.900 4.091 183.341 1:37.882 19 2"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 1,
+          "fia_detail": "33:50.269 11.271 0.371 183.307 1:37.374 18 1"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:50.617 11.619 0.348 183.276 1:35.774 19"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:52.885 13.887 2.268 183.072 1:37.363 18"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:53.778 14.780 0.893 182.991 1:38.349 17"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:54.751 15.753 0.973 182.904 1:37.913 18"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:54.856 15.858 0.105 182.894 1:37.800 18"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:55.391 16.393 0.535 182.846 1:37.278 18"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:55.428 16.430 0.037 182.843 1:36.912 18"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "33:59.012 20.014 3.584 182.521 1:38.158 19"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "34:00.597 21.599 1.585 182.380 1:38.487 19"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "34:00.969 21.971 0.372 182.346 1:38.532 18"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "34:07.239 28.241 6.270 181.788 1:38.862 18"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 12,
+          "awarded_points": 0,
+          "fia_detail": "20:05.858 DNF 194.715 1:38.027 5"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 12,
+          "awarded_points": 0,
+          "fia_detail": "20:58.952 DNF 186.503 1:39.262 9"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 11,
+          "awarded_points": 0,
+          "fia_detail": "18:55.284 DNF 189.534 1:38.475 6"
+        }
+      ]
+    },
+    {
+      "event": "miami",
+      "session": "sprint",
+      "rows": [
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 8,
+          "fia_detail": "29:15.045 210.599 1:31.885 10 8"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 7,
+          "fia_detail": "29:18.811 3.766 3.766 210.148 1:32.079 16 7"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 6,
+          "fia_detail": "29:21.296 6.251 2.485 209.852 1:31.964 11 6"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 5,
+          "fia_detail": "29:27.996 12.951 6.700 209.057 1:32.387 10 5"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 4,
+          "fia_detail": "29:28.684 13.639 0.688 208.975 1:32.201 19 4"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 3,
+          "fia_detail": "29:28.822 13.777 0.138 208.959 1:31.932 11 3"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 2,
+          "fia_detail": "29:36.710 21.665 7.888 208.031 1:32.448 6 2"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 1,
+          "fia_detail": "29:45.570 30.525 8.860 206.999 1:33.072 10 1"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "29:50.391 35.346 4.821 206.442 1:33.195 11"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "29:52.015 36.970 1.624 206.254 1:33.139 6"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:12.017 56.972 20.002 203.978 1:34.409 6"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:12.410 57.365 0.393 203.933 1:34.524 6"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:13.549 58.504 1.139 203.805 1:34.008 5"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:14.403 59.358 0.854 203.709 1:34.204 10"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:31.112 76.067 16.709 201.851 1:34.720 11"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:31.736 76.691 0.624 201.782 1:35.015 6"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:32.671 77.626 0.935 201.679 1:35.009 10"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:43.218 88.173 10.547 200.525 1:33.473 18"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 19,
+          "awarded_points": 0,
+          "fia_detail": "30:44.642 89.597 1.424 200.370 1:35.856 10"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNS",
+          "laps": 0,
+          "awarded_points": 0,
+          "fia_detail": "DNS"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "DSQ",
+          "status": "DSQ",
+          "laps": null,
+          "awarded_points": 0,
+          "fia_detail": "Disqualified - technical nonconformity, Stewards doc 54"
+        }
+      ]
+    },
+    {
+      "event": "canada",
+      "session": "sprint",
+      "rows": [
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 8,
+          "fia_detail": "28:50.951 208.608 1:14.702 16 8"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 7,
+          "fia_detail": "28:52.223 1.272 1.272 208.455 1:14.596 11 7"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 6,
+          "fia_detail": "28:52.794 1.843 0.571 208.386 1:14.380 11 6"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 5,
+          "fia_detail": "29:00.748 9.797 7.954 207.434 1:14.793 17 5"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 4,
+          "fia_detail": "29:00.880 9.929 0.132 207.418 1:14.741 11 4"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 3,
+          "fia_detail": "29:01.496 10.545 0.616 207.345 1:14.695 12 3"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 2,
+          "fia_detail": "29:06.886 15.935 5.390 206.705 1:14.974 11 2"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 1,
+          "fia_detail": "29:20.661 29.710 13.775 205.088 1:15.653 14 1"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:22.572 31.621 1.911 204.865 1:15.478 12"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:27.744 36.793 5.172 204.266 1:15.943 17"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:52.295 61.344 24.551 201.468 1:16.257 6"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:52.765 61.814 0.470 201.415 1:15.980 9"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "29:55.160 64.209 2.395 201.146 1:16.849 9"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "30:01.353 70.402 6.193 200.455 1:16.641 9"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "30:03.109 72.158 1.756 200.260 1:16.297 20"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 22,
+          "awarded_points": 0,
+          "fia_detail": "29:04.078 1 LAP 1 LAP 198.036 1:17.120 17"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 22,
+          "awarded_points": 0,
+          "fia_detail": "29:08.812 1 LAP 4.734 197.500 1:17.212 17"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 22,
+          "awarded_points": 0,
+          "fia_detail": "29:14.797 1 LAP 5.985 196.826 1:16.210 22"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 22,
+          "awarded_points": 0,
+          "fia_detail": "29:44.444 1 LAP 29.647 193.556 1:15.717 18"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 20,
+          "classification": "20",
+          "status": "CLASSIFIED",
+          "laps": 22,
+          "awarded_points": 0,
+          "fia_detail": "29:59.428 1 LAP 14.984 191.944 1:16.150 12"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 21,
+          "classification": "21",
+          "status": "CLASSIFIED",
+          "laps": 20,
+          "awarded_points": 0,
+          "fia_detail": "29:09.086 3 LAPS 2 LAPS 179.517 1:14.941 12"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 15,
+          "awarded_points": 0,
+          "fia_detail": "20:06.314 DNF 195.217 1:17.543 8"
+        }
+      ]
+    },
+    {
+      "event": "great_britain",
+      "session": "sprint",
+      "rows": [
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 8,
+          "fia_detail": "26:12.129 229.018 1:31.607 17 8"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 7,
+          "fia_detail": "26:14.874 2.745 2.745 228.619 1:31.908 5 7"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 6,
+          "fia_detail": "26:21.912 9.783 7.038 227.602 1:32.190 17 6"
+        },
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 5,
+          "fia_detail": "26:22.768 10.639 0.856 227.479 1:31.977 17 5"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 4,
+          "fia_detail": "26:24.749 12.620 1.981 227.194 1:32.158 17 4"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 3,
+          "fia_detail": "26:28.679 16.550 3.930 226.632 1:32.393 7 3"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 2,
+          "fia_detail": "26:29.680 17.551 1.001 226.490 1:32.223 17 2"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 1,
+          "fia_detail": "26:42.362 30.233 12.682 224.697 1:33.051 16 1"
+        },
+        {
+          "driver": "Isack Hadjar",
+          "car": 6,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:43.082 30.953 0.720 224.596 1:33.000 9"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:47.239 35.110 4.157 224.015 1:33.572 8"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:52.402 40.273 5.163 223.298 1:33.880 17"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:53.155 41.026 0.753 223.194 1:33.520 17"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:54.628 42.499 1.473 222.990 1:33.506 17"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:57.913 45.784 3.285 222.537 1:33.574 17"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "26:58.809 46.680 0.896 222.414 1:33.497 17"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "27:01.939 49.810 3.130 221.985 1:34.399 9"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "27:02.508 50.379 0.569 221.907 1:34.186 17"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "27:02.886 50.757 0.378 221.855 1:33.989 17"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "27:27.246 75.117 24.360 218.575 1:35.371 17"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 20,
+          "classification": "20",
+          "status": "CLASSIFIED",
+          "laps": 17,
+          "awarded_points": 0,
+          "fia_detail": "27:44.001 91.872 16.755 216.374 1:36.301 8"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 21,
+          "classification": "21",
+          "status": "CLASSIFIED",
+          "laps": 16,
+          "awarded_points": 0,
+          "fia_detail": "26:34.406 1 LAP 1 LAP 212.517 1:35.028 16"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 22,
+          "classification": "22",
+          "status": "CLASSIFIED",
+          "laps": 16,
+          "awarded_points": 0,
+          "fia_detail": "26:45.695 1 LAP 11.289 211.023 1:34.528 16"
+        }
+      ]
+    },
+    {
+      "event": "netherlands",
+      "session": "sprint",
+      "rows": [
+        {
+          "driver": "George Russell",
+          "car": 63,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 1,
+          "classification": "1",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 8,
+          "fia_detail": "30:25.318 201.485 1:14.936 5 8"
+        },
+        {
+          "driver": "Charles Leclerc",
+          "car": 16,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 2,
+          "classification": "2",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 7,
+          "fia_detail": "30:26.678 1.360 1.360 201.335 1:15.049 5 7"
+        },
+        {
+          "driver": "Lando Norris",
+          "car": 1,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 3,
+          "classification": "3",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 6,
+          "fia_detail": "30:30.514 5.196 3.836 200.914 1:14.881 5 6"
+        },
+        {
+          "driver": "Kimi Antonelli",
+          "car": 12,
+          "constructor": "Mercedes-AMG PETRONAS F1 Team",
+          "position": 4,
+          "classification": "4",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 5,
+          "fia_detail": "30:30.899 5.581 0.385 200.871 1:14.990 4 5"
+        },
+        {
+          "driver": "Oscar Piastri",
+          "car": 81,
+          "constructor": "McLaren Mastercard F1 Team",
+          "position": 5,
+          "classification": "5",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 4,
+          "fia_detail": "30:35.503 10.185 4.604 200.367 1:15.324 3 4"
+        },
+        {
+          "driver": "Max Verstappen",
+          "car": 3,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 6,
+          "classification": "6",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 3,
+          "fia_detail": "30:35.847 10.529 0.344 200.330 1:15.443 8 3"
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "car": 44,
+          "constructor": "Scuderia Ferrari HP",
+          "position": 7,
+          "classification": "7",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 2,
+          "fia_detail": "30:37.506 12.188 1.659 200.149 1:15.557 5 2"
+        },
+        {
+          "driver": "Pierre Gasly",
+          "car": 10,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 8,
+          "classification": "8",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 1,
+          "fia_detail": "31:07.828 42.510 30.322 196.900 1:16.895 3 1"
+        },
+        {
+          "driver": "Gabriel Bortoleto",
+          "car": 5,
+          "constructor": "Audi Revolut F1 Team",
+          "position": 9,
+          "classification": "9",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:09.755 44.437 1.927 196.697 1:16.922 5"
+        },
+        {
+          "driver": "Arvid Lindblad",
+          "car": 41,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 10,
+          "classification": "10",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:10.289 44.971 0.534 196.641 1:16.886 5"
+        },
+        {
+          "driver": "Liam Lawson",
+          "car": 30,
+          "constructor": "Oracle Red Bull Racing",
+          "position": 11,
+          "classification": "11",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:12.789 47.471 2.500 196.378 1:16.909 6"
+        },
+        {
+          "driver": "Franco Colapinto",
+          "car": 43,
+          "constructor": "BWT Alpine F1 Team",
+          "position": 12,
+          "classification": "12",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:19.784 54.466 6.995 195.648 1:16.718 4"
+        },
+        {
+          "driver": "Esteban Ocon",
+          "car": 31,
+          "constructor": "TGR Haas F1 Team",
+          "position": 14,
+          "classification": "14",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:31.416 66.098 9.615 194.444 1:17.138 4"
+        },
+        {
+          "driver": "Oliver Bearman",
+          "car": 87,
+          "constructor": "TGR Haas F1 Team",
+          "position": 15,
+          "classification": "15",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:31.906 66.588 0.490 194.394 1:17.137 5"
+        },
+        {
+          "driver": "Alexander Albon",
+          "car": 23,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 16,
+          "classification": "16",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:39.950 74.632 8.044 193.571 1:17.673 7"
+        },
+        {
+          "driver": "Lance Stroll",
+          "car": 18,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 17,
+          "classification": "17",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:39.968 74.650 0.018 193.569 1:17.713 8"
+        },
+        {
+          "driver": "Fernando Alonso",
+          "car": 14,
+          "constructor": "Aston Martin Aramco F1 Team",
+          "position": 18,
+          "classification": "18",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "31:40.602 75.284 0.634 193.505 1:17.449 4"
+        },
+        {
+          "driver": "Valtteri Bottas",
+          "car": 77,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 19,
+          "classification": "19",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "30:29.227 1 LAP 1 LAP 192.673 1:17.710 5"
+        },
+        {
+          "driver": "Carlos Sainz",
+          "car": 55,
+          "constructor": "Atlassian Williams F1 Team",
+          "position": 20,
+          "classification": "20",
+          "status": "CLASSIFIED",
+          "laps": 23,
+          "awarded_points": 0,
+          "fia_detail": "31:03.041 1 LAP 33.814 189.176 1:17.431 5"
+        },
+        {
+          "driver": "Sergio Perez",
+          "car": 11,
+          "constructor": "Cadillac Formula 1 Team",
+          "position": 21,
+          "classification": "21",
+          "status": "CLASSIFIED",
+          "laps": 21,
+          "awarded_points": 0,
+          "fia_detail": "31:27.795 3 LAPS 2 LAPS 170.452 1:17.462 3"
+        },
+        {
+          "driver": "Nico Hulkenberg",
+          "car": 27,
+          "constructor": "Audi Revolut F1 Team",
+          "position": null,
+          "classification": "NC",
+          "status": "DNF",
+          "laps": 7,
+          "awarded_points": 0,
+          "fia_detail": "30:43.640 17 LAPS 58.105 1:17.706 7"
+        },
+        {
+          "driver": "Yuki Tsunoda",
+          "car": 22,
+          "constructor": "Visa Cash App Racing Bulls F1 Team",
+          "position": 13,
+          "classification": "13",
+          "status": "CLASSIFIED",
+          "laps": 24,
+          "awarded_points": 0,
+          "fia_detail": "56.483"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "driver_standings": {
+    "George Russell": 183,
+    "Kimi Antonelli": 242,
+    "Charles Leclerc": 155,
+    "Lewis Hamilton": 183,
+    "Lando Norris": 159,
+    "Max Verstappen": 112,
+    "Oliver Bearman": 18,
+    "Arvid Lindblad": 23,
+    "Gabriel Bortoleto": 10,
+    "Pierre Gasly": 44,
+    "Esteban Ocon": 3,
+    "Alexander Albon": 5,
+    "Liam Lawson": 49,
+    "Franco Colapinto": 19,
+    "Carlos Sainz": 6,
+    "Sergio Perez": 0,
+    "Lance Stroll": 0,
+    "Fernando Alonso": 3,
+    "Valtteri Bottas": 0,
+    "Isack Hadjar": 68,
+    "Oscar Piastri": 104,
+    "Nico Hulkenberg": 6,
+    "Yuki Tsunoda": 0
+  },
+  "constructor_standings": {
+    "Mercedes-AMG PETRONAS F1 Team": 425,
+    "Scuderia Ferrari HP": 338,
+    "McLaren Mastercard F1 Team": 263,
+    "Oracle Red Bull Racing": 186,
+    "TGR Haas F1 Team": 21,
+    "Visa Cash App Racing Bulls F1 Team": 66,
+    "Audi Revolut F1 Team": 16,
+    "BWT Alpine F1 Team": 63,
+    "Atlassian Williams F1 Team": 11,
+    "Cadillac Formula 1 Team": 0,
+    "Aston Martin Aramco F1 Team": 3
+  },
+  "driver_race_position_histograms": {
+    "George Russell": {
+      "1": 2,
+      "2": 3,
+      "4": 2,
+      "12": 1,
+      "7": 1,
+      "3": 1
+    },
+    "Kimi Antonelli": {
+      "2": 2,
+      "1": 6,
+      "16": 1,
+      "3": 2,
+      "15": 1
+    },
+    "Charles Leclerc": {
+      "3": 2,
+      "4": 3,
+      "8": 2,
+      "15": 1,
+      "1": 1,
+      "2": 1,
+      "5": 1
+    },
+    "Lewis Hamilton": {
+      "4": 3,
+      "3": 2,
+      "6": 2,
+      "2": 2,
+      "1": 1,
+      "5": 2
+    },
+    "Lando Norris": {
+      "5": 2,
+      "2": 1,
+      "3": 1,
+      "7": 2,
+      "4": 1,
+      "1": 2
+    },
+    "Max Verstappen": {
+      "6": 1,
+      "8": 1,
+      "5": 1,
+      "3": 2,
+      "4": 1,
+      "2": 2,
+      "20": 1
+    },
+    "Oliver Bearman": {
+      "7": 1,
+      "5": 1,
+      "11": 1,
+      "10": 1,
+      "17": 1,
+      "14": 2,
+      "12": 1,
+      "19": 1
+    },
+    "Arvid Lindblad": {
+      "8": 1,
+      "12": 2,
+      "14": 2,
+      "7": 2,
+      "9": 2,
+      "10": 2
+    },
+    "Gabriel Bortoleto": {
+      "9": 1,
+      "13": 3,
+      "12": 1,
+      "11": 4,
+      "8": 2
+    },
+    "Pierre Gasly": {
+      "10": 3,
+      "6": 1,
+      "7": 2,
+      "8": 1,
+      "3": 1,
+      "13": 1,
+      "11": 1,
+      "12": 1
+    },
+    "Esteban Ocon": {
+      "11": 1,
+      "14": 2,
+      "10": 1,
+      "13": 3,
+      "9": 1,
+      "16": 2,
+      "17": 1
+    },
+    "Alexander Albon": {
+      "12": 1,
+      "20": 1,
+      "10": 1,
+      "8": 1,
+      "17": 3,
+      "15": 1
+    },
+    "Liam Lawson": {
+      "13": 1,
+      "7": 3,
+      "9": 2,
+      "6": 2,
+      "8": 2,
+      "12": 1
+    },
+    "Franco Colapinto": {
+      "14": 3,
+      "10": 3,
+      "16": 1,
+      "7": 1,
+      "6": 1,
+      "15": 2,
+      "9": 1
+    },
+    "Carlos Sainz": {
+      "15": 2,
+      "9": 3,
+      "16": 3,
+      "12": 1,
+      "17": 1,
+      "18": 1
+    },
+    "Sergio Perez": {
+      "16": 2,
+      "15": 3,
+      "17": 1,
+      "14": 2
+    },
+    "Isack Hadjar": {
+      "8": 1,
+      "12": 1,
+      "5": 2,
+      "4": 1,
+      "6": 4
+    },
+    "Nico Hulkenberg": {
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "9": 1,
+      "8": 1
+    },
+    "Valtteri Bottas": {
+      "13": 1,
+      "19": 1,
+      "18": 2,
+      "16": 2
+    },
+    "Oscar Piastri": {
+      "2": 1,
+      "3": 1,
+      "11": 2,
+      "5": 3,
+      "4": 1,
+      "6": 1
+    },
+    "Fernando Alonso": {
+      "18": 3,
+      "15": 1,
+      "10": 1,
+      "19": 1,
+      "14": 1,
+      "9": 1
+    },
+    "Lance Stroll": {
+      "17": 1,
+      "15": 1,
+      "19": 1,
+      "13": 1
+    },
+    "Yuki Tsunoda": {
+      "11": 1
+    }
+  },
+  "constructor_race_position_histograms": {
+    "Mercedes-AMG PETRONAS F1 Team": {
+      "1": 8,
+      "2": 5,
+      "4": 2,
+      "12": 1,
+      "16": 1,
+      "3": 3,
+      "15": 1,
+      "7": 1
+    },
+    "Scuderia Ferrari HP": {
+      "3": 4,
+      "4": 6,
+      "6": 2,
+      "8": 2,
+      "2": 3,
+      "1": 2,
+      "15": 1,
+      "5": 3
+    },
+    "McLaren Mastercard F1 Team": {
+      "5": 5,
+      "2": 2,
+      "3": 2,
+      "11": 2,
+      "4": 2,
+      "7": 2,
+      "1": 2,
+      "6": 1
+    },
+    "Oracle Red Bull Racing": {
+      "6": 5,
+      "8": 2,
+      "12": 1,
+      "5": 3,
+      "3": 2,
+      "4": 2,
+      "2": 2,
+      "20": 1,
+      "7": 1
+    },
+    "TGR Haas F1 Team": {
+      "7": 1,
+      "11": 2,
+      "5": 1,
+      "14": 4,
+      "10": 2,
+      "13": 3,
+      "9": 1,
+      "17": 2,
+      "16": 2,
+      "12": 1,
+      "19": 1
+    },
+    "Visa Cash App Racing Bulls F1 Team": {
+      "8": 3,
+      "13": 1,
+      "7": 4,
+      "12": 3,
+      "9": 4,
+      "14": 2,
+      "6": 2,
+      "10": 2,
+      "11": 1
+    },
+    "Audi Revolut F1 Team": {
+      "9": 2,
+      "11": 6,
+      "13": 5,
+      "12": 3,
+      "8": 3
+    },
+    "BWT Alpine F1 Team": {
+      "10": 6,
+      "14": 3,
+      "6": 2,
+      "7": 3,
+      "16": 1,
+      "8": 1,
+      "3": 1,
+      "13": 1,
+      "15": 2,
+      "9": 1,
+      "11": 1,
+      "12": 1
+    },
+    "Atlassian Williams F1 Team": {
+      "12": 2,
+      "15": 3,
+      "9": 3,
+      "20": 1,
+      "10": 1,
+      "8": 1,
+      "16": 3,
+      "17": 4,
+      "18": 1
+    },
+    "Cadillac Formula 1 Team": {
+      "16": 4,
+      "13": 1,
+      "15": 3,
+      "17": 1,
+      "19": 1,
+      "18": 2,
+      "14": 2
+    },
+    "Aston Martin Aramco F1 Team": {
+      "18": 3,
+      "15": 2,
+      "17": 1,
+      "10": 1,
+      "19": 2,
+      "13": 1,
+      "14": 1,
+      "9": 1
+    }
+  },
+  "future_regular_lineup": {
+    "Mercedes-AMG PETRONAS F1 Team": [
+      "Kimi Antonelli",
+      "George Russell"
+    ],
+    "Scuderia Ferrari HP": [
+      "Lewis Hamilton",
+      "Charles Leclerc"
+    ],
+    "McLaren Mastercard F1 Team": [
+      "Lando Norris",
+      "Oscar Piastri"
+    ],
+    "Oracle Red Bull Racing": [
+      "Max Verstappen",
+      "Isack Hadjar"
+    ],
+    "Visa Cash App Racing Bulls F1 Team": [
+      "Liam Lawson",
+      "Arvid Lindblad"
+    ],
+    "BWT Alpine F1 Team": [
+      "Pierre Gasly",
+      "Franco Colapinto"
+    ],
+    "TGR Haas F1 Team": [
+      "Oliver Bearman",
+      "Esteban Ocon"
+    ],
+    "Audi Revolut F1 Team": [
+      "Gabriel Bortoleto",
+      "Nico Hulkenberg"
+    ],
+    "Atlassian Williams F1 Team": [
+      "Carlos Sainz",
+      "Alexander Albon"
+    ],
+    "Aston Martin Aramco F1 Team": [
+      "Fernando Alonso",
+      "Lance Stroll"
+    ],
+    "Cadillac Formula 1 Team": [
+      "Valtteri Bottas",
+      "Sergio Perez"
+    ]
+  },
+  "remaining": [
+    {
+      "event": "italy",
+      "race_date": "2026-09-06",
+      "sprint": false
+    },
+    {
+      "event": "spain_madrid",
+      "race_date": "2026-09-13",
+      "sprint": false
+    },
+    {
+      "event": "azerbaijan",
+      "race_date": "2026-09-26",
+      "sprint": false
+    },
+    {
+      "event": "bahrain_at_sepang_malaysia",
+      "race_date": "2026-10-04",
+      "sprint": false
+    },
+    {
+      "event": "singapore",
+      "race_date": "2026-10-11",
+      "sprint": true
+    },
+    {
+      "event": "united_states",
+      "race_date": "2026-10-25",
+      "sprint": false
+    },
+    {
+      "event": "mexico_city",
+      "race_date": "2026-11-01",
+      "sprint": false
+    },
+    {
+      "event": "sao_paulo",
+      "race_date": "2026-11-08",
+      "sprint": false
+    },
+    {
+      "event": "las_vegas",
+      "race_date": "2026-11-21",
+      "sprint": false
+    },
+    {
+      "event": "qatar",
+      "race_date": "2026-11-29",
+      "sprint": false
+    },
+    {
+      "event": "abu_dhabi",
+      "race_date": "2026-12-06",
+      "sprint": false
+    }
+  ]
+}
