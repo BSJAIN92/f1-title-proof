@@ -22,6 +22,9 @@ export interface DashboardEvent {
 export interface PopularComparison { readonly first: string; readonly second: string; readonly count: number }
 export interface CountryActivity { readonly code: string; readonly visitors: number }
 export interface DailyActivity { readonly date: string; readonly visitors: number; readonly comparisons: number; readonly averageComparisonsPerUser: number }
+export interface DashboardDailyVisitor { readonly date: string; readonly visitorHash: string; readonly visited: boolean; readonly countryCode?: string; readonly comparisons: number }
+export interface DashboardDailyMatchup { readonly date: string; readonly kind: "driver" | "constructor"; readonly first: string; readonly second: string; readonly count: number }
+export interface DashboardDailyTotal { readonly date: string; readonly completed: number; readonly failed: number; readonly returned: number }
 
 export interface DashboardSnapshot {
   readonly range: DashboardRange;
@@ -58,7 +61,8 @@ export function parseDashboardRange(values: { period?: string; from?: string; to
   }
   const period = values.period === "day" || values.period === "month" ? values.period : "week";
   const days = period === "day" ? 1 : period === "month" ? 30 : 7;
-  return { period, start: now - days * DAY, end: now };
+  const today = Math.floor(now / DAY) * DAY;
+  return { period, start: today - (days - 1) * DAY, end: now };
 }
 
 const rounded = (value: number) => Math.round(value * 100) / 100;
@@ -108,5 +112,33 @@ export function aggregateDashboardEvents(events: readonly DashboardEvent[], rang
     popularConstructorComparisons: rankMatchups(completed, "constructor"),
     daily: [...daily].map(([date, item]) => ({ date, visitors: item.visitors.size, comparisons: item.comparisons, averageComparisonsPerUser: item.visitors.size ? rounded(item.comparisons / item.visitors.size) : 0 })),
     countryTrackingStartedAt: COUNTRY_TRACKING_STARTED_AT,
+  };
+}
+
+export function aggregateDashboardDailyRecords(records: { visitors: readonly DashboardDailyVisitor[]; matchups: readonly DashboardDailyMatchup[]; totals: readonly DashboardDailyTotal[] }, range: DashboardRange): DashboardSnapshot {
+  const visitors = new Set(records.visitors.filter((row) => row.visited).map((row) => row.visitorHash));
+  const comparingVisitors = new Set(records.visitors.filter((row) => row.comparisons > 0).map((row) => row.visitorHash));
+  const countryVisitors = new Map<string, Set<string>>();
+  for (const row of records.visitors) if (row.visited && row.countryCode) { const set = countryVisitors.get(row.countryCode) ?? new Set<string>(); set.add(row.visitorHash); countryVisitors.set(row.countryCode, set); }
+  const matchupMaps = { driver: new Map<string, PopularComparison>(), constructor: new Map<string, PopularComparison>() };
+  for (const row of records.matchups) { const map = matchupMaps[row.kind]; const key = `${row.first}\u0000${row.second}`; map.set(key, { first: row.first, second: row.second, count: (map.get(key)?.count ?? 0) + row.count }); }
+  const ranked = (map: Map<string, PopularComparison>) => [...map.values()].sort((a, b) => b.count - a.count || a.first.localeCompare(b.first) || a.second.localeCompare(b.second)).slice(0, 10);
+  const totalsByDate = new Map(records.totals.map((row) => [row.date, row]));
+  const visitorsByDate = new Map<string, number>();
+  for (const row of records.visitors) if (row.visited) visitorsByDate.set(row.date, (visitorsByDate.get(row.date) ?? 0) + 1);
+  const totalComparisons = records.totals.reduce((sum, row) => sum + row.completed, 0);
+  const failures = records.totals.reduce((sum, row) => sum + row.failed, 0);
+  const daily: DailyActivity[] = [];
+  const firstDay = Math.floor(range.start / DAY) * DAY;
+  for (let cursor = firstDay; cursor < range.end; cursor += DAY) {
+    const date = dateKey(cursor); const visitorCount = visitorsByDate.get(date) ?? 0; const comparisons = totalsByDate.get(date)?.completed ?? 0;
+    daily.push({ date, visitors: visitorCount, comparisons, averageComparisonsPerUser: visitorCount ? rounded(comparisons / visitorCount) : 0 });
+  }
+  return {
+    range, uniqueVisitors: visitors.size, uniqueCountries: countryVisitors.size, totalComparisons, comparingVisitors: comparingVisitors.size,
+    averageComparisonsPerUser: visitors.size ? rounded(totalComparisons / visitors.size) : 0,
+    comparisonCompletionRate: totalComparisons + failures ? rounded(totalComparisons / (totalComparisons + failures) * 100) : 0,
+    countries: [...countryVisitors].map(([code, set]) => ({ code, visitors: set.size })).sort((a, b) => b.visitors - a.visitors || a.code.localeCompare(b.code)),
+    popularDriverComparisons: ranked(matchupMaps.driver), popularConstructorComparisons: ranked(matchupMaps.constructor), daily, countryTrackingStartedAt: COUNTRY_TRACKING_STARTED_AT,
   };
 }

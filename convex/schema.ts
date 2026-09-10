@@ -26,4 +26,17 @@ export default defineSchema({
     constructorId: v.optional(v.string()), rivalId: v.optional(v.string()),
     dataVersion: v.optional(v.string()), outcome: v.optional(v.string()), countryCode: v.optional(v.string()), occurredAt: v.number(),
   }).index("by_visitor_occurred_at", ["visitorHash", "occurredAt"]).index("by_event_occurred_at", ["eventType", "occurredAt"]),
+  requestLimitBuckets: defineTable({
+    key: v.string(), windowStart: v.number(), count: v.number(), expiresAt: v.number(),
+  }).index("by_key", ["key"]).index("by_expiry", ["expiresAt"]),
+  dailyVisitorActivity: defineTable({
+    date: v.string(), visitorHash: v.string(), visited: v.boolean(), countryCode: v.optional(v.string()), comparisons: v.number(),
+  }).index("by_date", ["date"]).index("by_date_visitor", ["date", "visitorHash"]),
+  dailyMatchupActivity: defineTable({
+    date: v.string(), kind: v.union(v.literal("driver"), v.literal("constructor")), first: v.string(), second: v.string(), count: v.number(),
+  }).index("by_date", ["date"]).index("by_date_matchup", ["date", "kind", "first", "second"]),
+  dailyActivityTotals: defineTable({
+    date: v.string(), completed: v.number(), failed: v.number(), returned: v.number(),
+  }).index("by_date", ["date"]),
+  maintenanceState: defineTable({ key: v.string(), completedAt: v.number() }).index("by_key", ["key"]),
 });

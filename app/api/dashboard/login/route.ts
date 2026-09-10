@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 import { createDashboardSession, DASHBOARD_COOKIE, dashboardCookieOptions, verifyDashboardPassword } from "../../../../src/server/dashboard-auth";
+import { checkRateLimit, rateLimitedResponse } from "../../../../src/server/rate-limit";
 
 export const runtime = "nodejs";
 export async function POST(request: Request) {
+  const limit = await checkRateLimit(request, "login");
+  if (!limit.allowed) return rateLimitedResponse(limit.retryAfterSeconds);
   let body: unknown;
   try { body = await request.json(); } catch { return NextResponse.json({ reason: "The login request is invalid." }, { status: 400 }); }
   const password = typeof body === "object" && body !== null && "password" in body && typeof body.password === "string" ? body.password : "";

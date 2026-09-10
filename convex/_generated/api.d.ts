@@ -9,11 +9,13 @@
  */
 
 import type * as dashboard from "../dashboard.js";
+import type * as activityAggregates from "../activityAggregates.js";
 import type * as datasets from "../datasets.js";
 import type * as history from "../history.js";
 import type * as seed from "../seed.js";
 import type * as seedNode from "../seedNode.js";
 import type * as serverAccess from "../serverAccess.js";
+import type * as security from "../security.js";
 
 import type {
   ApiFromModules,
@@ -22,12 +24,14 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  activityAggregates: typeof activityAggregates;
   dashboard: typeof dashboard;
   datasets: typeof datasets;
   history: typeof history;
   seed: typeof seed;
   seedNode: typeof seedNode;
   serverAccess: typeof serverAccess;
+  security: typeof security;
 }>;
 
 /**

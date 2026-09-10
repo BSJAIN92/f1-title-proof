@@ -12,6 +12,6 @@ describe("dashboard authentication", () => {
     const token = createDashboardSession("a-secure-session-secret-that-is-long", now);
     expect(isDashboardSessionValid(token, "a-secure-session-secret-that-is-long", now + 1_000)).toBe(true);
     expect(isDashboardSessionValid(`${token}x`, "a-secure-session-secret-that-is-long", now + 1_000)).toBe(false);
-    expect(isDashboardSessionValid(token, "a-secure-session-secret-that-is-long", now + 8 * 86_400_000)).toBe(false);
+    expect(isDashboardSessionValid(token, "a-secure-session-secret-that-is-long", now + 25 * 60 * 60_000)).toBe(false);
   });
 });

@@ -2,7 +2,7 @@ import "server-only";
 import { createHmac, createHash, timingSafeEqual } from "node:crypto";
 
 export const DASHBOARD_COOKIE = "titleproof_dashboard";
-export const DASHBOARD_SESSION_SECONDS = 7 * 24 * 60 * 60;
+export const DASHBOARD_SESSION_SECONDS = 24 * 60 * 60;
 
 function digest(value: string) { return createHash("sha256").update(value, "utf8").digest(); }
 function signature(payload: string, secret: string) { return createHmac("sha256", secret).update(payload, "utf8").digest("base64url"); }

@@ -1,6 +1,7 @@
 import { mutation, query, type MutationCtx, type QueryCtx } from "./_generated/server";
 import { v } from "convex/values";
 import { requireServerCredential } from "./serverAccess";
+import { updateDailyActivity } from "./activityAggregates";
 
 const kindValidator = v.union(v.literal("driver"), v.literal("constructor"));
 const statusValidator = v.union(v.literal("COMPLETE"), v.literal("ELIMINATED"));
@@ -65,7 +66,11 @@ export const recordVisit = mutation({
     if (!Number.isFinite(args.occurredAt)) throw new Error("The visit time is invalid.");
     if (args.countryCode && !/^[A-Z]{2}$/.test(args.countryCode)) throw new Error("The country code is invalid.");
     await upsertVisitor(ctx, args.visitorHash, args.occurredAt);
-    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "visit", countryCode: args.countryCode, occurredAt: args.occurredAt });
+    const recent = await ctx.db.query("visitorEvents").withIndex("by_visitor_occurred_at", (q) => q.eq("visitorHash", args.visitorHash).gte("occurredAt", args.occurredAt - 30 * 60_000)).order("desc").take(20);
+    if (recent.some((event) => event.eventType === "visit")) return null;
+    const event = { visitorHash: args.visitorHash, eventType: "visit" as const, countryCode: args.countryCode, occurredAt: args.occurredAt };
+    await updateDailyActivity(ctx, event);
+    return ctx.db.insert("visitorEvents", event);
   },
 });
 
@@ -77,7 +82,9 @@ export const recordComparisonReturn = mutation({
     if (!selectedId || !args.rivalId || selectedId === args.rivalId || !args.dataVersion || !Number.isFinite(args.occurredAt)) throw new Error("The comparison return event is invalid.");
     await upsertVisitor(ctx, args.visitorHash, args.occurredAt);
     const selectedField = args.kind === "driver" ? { driverId: selectedId } : { constructorId: selectedId };
-    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "comparison_returned", kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, occurredAt: args.occurredAt });
+    const event = { visitorHash: args.visitorHash, eventType: "comparison_returned" as const, kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, occurredAt: args.occurredAt };
+    await updateDailyActivity(ctx, event);
+    return ctx.db.insert("visitorEvents", event);
   },
 });
 
@@ -93,8 +100,10 @@ export const recordComparison = mutation({
     const selectedField = args.kind === "driver" ? { driverId: selectedId } : { constructorId: selectedId };
     const historyId = await ctx.db.insert("comparisonHistory", { visitorHash: args.visitorHash, kind: args.kind, ...selectedField, rivalId: args.rivalId,
       dataVersion: args.dataVersion, ruleVersion: args.ruleVersion, resultStatus: args.resultStatus, reason: args.reason, requestedAt: args.requestedAt });
-    await ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: args.resultStatus === "COMPLETE" ? "comparison_completed" : "comparison_failed",
-      kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, outcome: args.resultStatus, occurredAt: args.requestedAt });
+    const event = { visitorHash: args.visitorHash, eventType: args.resultStatus === "COMPLETE" ? "comparison_completed" as const : "comparison_failed" as const,
+      kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, outcome: args.resultStatus, occurredAt: args.requestedAt };
+    await updateDailyActivity(ctx, event);
+    await ctx.db.insert("visitorEvents", event);
     return historyId;
   },
 });

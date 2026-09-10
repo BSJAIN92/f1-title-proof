@@ -22,7 +22,7 @@ describe("anonymous visitor identity", () => {
     const visitor = getOrCreateAnonymousVisitor(jar.store, false);
     const write = jar.written();
     expect(write?.name).toBe("titleproof_anon");
-    expect(write?.options).toMatchObject({ httpOnly: true, sameSite: "lax", path: "/", maxAge: 31_536_000, secure: true });
+    expect(write?.options).toMatchObject({ httpOnly: true, sameSite: "lax", path: "/", maxAge: 7_776_000, secure: true });
     expect(isValidVisitorId(write?.value)).toBe(true);
     expect(visitor.hash).toMatch(/^[a-f0-9]{64}$/);
     expect(visitor.hash).not.toContain(write?.value ?? "missing");

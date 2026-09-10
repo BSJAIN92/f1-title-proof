@@ -2,10 +2,13 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { getOrCreateAnonymousVisitor } from "../../../src/server/anonymous-visitor";
 import { loadAnonymousState, recordAnonymousVisit } from "../../../src/server/convex-store";
+import { checkRateLimit, rateLimitedResponse } from "../../../src/server/rate-limit";
 
 export const runtime = "nodejs";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const limit = await checkRateLimit(request, "state");
+  if (!limit.allowed) return rateLimitedResponse(limit.retryAfterSeconds);
   const cookieStore = await cookies();
   const visitor = getOrCreateAnonymousVisitor({ get: (name) => cookieStore.get(name), set: (name, value, options) => cookieStore.set(name, value, options) });
   try {

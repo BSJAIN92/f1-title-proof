@@ -31,7 +31,7 @@ export function ActivityDashboard({ snapshot }: { snapshot: DashboardSnapshot })
     </header>
 
     <nav className="period-filter" aria-label="Dashboard period">
-      {[['day','24 hours'],['week','7 days'],['month','30 days']].map(([period, label]) => <a key={period} href={`/dashboard?period=${period}`} aria-current={snapshot.range.period === period ? "page" : undefined}>{label}</a>)}
+      {[['day','Today'],['week','7 days'],['month','30 days']].map(([period, label]) => <a key={period} href={`/dashboard?period=${period}`} aria-current={snapshot.range.period === period ? "page" : undefined}>{label}</a>)}
       <form><input type="hidden" name="period" value="custom" /><label>From <input type="date" name="from" defaultValue={snapshot.range.from} required /></label><label>To <input type="date" name="to" defaultValue={snapshot.range.to} required /></label><button type="submit">Apply</button></form>
     </nav>
 

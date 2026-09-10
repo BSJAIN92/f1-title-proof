@@ -2,7 +2,7 @@ import "server-only";
 import { createHash, randomBytes } from "node:crypto";
 
 export const COOKIE_NAME = "titleproof_anon";
-const ONE_YEAR_SECONDS = 365 * 24 * 60 * 60;
+const VISITOR_LIFETIME_SECONDS = 90 * 24 * 60 * 60;
 const VISITOR_ID = /^[A-Za-z0-9_-]{43}$/;
 
 export interface VisitorCookieStore {
@@ -15,7 +15,7 @@ export function cookieOptions(localDevelopment = process.env.NODE_ENV === "devel
     httpOnly: true,
     sameSite: "lax" as const,
     path: "/",
-    maxAge: ONE_YEAR_SECONDS,
+    maxAge: VISITOR_LIFETIME_SECONDS,
     secure: !localDevelopment,
   };
 }

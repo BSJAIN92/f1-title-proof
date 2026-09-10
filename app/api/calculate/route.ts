@@ -2,11 +2,14 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { getOrCreateAnonymousVisitor } from "../../../src/server/anonymous-visitor";
 import { calculateAndRecord, StoreFailure } from "../../../src/server/convex-store";
+import { checkRateLimit, rateLimitedResponse } from "../../../src/server/rate-limit";
 
 export const runtime = "nodejs";
 const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null && !Array.isArray(value);
 
 export async function POST(request: Request) {
+  const limit = await checkRateLimit(request, "calculate");
+  if (!limit.allowed) return rateLimitedResponse(limit.retryAfterSeconds);
   let body: unknown;
   try { body = await request.json(); }
   catch { return NextResponse.json({ reason: "The calculation request is not valid JSON." }, { status: 400 }); }
