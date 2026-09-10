@@ -270,12 +270,12 @@
     {
       "position": 4,
       "constructor": "Oracle Red Bull Racing",
-      "points": 206
+      "points": 204
     },
     {
       "position": 5,
       "constructor": "Visa Cash App Racing Bulls F1 Team",
-      "points": 73
+      "points": 75
     },
     {
       "position": 6,
@@ -402,7 +402,7 @@
   "artifacts": {
     "sessionResults": {
       "path": "session-results.json",
-      "sha256": "2C93F59C175C419DE22AFBEDE648B6A8816A6DCAD870F1532F8596D8E54AD93B"
+      "sha256": "1980547F9F02D41DE64863AE8817A1A15E4992C4D19934B18DE406B029B620FD"
     },
     "countback": {
       "path": "countback.json",
