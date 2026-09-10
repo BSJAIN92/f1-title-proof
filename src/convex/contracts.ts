@@ -29,6 +29,19 @@ export interface HistorySummary extends SelectionSummary {
 export interface AnonymousState {
   readonly latestSelection: SelectionSummary | null;
   readonly history: readonly HistorySummary[];
+  readonly comparisons: readonly ComparisonHistorySummary[];
+}
+
+export interface ComparisonHistorySummary {
+  readonly id: string;
+  readonly kind: ChampionshipKind;
+  readonly targetId: string;
+  readonly rivalId: string;
+  readonly dataVersion: string;
+  readonly ruleVersion: string;
+  readonly resultStatus: "COMPLETE" | "FAILED";
+  readonly reason?: string;
+  readonly requestedAt: number;
 }
 
 export interface StoredHistoryEntry extends HistorySummary {
@@ -81,7 +94,7 @@ export function parseHistoryEntry(value: unknown): StoredHistoryEntry {
 }
 
 export function parseAnonymousState(value: unknown): AnonymousState {
-  if (!isRecord(value) || !Array.isArray(value.history) || value.history.length > 20) throw new Error("The anonymous Convex state is malformed.");
+  if (!isRecord(value) || !Array.isArray(value.history) || value.history.length > 20 || !Array.isArray(value.comparisons) || value.comparisons.length > 20) throw new Error("The anonymous Convex state is malformed.");
   const history = value.history.map((item) => {
     if (!isRecord(item) || !isNonEmpty(item.id) || !isKind(item.kind) || !isNonEmpty(item.contenderId) || !isNonEmpty(item.dataVersion)
       || !isNonEmpty(item.ruleVersion) || !isStatus(item.resultStatus) || typeof item.requestedAt !== "number" || !Number.isFinite(item.requestedAt)) {
@@ -89,7 +102,17 @@ export function parseAnonymousState(value: unknown): AnonymousState {
     }
     return { id: item.id, kind: item.kind, contenderId: item.contenderId, dataVersion: item.dataVersion, ruleVersion: item.ruleVersion, resultStatus: item.resultStatus, requestedAt: item.requestedAt };
   });
-  return { latestSelection: parseSelection(value.latestSelection), history };
+  const comparisons = value.comparisons.map((item) => {
+    if (!isRecord(item) || !isNonEmpty(item.id) || !isKind(item.kind) || !isNonEmpty(item.targetId) || !isNonEmpty(item.rivalId)
+      || !isNonEmpty(item.dataVersion) || !isNonEmpty(item.ruleVersion) || (item.resultStatus !== "COMPLETE" && item.resultStatus !== "FAILED")
+      || (item.reason !== undefined && typeof item.reason !== "string") || typeof item.requestedAt !== "number" || !Number.isFinite(item.requestedAt)) {
+      throw new Error("The anonymous comparison history is malformed.");
+    }
+    const resultStatus: ComparisonHistorySummary["resultStatus"] = item.resultStatus;
+    return { id: item.id, kind: item.kind, targetId: item.targetId, rivalId: item.rivalId, dataVersion: item.dataVersion, ruleVersion: item.ruleVersion,
+      resultStatus, ...(item.reason ? { reason: item.reason } : {}), requestedAt: item.requestedAt };
+  });
+  return { latestSelection: parseSelection(value.latestSelection), history, comparisons };
 }
 
 export function isVisitorHash(value: unknown): value is string {

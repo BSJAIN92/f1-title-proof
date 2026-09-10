@@ -12,7 +12,7 @@ describe("Convex storage contracts", () => {
   });
 
   it("accepts an empty anonymous state", () => {
-    expect(parseAnonymousState({ latestSelection: null, history: [] })).toEqual({ latestSelection: null, history: [] });
+    expect(parseAnonymousState({ latestSelection: null, history: [], comparisons: [] })).toEqual({ latestSelection: null, history: [], comparisons: [] });
   });
 
   it("never accepts a raw browser identifier as an owner hash", () => {

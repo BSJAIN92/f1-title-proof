@@ -78,6 +78,28 @@ export async function compareActiveHeadToHead(request: HeadToHeadRequest): Promi
   return calculateHeadToHead(snapshot, request);
 }
 
+export async function recordAnonymousVisit(visitorHash: string): Promise<void> {
+  requireHash(visitorHash);
+  const access = options();
+  await mutate(() => fetchMutation(api.history.recordVisit, { visitorHash, serverCredential: access.serverCredential, occurredAt: Date.now() }, { url: access.url }));
+}
+
+export async function compareAndRecord(visitorHash: string, request: HeadToHeadRequest): Promise<HeadToHeadResponse> {
+  requireHash(visitorHash);
+  const result = await compareActiveHeadToHead(request);
+  const access = options();
+  try {
+    await mutate(() => fetchMutation(api.history.recordComparison, {
+      visitorHash, serverCredential: access.serverCredential, ...request,
+      resultStatus: result.status === "COMPLETE" ? "COMPLETE" : "FAILED",
+      ...(result.status === "ERROR" ? { reason: result.reason.slice(0, 240) } : {}), requestedAt: Date.now(),
+    }, { url: access.url }));
+  } catch {
+    // Analytics is deliberately best-effort; a valid comparison must remain usable.
+  }
+  return result;
+}
+
 export async function loadAnonymousState(visitorHash: string): Promise<AnonymousState> {
   requireHash(visitorHash);
   const access = options();

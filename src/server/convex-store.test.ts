@@ -6,6 +6,7 @@ vi.mock("convex/nextjs", () => ({ fetchQuery: convex.query, fetchMutation: conve
 
 import {
   calculateAndRecord,
+  compareAndRecord,
   loadActiveProductData,
   loadAnonymousState,
   reopenOwnedHistory,
@@ -31,10 +32,20 @@ describe("Convex store bridge", () => {
   });
 
   it("validates anonymous state before returning it", async () => {
-    convex.query.mockResolvedValueOnce({ latestSelection: null, history: [] });
-    await expect(loadAnonymousState(hash)).resolves.toEqual({ latestSelection: null, history: [] });
-    convex.query.mockResolvedValueOnce({ latestSelection: null, history: [{ id: "bad" }] });
+    convex.query.mockResolvedValueOnce({ latestSelection: null, history: [], comparisons: [] });
+    await expect(loadAnonymousState(hash)).resolves.toEqual({ latestSelection: null, history: [], comparisons: [] });
+    convex.query.mockResolvedValueOnce({ latestSelection: null, history: [{ id: "bad" }], comparisons: [] });
     await expect(loadAnonymousState(hash)).rejects.toMatchObject({ code: "INVALID_DATA" });
+  });
+
+  it("records the active comparison without making analytics a result dependency", async () => {
+    const request = { kind: "driver" as const, targetId: "Kimi Antonelli", rivalId: "Lando Norris", dataVersion: selection.dataVersion, ruleVersion: selection.ruleVersion };
+    convex.query.mockResolvedValue(approvedDatasetFixture());
+    convex.mutation.mockResolvedValueOnce("comparison-id");
+    await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE", targetId: request.targetId, rivalId: request.rivalId });
+    expect(convex.mutation).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ visitorHash: hash, resultStatus: "COMPLETE", ...request }), expect.anything());
+    convex.mutation.mockRejectedValueOnce(new Error("tracking offline"));
+    await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE" });
   });
 
   it("saves a validated selection", async () => {

@@ -4,6 +4,7 @@ import { requireServerCredential } from "./serverAccess";
 
 const kindValidator = v.union(v.literal("driver"), v.literal("constructor"));
 const statusValidator = v.union(v.literal("COMPLETE"), v.literal("ELIMINATED"));
+const comparisonStatusValidator = v.union(v.literal("COMPLETE"), v.literal("FAILED"));
 const HASH = /^[a-f0-9]{64}$/;
 
 function requireHash(visitorHash: string) {
@@ -45,12 +46,41 @@ export const getState = query({
     requireHash(args.visitorHash);
     const visitor = await ctx.db.query("anonymousVisitors").withIndex("by_visitor_hash", (q) => q.eq("visitorHash", args.visitorHash)).unique();
     const history = await ctx.db.query("calculationHistory").withIndex("by_visitor_requested_at", (q) => q.eq("visitorHash", args.visitorHash)).order("desc").take(20);
+    const comparisons = await ctx.db.query("comparisonHistory").withIndex("by_visitor_requested_at", (q) => q.eq("visitorHash", args.visitorHash)).order("desc").take(20);
     return {
       latestSelection: visitor?.latestKind && visitor.latestContenderId && visitor.latestDataVersion && visitor.latestRuleVersion
         ? { kind: visitor.latestKind, contenderId: visitor.latestContenderId, dataVersion: visitor.latestDataVersion, ruleVersion: visitor.latestRuleVersion }
         : null,
       history: history.map((entry) => ({ id: entry._id, kind: entry.kind, contenderId: entry.contenderId, dataVersion: entry.dataVersion, ruleVersion: entry.ruleVersion, resultStatus: entry.resultStatus, requestedAt: entry.requestedAt })),
+      comparisons: comparisons.map((entry) => ({ id: entry._id, kind: entry.kind, targetId: entry.targetId, rivalId: entry.rivalId, dataVersion: entry.dataVersion,
+        ruleVersion: entry.ruleVersion, resultStatus: entry.resultStatus, reason: entry.reason, requestedAt: entry.requestedAt })),
     };
+  },
+});
+
+export const recordVisit = mutation({
+  args: { serverCredential: v.string(), visitorHash: v.string(), occurredAt: v.number() },
+  handler: async (ctx, args) => {
+    requireServerCredential(args.serverCredential); requireHash(args.visitorHash);
+    if (!Number.isFinite(args.occurredAt)) throw new Error("The visit time is invalid.");
+    await upsertVisitor(ctx, args.visitorHash, args.occurredAt);
+    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "visit", occurredAt: args.occurredAt });
+  },
+});
+
+export const recordComparison = mutation({
+  args: { serverCredential: v.string(), visitorHash: v.string(), kind: kindValidator, targetId: v.string(), rivalId: v.string(), dataVersion: v.string(),
+    ruleVersion: v.string(), resultStatus: comparisonStatusValidator, reason: v.optional(v.string()), requestedAt: v.number() },
+  handler: async (ctx, args) => {
+    requireServerCredential(args.serverCredential); requireHash(args.visitorHash);
+    if (!args.targetId || !args.rivalId || args.targetId === args.rivalId || !Number.isFinite(args.requestedAt)) throw new Error("The comparison history request is invalid.");
+    const visitorId = await upsertVisitor(ctx, args.visitorHash, args.requestedAt);
+    await ctx.db.patch(visitorId, { lastSeenAt: args.requestedAt });
+    const historyId = await ctx.db.insert("comparisonHistory", { visitorHash: args.visitorHash, kind: args.kind, targetId: args.targetId, rivalId: args.rivalId,
+      dataVersion: args.dataVersion, ruleVersion: args.ruleVersion, resultStatus: args.resultStatus, reason: args.reason, requestedAt: args.requestedAt });
+    await ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: args.resultStatus === "COMPLETE" ? "comparison_completed" : "comparison_failed",
+      kind: args.kind, targetId: args.targetId, rivalId: args.rivalId, dataVersion: args.dataVersion, outcome: args.resultStatus, occurredAt: args.requestedAt });
+    return historyId;
   },
 });
 
