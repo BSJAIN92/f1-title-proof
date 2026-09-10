@@ -39,11 +39,21 @@ function maximumRemainingPoints(snapshot: VerifiedFrozenDriverSnapshot, kind: "d
 }
 
 export function productDataFromSnapshot(snapshot: VerifiedFrozenDriverSnapshot): ProductData {
+  const races = snapshot.sessions.filter((session) => session.session === "race").length;
+  const sprints = snapshot.sessions.filter((session) => session.session === "sprint").length;
   return Object.freeze({
     dataVersion: snapshot.dataVersion,
     ruleVersion: snapshot.ruleVersion,
     cutoff: snapshot.cutoff,
     remainingSessions: snapshot.sessions.length,
+    remaining: {
+      races,
+      sprints,
+      maximumPoints: {
+        driver: { races: races * 25, sprints: sprints * 8, total: maximumRemainingPoints(snapshot, "driver") },
+        constructor: { races: races * 43, sprints: sprints * 15, total: maximumRemainingPoints(snapshot, "constructor") },
+      },
+    },
     assumptions: ["Every remaining race and Sprint awards full points.", "The regular 22-driver lineup stays fixed.", "Both entered cars score constructor points.", "Points ties use race finishes first, then qualifying results."],
     unsupported: [...snapshot.unsupported],
     standings: {

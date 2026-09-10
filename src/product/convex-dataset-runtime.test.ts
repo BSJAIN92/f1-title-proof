@@ -9,7 +9,7 @@ describe("Convex dataset runtime", () => {
     expect(verified.status).toBe("VERIFIED");
     if (verified.status !== "VERIFIED") return;
     const data = productDataFromSnapshot(verified.snapshot);
-    expect(data).toMatchObject({ dataVersion: "2026-09-10T12:30:00+05:30", remainingSessions: 11 });
+    expect(data).toMatchObject({ dataVersion: "2026-09-10T12:30:00+05:30", remainingSessions: 11, remaining: { races: 10, sprints: 1, maximumPoints: { driver: { races: 250, sprints: 8, total: 258 }, constructor: { races: 430, sprints: 15, total: 445 } } } });
     expect(data.standings.driver).toHaveLength(22);
     expect(data.standings.constructor).toHaveLength(11);
     expect(data.standings.driver.find(({ id }) => id === "Gabriel Bortoleto")?.eligible).toBe(true);
