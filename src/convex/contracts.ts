@@ -32,10 +32,8 @@ export interface AnonymousState {
   readonly comparisons: readonly ComparisonHistorySummary[];
 }
 
-export interface ComparisonHistorySummary {
+interface ComparisonHistoryBase {
   readonly id: string;
-  readonly kind: ChampionshipKind;
-  readonly targetId: string;
   readonly rivalId: string;
   readonly dataVersion: string;
   readonly ruleVersion: string;
@@ -43,6 +41,7 @@ export interface ComparisonHistorySummary {
   readonly reason?: string;
   readonly requestedAt: number;
 }
+export type ComparisonHistorySummary = ComparisonHistoryBase & ({ readonly kind: "driver"; readonly driverId: string } | { readonly kind: "constructor"; readonly constructorId: string });
 
 export interface StoredHistoryEntry extends HistorySummary {
   readonly visitorHash: string;
@@ -103,13 +102,15 @@ export function parseAnonymousState(value: unknown): AnonymousState {
     return { id: item.id, kind: item.kind, contenderId: item.contenderId, dataVersion: item.dataVersion, ruleVersion: item.ruleVersion, resultStatus: item.resultStatus, requestedAt: item.requestedAt };
   });
   const comparisons = value.comparisons.map((item) => {
-    if (!isRecord(item) || !isNonEmpty(item.id) || !isKind(item.kind) || !isNonEmpty(item.targetId) || !isNonEmpty(item.rivalId)
+    const selectedId = isRecord(item) && item.kind === "driver" ? item.driverId : isRecord(item) && item.kind === "constructor" ? item.constructorId : undefined;
+    if (!isRecord(item) || !isNonEmpty(item.id) || !isKind(item.kind) || !isNonEmpty(selectedId) || !isNonEmpty(item.rivalId)
       || !isNonEmpty(item.dataVersion) || !isNonEmpty(item.ruleVersion) || (item.resultStatus !== "COMPLETE" && item.resultStatus !== "FAILED")
       || (item.reason !== undefined && typeof item.reason !== "string") || typeof item.requestedAt !== "number" || !Number.isFinite(item.requestedAt)) {
       throw new Error("The anonymous comparison history is malformed.");
     }
     const resultStatus: ComparisonHistorySummary["resultStatus"] = item.resultStatus;
-    return { id: item.id, kind: item.kind, targetId: item.targetId, rivalId: item.rivalId, dataVersion: item.dataVersion, ruleVersion: item.ruleVersion,
+    const selectedField = item.kind === "driver" ? { kind: "driver" as const, driverId: selectedId } : { kind: "constructor" as const, constructorId: selectedId };
+    return { id: item.id, ...selectedField, rivalId: item.rivalId, dataVersion: item.dataVersion, ruleVersion: item.ruleVersion,
       resultStatus, ...(item.reason ? { reason: item.reason } : {}), requestedAt: item.requestedAt };
   });
   return { latestSelection: parseSelection(value.latestSelection), history, comparisons };

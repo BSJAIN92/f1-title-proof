@@ -43,7 +43,8 @@ describe("Convex store bridge", () => {
     convex.query.mockResolvedValue(approvedDatasetFixture());
     convex.mutation.mockResolvedValueOnce("comparison-id");
     await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE", targetId: request.targetId, rivalId: request.rivalId });
-    expect(convex.mutation).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ visitorHash: hash, resultStatus: "COMPLETE", ...request }), expect.anything());
+    expect(convex.mutation).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ visitorHash: hash, resultStatus: "COMPLETE", driverId: request.targetId, rivalId: request.rivalId }), expect.anything());
+    expect(convex.mutation.mock.calls[0][1]).not.toHaveProperty("targetId");
     convex.mutation.mockRejectedValueOnce(new Error("tracking offline"));
     await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE" });
   });

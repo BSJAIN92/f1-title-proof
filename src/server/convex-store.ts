@@ -90,7 +90,8 @@ export async function compareAndRecord(visitorHash: string, request: HeadToHeadR
   const access = options();
   try {
     await mutate(() => fetchMutation(api.history.recordComparison, {
-      visitorHash, serverCredential: access.serverCredential, ...request,
+      visitorHash, serverCredential: access.serverCredential, kind: request.kind, rivalId: request.rivalId, dataVersion: request.dataVersion, ruleVersion: request.ruleVersion,
+      ...(request.kind === "driver" ? { driverId: request.targetId } : { constructorId: request.targetId }),
       resultStatus: result.status === "COMPLETE" ? "COMPLETE" : "FAILED",
       ...(result.status === "ERROR" ? { reason: result.reason.slice(0, 240) } : {}), requestedAt: Date.now(),
     }, { url: access.url }));

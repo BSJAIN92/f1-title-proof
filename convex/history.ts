@@ -52,7 +52,7 @@ export const getState = query({
         ? { kind: visitor.latestKind, contenderId: visitor.latestContenderId, dataVersion: visitor.latestDataVersion, ruleVersion: visitor.latestRuleVersion }
         : null,
       history: history.map((entry) => ({ id: entry._id, kind: entry.kind, contenderId: entry.contenderId, dataVersion: entry.dataVersion, ruleVersion: entry.ruleVersion, resultStatus: entry.resultStatus, requestedAt: entry.requestedAt })),
-      comparisons: comparisons.map((entry) => ({ id: entry._id, kind: entry.kind, targetId: entry.targetId, rivalId: entry.rivalId, dataVersion: entry.dataVersion,
+      comparisons: comparisons.map((entry) => ({ id: entry._id, kind: entry.kind, ...(entry.kind === "driver" ? { driverId: entry.driverId } : { constructorId: entry.constructorId }), rivalId: entry.rivalId, dataVersion: entry.dataVersion,
         ruleVersion: entry.ruleVersion, resultStatus: entry.resultStatus, reason: entry.reason, requestedAt: entry.requestedAt })),
     };
   },
@@ -69,17 +69,19 @@ export const recordVisit = mutation({
 });
 
 export const recordComparison = mutation({
-  args: { serverCredential: v.string(), visitorHash: v.string(), kind: kindValidator, targetId: v.string(), rivalId: v.string(), dataVersion: v.string(),
+  args: { serverCredential: v.string(), visitorHash: v.string(), kind: kindValidator, driverId: v.optional(v.string()), constructorId: v.optional(v.string()), rivalId: v.string(), dataVersion: v.string(),
     ruleVersion: v.string(), resultStatus: comparisonStatusValidator, reason: v.optional(v.string()), requestedAt: v.number() },
   handler: async (ctx, args) => {
     requireServerCredential(args.serverCredential); requireHash(args.visitorHash);
-    if (!args.targetId || !args.rivalId || args.targetId === args.rivalId || !Number.isFinite(args.requestedAt)) throw new Error("The comparison history request is invalid.");
+    const selectedId = args.kind === "driver" ? args.driverId : args.constructorId;
+    if (!selectedId || !args.rivalId || selectedId === args.rivalId || !Number.isFinite(args.requestedAt)) throw new Error("The comparison history request is invalid.");
     const visitorId = await upsertVisitor(ctx, args.visitorHash, args.requestedAt);
     await ctx.db.patch(visitorId, { lastSeenAt: args.requestedAt });
-    const historyId = await ctx.db.insert("comparisonHistory", { visitorHash: args.visitorHash, kind: args.kind, targetId: args.targetId, rivalId: args.rivalId,
+    const selectedField = args.kind === "driver" ? { driverId: selectedId } : { constructorId: selectedId };
+    const historyId = await ctx.db.insert("comparisonHistory", { visitorHash: args.visitorHash, kind: args.kind, ...selectedField, rivalId: args.rivalId,
       dataVersion: args.dataVersion, ruleVersion: args.ruleVersion, resultStatus: args.resultStatus, reason: args.reason, requestedAt: args.requestedAt });
     await ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: args.resultStatus === "COMPLETE" ? "comparison_completed" : "comparison_failed",
-      kind: args.kind, targetId: args.targetId, rivalId: args.rivalId, dataVersion: args.dataVersion, outcome: args.resultStatus, occurredAt: args.requestedAt });
+      kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, outcome: args.resultStatus, occurredAt: args.requestedAt });
     return historyId;
   },
 });

@@ -15,13 +15,15 @@ export default defineSchema({
     ruleVersion: v.string(), resultStatus: v.union(v.literal("COMPLETE"), v.literal("ELIMINATED")), requestedAt: v.number(),
   }).index("by_visitor_requested_at", ["visitorHash", "requestedAt"]),
   comparisonHistory: defineTable({
-    visitorHash: v.string(), kind: v.union(v.literal("driver"), v.literal("constructor")), targetId: v.string(), rivalId: v.string(),
+    visitorHash: v.string(), kind: v.union(v.literal("driver"), v.literal("constructor")), driverId: v.optional(v.string()),
+    constructorId: v.optional(v.string()), rivalId: v.string(),
     dataVersion: v.string(), ruleVersion: v.string(), resultStatus: v.union(v.literal("COMPLETE"), v.literal("FAILED")),
     reason: v.optional(v.string()), requestedAt: v.number(),
   }).index("by_visitor_requested_at", ["visitorHash", "requestedAt"]),
   visitorEvents: defineTable({
     visitorHash: v.string(), eventType: v.union(v.literal("visit"), v.literal("comparison_completed"), v.literal("comparison_failed")),
-    kind: v.optional(v.union(v.literal("driver"), v.literal("constructor"))), targetId: v.optional(v.string()), rivalId: v.optional(v.string()),
+    kind: v.optional(v.union(v.literal("driver"), v.literal("constructor"))), driverId: v.optional(v.string()),
+    constructorId: v.optional(v.string()), rivalId: v.optional(v.string()),
     dataVersion: v.optional(v.string()), outcome: v.optional(v.string()), occurredAt: v.number(),
   }).index("by_visitor_occurred_at", ["visitorHash", "occurredAt"]).index("by_event_occurred_at", ["eventType", "occurredAt"]),
 });
