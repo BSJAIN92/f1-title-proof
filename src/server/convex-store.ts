@@ -14,6 +14,7 @@ import { productDataFromSnapshot, verifyStoredDataset } from "../product/convex-
 import type { ProductData } from "../product/frozen-product-data";
 import { calculateHeadToHead, type HeadToHeadRequest, type HeadToHeadResponse } from "../product/head-to-head";
 import type { DashboardRange, DashboardSnapshot } from "../analytics/dashboard-contract";
+import { calculateGuaranteedScenarioPage, type GuaranteedScenarioRequest, type GuaranteedScenarioResponse } from "../product/guaranteed-scenarios";
 
 export type StoreFailureCode = "MISSING_URL" | "MISSING_CREDENTIAL" | "UNAVAILABLE" | "MISSING_DATA" | "INVALID_DATA" | "INVALID_REQUEST" | "STALE" | "WRITE_REJECTED" | "NOT_FOUND";
 
@@ -77,6 +78,11 @@ export async function loadActiveProductData(): Promise<ProductData> {
 export async function compareActiveHeadToHead(request: HeadToHeadRequest): Promise<HeadToHeadResponse> {
   const snapshot = await loadVerifiedDataset(request.dataVersion);
   return calculateHeadToHead(snapshot, request);
+}
+
+export async function loadGuaranteedScenarios(request: GuaranteedScenarioRequest): Promise<GuaranteedScenarioResponse> {
+  const snapshot = await loadVerifiedDataset(request.dataVersion);
+  return calculateGuaranteedScenarioPage(snapshot, request);
 }
 
 export async function recordAnonymousVisit(visitorHash: string, countryCode?: string): Promise<void> {
