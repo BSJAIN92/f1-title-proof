@@ -24,6 +24,6 @@ export default defineSchema({
     visitorHash: v.string(), eventType: v.union(v.literal("visit"), v.literal("comparison_completed"), v.literal("comparison_failed"), v.literal("comparison_returned")),
     kind: v.optional(v.union(v.literal("driver"), v.literal("constructor"))), driverId: v.optional(v.string()),
     constructorId: v.optional(v.string()), rivalId: v.optional(v.string()),
-    dataVersion: v.optional(v.string()), outcome: v.optional(v.string()), occurredAt: v.number(),
+    dataVersion: v.optional(v.string()), outcome: v.optional(v.string()), countryCode: v.optional(v.string()), occurredAt: v.number(),
   }).index("by_visitor_occurred_at", ["visitorHash", "occurredAt"]).index("by_event_occurred_at", ["eventType", "occurredAt"]),
 });

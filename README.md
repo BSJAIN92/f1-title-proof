@@ -31,5 +31,9 @@ These steps require the owner&apos;s accounts and have not been run:
 4. Generate a different `CONVEX_SERVER_CREDENTIAL` and `CONVEX_SEED_CREDENTIAL` for Preview and Production. Put each server credential in the matching Vercel environment and Convex deployment. Put each seed credential in the environment used to run the seed and in its Convex deployment. Never commit either value or expose it with a `NEXT_PUBLIC_` name.
 5. Keep Vercel&apos;s build command from `vercel.json`: it deploys Convex functions, runs the Next build, and supplies `NEXT_PUBLIC_CONVEX_URL`.
 6. Seed each Convex deployment with the approved frozen dataset by running `npm run convex:seed` while `NEXT_PUBLIC_CONVEX_URL` and `CONVEX_SEED_CREDENTIAL` point to that deployment. Run it twice to confirm the second result reports no insertion.
+
+## Private activity dashboard
+
+Set `DASHBOARD_PASSWORD` to a private password of at least 12 characters and `DASHBOARD_SESSION_SECRET` to a random value of at least 32 characters. The dashboard is available at `/dashboard`; its signed login lasts seven days. Country reporting starts when this version is deployed because earlier visit events did not store country codes.
 7. Deploy a Vercel Preview and smoke-test `/`, `/api/state`, `/api/selection`, `/api/calculate`, and `/api/reopen`. Confirm direct Convex calls without the server credential fail, and confirm the `titleproof_anon` cookie is HTTP-only, `SameSite=Lax`, secure, and contains no user data.
 8. Promote only after the Preview checks pass. Production deployment has not been performed from this workspace.

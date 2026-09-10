@@ -13,6 +13,7 @@ import { calculateScenarioFromSnapshot, type CalculateRequest, type ResultView }
 import { productDataFromSnapshot, verifyStoredDataset } from "../product/convex-dataset-runtime";
 import type { ProductData } from "../product/frozen-product-data";
 import { calculateHeadToHead, type HeadToHeadRequest, type HeadToHeadResponse } from "../product/head-to-head";
+import type { DashboardRange, DashboardSnapshot } from "../analytics/dashboard-contract";
 
 export type StoreFailureCode = "MISSING_URL" | "MISSING_CREDENTIAL" | "UNAVAILABLE" | "MISSING_DATA" | "INVALID_DATA" | "INVALID_REQUEST" | "STALE" | "WRITE_REJECTED" | "NOT_FOUND";
 
@@ -78,10 +79,18 @@ export async function compareActiveHeadToHead(request: HeadToHeadRequest): Promi
   return calculateHeadToHead(snapshot, request);
 }
 
-export async function recordAnonymousVisit(visitorHash: string): Promise<void> {
+export async function recordAnonymousVisit(visitorHash: string, countryCode?: string): Promise<void> {
   requireHash(visitorHash);
   const access = options();
-  await mutate(() => fetchMutation(api.history.recordVisit, { visitorHash, serverCredential: access.serverCredential, occurredAt: Date.now() }, { url: access.url }));
+  const normalizedCountry = countryCode?.trim().toUpperCase();
+  await mutate(() => fetchMutation(api.history.recordVisit, { visitorHash, serverCredential: access.serverCredential, ...(normalizedCountry && /^[A-Z]{2}$/.test(normalizedCountry) ? { countryCode: normalizedCountry } : {}), occurredAt: Date.now() }, { url: access.url }));
+}
+
+export async function loadDashboardSnapshot(range: DashboardRange): Promise<DashboardSnapshot> {
+  const access = options();
+  const value = await query(() => fetchQuery(api.dashboard.getSnapshot, { serverCredential: access.serverCredential, ...range }, { url: access.url }));
+  if (!value || typeof value !== "object" || !("uniqueVisitors" in value) || !("daily" in value)) throw new StoreFailure("INVALID_DATA", "The dashboard response is malformed.");
+  return value as DashboardSnapshot;
 }
 
 export async function recordComparisonReturn(visitorHash: string, request: HeadToHeadRequest): Promise<void> {

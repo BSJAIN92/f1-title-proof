@@ -9,6 +9,7 @@ import {
   compareAndRecord,
   loadActiveProductData,
   loadAnonymousState,
+  recordAnonymousVisit,
   recordComparisonReturn,
   reopenOwnedHistory,
   saveSelection,
@@ -48,6 +49,14 @@ describe("Convex store bridge", () => {
     expect(convex.mutation.mock.calls[0][1]).not.toHaveProperty("targetId");
     convex.mutation.mockRejectedValueOnce(new Error("tracking offline"));
     await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE" });
+  });
+
+  it("records a normalized country code without storing malformed geography", async () => {
+    convex.mutation.mockResolvedValue(undefined);
+    await recordAnonymousVisit(hash, "in");
+    expect(convex.mutation).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({ countryCode: "IN" }), expect.anything());
+    await recordAnonymousVisit(hash, "unknown");
+    expect(convex.mutation.mock.calls.at(-1)?.[1]).not.toHaveProperty("countryCode");
   });
 
   it("records returning from a driver comparison with the selected and rival IDs", async () => {

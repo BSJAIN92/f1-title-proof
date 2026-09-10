@@ -59,12 +59,13 @@ export const getState = query({
 });
 
 export const recordVisit = mutation({
-  args: { serverCredential: v.string(), visitorHash: v.string(), occurredAt: v.number() },
+  args: { serverCredential: v.string(), visitorHash: v.string(), countryCode: v.optional(v.string()), occurredAt: v.number() },
   handler: async (ctx, args) => {
     requireServerCredential(args.serverCredential); requireHash(args.visitorHash);
     if (!Number.isFinite(args.occurredAt)) throw new Error("The visit time is invalid.");
+    if (args.countryCode && !/^[A-Z]{2}$/.test(args.countryCode)) throw new Error("The country code is invalid.");
     await upsertVisitor(ctx, args.visitorHash, args.occurredAt);
-    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "visit", occurredAt: args.occurredAt });
+    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "visit", countryCode: args.countryCode, occurredAt: args.occurredAt });
   },
 });
 
