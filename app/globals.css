@@ -110,3 +110,4 @@ summary::before{border-color:var(--line-strong);border-radius:5px;color:#202124}
  .standing-row{border-radius:10px}
  .compare-cell select{min-height:46px}
 }
+.standings--home .standings__head{grid-template-columns:minmax(0,1fr) minmax(280px,360px) minmax(0,1fr)}.season-title{grid-column:1;grid-row:1}.standings--home .switch{grid-column:2;grid-row:1;justify-self:center;width:100%}.remaining-table{grid-column:3;grid-row:1;justify-self:end;width:min(520px,100%)}@media(max-width:900px){.standings--home .standings__head{grid-template-columns:1fr 1fr}.season-title{grid-column:1;grid-row:1}.standings--home .switch{grid-column:2;grid-row:1}.remaining-table{grid-column:1/-1;grid-row:2;justify-self:end;width:min(520px,100%)}}@media(max-width:680px){.standings--home .standings__head{grid-template-columns:1fr}.season-title{grid-column:1;grid-row:1}.standings--home .switch{grid-column:1;grid-row:2}.remaining-table{grid-column:1;grid-row:3;justify-self:stretch;width:100%}}
