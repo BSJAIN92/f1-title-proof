@@ -12,6 +12,7 @@ import {
 import { calculateScenarioFromSnapshot, type CalculateRequest, type ResultView } from "../product/calculate-scenario";
 import { productDataFromSnapshot, verifyStoredDataset } from "../product/convex-dataset-runtime";
 import type { ProductData } from "../product/frozen-product-data";
+import { calculateHeadToHead, type HeadToHeadRequest, type HeadToHeadResponse } from "../product/head-to-head";
 
 export type StoreFailureCode = "MISSING_URL" | "MISSING_CREDENTIAL" | "UNAVAILABLE" | "MISSING_DATA" | "INVALID_DATA" | "INVALID_REQUEST" | "STALE" | "WRITE_REJECTED" | "NOT_FOUND";
 
@@ -70,6 +71,11 @@ async function loadVerifiedDataset(dataVersion?: string) {
 
 export async function loadActiveProductData(): Promise<ProductData> {
   return productDataFromSnapshot(await loadVerifiedDataset());
+}
+
+export async function compareActiveHeadToHead(request: HeadToHeadRequest): Promise<HeadToHeadResponse> {
+  const snapshot = await loadVerifiedDataset(request.dataVersion);
+  return calculateHeadToHead(snapshot, request);
 }
 
 export async function loadAnonymousState(visitorHash: string): Promise<AnonymousState> {
