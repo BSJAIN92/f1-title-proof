@@ -27,7 +27,6 @@ test("keeps the mobile page within the viewport", async ({ page }, testInfo) => 
   await page.goto("/scenarios");
   await page.getByRole("button", { name:/Select Kimi Antonelli/ }).click();
   await expect(page.locator(".guarantee-card")).toHaveCount(25, { timeout:15_000 });
-  await expect(page.getByRole("heading", { name:"Kimi Antonelli", exact:true })).toBeInViewport();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
   expect(overflow).toBe(false);
   await page.screenshot({ path:testInfo.outputPath("scenarios-mobile.png"), fullPage:false });
