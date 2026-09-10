@@ -3,8 +3,9 @@ import { compareStandings, type ChampionshipStanding } from "../standings/champi
 import { createFutureChampionshipState } from "../search/future-state";
 import { proveStateCannotWin, type PruningProof } from "../search/pruning";
 import type { VerifiedFrozenDriverSnapshot } from "./verified-frozen-driver-snapshot";
+import { APPROVED_FROZEN_DATA } from "./approved-frozen-constants";
 
-export const APPROVED_FROZEN_SNAPSHOT_FINGERPRINT = "sha256-9b2449140b8985c984a8a4af5a2882a3ebdc9333d94a55b9681a4c4f8f52f2ca";
+export const APPROVED_FROZEN_SNAPSHOT_FINGERPRINT = APPROVED_FROZEN_DATA.snapshotFingerprint;
 
 export interface SymbolicEventConstraint {
   readonly sessionId: string;

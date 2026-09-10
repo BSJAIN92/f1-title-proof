@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-01/manifest.json";
+import manifest from "../../../data/frozen/2026-09-10/manifest.json";
 import { analyzeBoundedGroupCoverage, createAuthenticatedBoundedGroupingFixture, groupFrozenConstructorRelation, groupFrozenDriverRelation } from "../groups/winning-groups";
 import { APPROVED_FROZEN_SNAPSHOT_FINGERPRINT, buildApprovedFrozenDriverRelation } from "../relations/frozen-driver-symbolic-relation";
 import { buildApprovedFrozenConstructorRelation } from "../relations/frozen-constructor-symbolic-relation";
@@ -45,14 +45,14 @@ describe("M10 labeled samples", () => {
   it("derives legal verified win/loss paths for all frozen drivers and constructors",()=>{
     for(const id of manifest.futureLineup.flatMap(x=>x.drivers)){
       const source=driverSource(id), m9=deriveFrozenDriverLayeredResult(source,groupFrozenDriverRelation(source)), result=deriveFrozenDriverSampledResult(m9,source);
-      expect(result.status,id).toBe("COMPLETE"); if(result.status!=="COMPLETE") continue;
+      expect(["COMPLETE","ELIMINATED"],id).toContain(result.status); if(result.status!=="COMPLETE") continue;
       expect(result.layers[2].samples.map(x=>[x.expectedWin,x.evidence.exactRelationAccepted])).toEqual([[true,true],[false,false]]);
       const statuses=result.layers[2].samples.flatMap(x=>x.sessions.flatMap(s=>s.results.map(r=>`${r.status}:${r.position===null?"NULL":"CLASSIFIED"}`)));
       expect(statuses).toEqual(expect.arrayContaining(["FINISHED:CLASSIFIED","DNF:CLASSIFIED","DNF:NULL","DNS:NULL"]));
     }
     for(const id of manifest.futureLineup.map(x=>x.constructor)){
       const source=constructorSource(id), m9=deriveFrozenConstructorLayeredResult(source,groupFrozenConstructorRelation(source)), result=deriveFrozenConstructorSampledResult(m9,source);
-      expect(result.status,id).toBe("COMPLETE"); if(result.status!=="COMPLETE") continue;
+      expect(["COMPLETE","ELIMINATED"],id).toContain(result.status); if(result.status!=="COMPLETE") continue;
       expect(result.layers[2].samples.map(x=>x.expectedWin)).toEqual([true,false]);
     }
   });

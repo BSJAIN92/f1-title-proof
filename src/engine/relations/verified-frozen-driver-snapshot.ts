@@ -111,7 +111,7 @@ export function verifyFrozenDriverSnapshot(input: FrozenSnapshotInputs): Snapsho
   }
   if (constructorPointMap.size !== 11 || [...constructorIds].some((id) => !constructorPointMap.has(id))) return fail("Constructor standings must exactly cover the 11 future teams.");
   const remaining = manifest.remainingSessions;
-  if (!Array.isArray(remaining) || remaining.length !== 12) return fail("The revised remaining schedule must contain exactly 12 sessions.");
+  if (!Array.isArray(remaining) || remaining.length !== 11) return fail("The revised remaining schedule must contain exactly 11 sessions.");
   const sessions: { id: string; session: "race" | "sprint"; sequenceIndex: number }[] = [];
   for (let index = 0; index < remaining.length; index += 1) {
     const item = obj(remaining[index]);
@@ -119,15 +119,15 @@ export function verifyFrozenDriverSnapshot(input: FrozenSnapshotInputs): Snapsho
     sessions.push({ id: `${item.date}:${item.event}:${item.type}`, session: item.type, sequenceIndex: index });
   }
   if (sessions.some((session, index) => index > 0 && session.id.slice(0, 10) < sessions[index - 1].id.slice(0, 10))) return fail("The revised remaining schedule is not in chronological order.");
-  if (new Set(sessions.map(({ id }) => id)).size !== 12 || sessions.filter(({ session }) => session === "race").length !== 11 || sessions.filter(({ session }) => session === "sprint").length !== 1) return fail("The revised schedule must have unique IDs, 11 races, and one Sprint.");
+  if (new Set(sessions.map(({ id }) => id)).size !== 11 || sessions.filter(({ session }) => session === "race").length !== 10 || sessions.filter(({ session }) => session === "sprint").length !== 1) return fail("The revised schedule must have unique IDs, 10 races, and one Sprint.");
   const raceHistograms = obj(countback.driver_race_finish_histograms), qualifyingHistograms = obj(countback.driver_qualifying_position_histograms);
   const constructorRaceHistograms = obj(countback.constructor_race_finish_histograms), constructorQualifyingHistograms = obj(countback.constructor_qualifying_position_histograms);
   if (!raceHistograms || !qualifyingHistograms || [...futureIds].some((id) => !validHistogram(raceHistograms[id]) || !validHistogram(qualifyingHistograms[id]))) return fail("Race and qualifying countback must contain well-formed coverage for every future driver.");
   if (!constructorRaceHistograms || !constructorQualifyingHistograms || [...constructorIds].some((id) => !validHistogram(constructorRaceHistograms[id]) || !validHistogram(constructorQualifyingHistograms[id]))) return fail("Constructor countback must contain well-formed coverage for every future team.");
-  if (!Array.isArray(countback.qualifying_events) || countback.qualifying_events.length !== 12) return fail("Exactly 12 completed qualifying events are required.");
+  if (!Array.isArray(countback.qualifying_events) || countback.qualifying_events.length !== 13) return fail("Exactly 13 completed qualifying events are required.");
   if (!Array.isArray(sessionResults.events)) return fail("Completed session results are missing.");
   const expectedQualifyingIds = sessionResults.events.filter((value) => obj(value)?.session === "race").map((value) => obj(value)?.event);
-  if (expectedQualifyingIds.length !== 12 || expectedQualifyingIds.some((id) => typeof id !== "string") || new Set(expectedQualifyingIds).size !== 12) return fail("Completed races do not define the expected 12 unique qualifying events.");
+  if (expectedQualifyingIds.length !== 13 || expectedQualifyingIds.some((id) => typeof id !== "string") || new Set(expectedQualifyingIds).size !== 13) return fail("Completed races do not define the expected 13 unique qualifying events.");
   const qualifyingEventIds = new Set<string>(), reconstructedQualifying = new Map<string, Record<string, number>>(), reconstructedConstructorQualifying = new Map<string, Record<string, number>>();
   for (const eventValue of countback.qualifying_events) {
     const event = obj(eventValue);
@@ -177,6 +177,6 @@ export function verifyFrozenDriverSnapshot(input: FrozenSnapshotInputs): Snapsho
   if (!excluded || !Array.isArray(excluded.permanent) || !Array.isArray(excluded.v1) || [...excluded.permanent, ...excluded.v1].some((item) => typeof item !== "string")) return fail("Unsupported-case declarations are malformed.");
   const mathematicallyRelevant = { dataVersion: manifest.dataVersion, ruleVersion: manifest.ruleVersion, roster, sessions, scoring: { race: scoring.race, sprint: scoring.sprint }, standings: [...futureIds].sort().map((id) => ({ id, points: pointMap.get(id), race: raceHistograms[id], qualifying: qualifyingHistograms[id] })), constructorStandings: [...constructorIds].sort().map((id) => ({ id, points: constructorPointMap.get(id), race: constructorRaceHistograms[id], qualifying: constructorQualifyingHistograms[id] })) };
   const fingerprint = `sha256-${sha256(canonical(mathematicallyRelevant)).toLowerCase()}`;
-  if (fingerprint !== APPROVED_FROZEN_DATA.snapshotFingerprint) return fail("The computed snapshot fingerprint does not match the approved fingerprint.");
+  if (fingerprint !== APPROVED_FROZEN_DATA.snapshotFingerprint) return fail(`The computed snapshot fingerprint ${fingerprint} does not match the approved fingerprint.`);
   return { status: "VERIFIED", snapshot: deepFreeze({ dataVersion: manifest.dataVersion as string, ruleVersion: manifest.ruleVersion as string, cutoff: obj(manifest.cutoff)!.local as string, fingerprint, unsupported: [...excluded.permanent as string[], ...excluded.v1 as string[]], roster, sessions, standings: roster.map(({ driverId }) => ({ driverId, position: driverPositionMap.get(driverId)!, points: pointMap.get(driverId)!, racePositions: { ...(raceHistograms[driverId] as Record<number, number>) }, qualifyingPositions: { ...(qualifyingHistograms[driverId] as Record<number, number>) } })).sort((a, b) => a.position - b.position), constructorStandings: [...constructorIds].map((constructorId) => ({ constructorId, position: constructorPositionMap.get(constructorId)!, points: constructorPointMap.get(constructorId)!, racePositions: { ...(constructorRaceHistograms[constructorId] as Record<number, number>) }, qualifyingPositions: { ...(constructorQualifyingHistograms[constructorId] as Record<number, number>) } })).sort((a, b) => a.position - b.position) }) };
 }

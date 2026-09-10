@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-01/manifest.json";
+import manifest from "../../../data/frozen/2026-09-10/manifest.json";
 import { accumulateStandings } from "../standings/championship-standings";
 import { enumerateEventOutcomes, enumerateWinningRawOutcomes, type TinyChampionshipQuestion } from "../oracle/direct-enumerator";
 import { analyzeBoundedGroupCoverage, classifyExactFinalStandings, createAuthenticatedBoundedGroupingFixture, groupFrozenConstructorRelation, groupFrozenDriverRelation } from "../groups/winning-groups";
@@ -177,9 +177,8 @@ describe("M9 compact winning rule", () => {
     for (const driver of manifest.futureLineup.flatMap(({ drivers }) => drivers)) {
       const source = buildApprovedFrozenDriverRelation(driverRequest(driver));
       if (source.status === "ELIMINATED") eliminated += 1;
-      expect(source.status).toBe("COMPLETE");
       const result = deriveFrozenDriverLayeredResult(source, groupFrozenDriverRelation(source));
-      expect(result.status).toBe("COMPLETE");
+      expect(result.status).toBe(source.status === "ELIMINATED" ? "ELIMINATED" : "COMPLETE");
       expect(isGenuineLayeredWinningResult(result)).toBe(true);
       if (result.status === "COMPLETE") {
         expect(result.layers.map(({ layer }) => layer)).toEqual(["COMPACT_RULE", "DETAILED_GROUPS"]);
@@ -189,30 +188,29 @@ describe("M9 compact winning rule", () => {
     for (const team of manifest.futureLineup.map(({ constructor }) => constructor)) {
       const source = buildApprovedFrozenConstructorRelation(constructorRequest(team));
       if (source.status === "ELIMINATED") eliminated += 1;
-      expect(source.status).toBe("COMPLETE");
       const result = deriveFrozenConstructorLayeredResult(source, groupFrozenConstructorRelation(source));
-      expect(result.status).toBe("COMPLETE");
+      expect(result.status).toBe(source.status === "ELIMINATED" ? "ELIMINATED" : "COMPLETE");
       expect(isGenuineLayeredWinningResult(result)).toBe(true);
       if (result.status === "COMPLETE") expect(result.certificate).toMatchObject({ selectedContenderId: team, sourceKind: "CONSTRUCTOR" });
     }
-    expect(eliminated).toBe(0);
+    expect(eliminated).toBeGreaterThan(0);
   });
 
   it("classifies representative frozen leader, close, and lower contender paths", () => {
-    for (const driver of ["Kimi Antonelli", "George Russell", "Sergio Perez"]) {
+    for (const driver of ["Kimi Antonelli", "George Russell"]) {
       const source = buildApprovedFrozenDriverRelation(driverRequest(driver));
       if (source.status !== "COMPLETE") throw new Error(`Expected complete ${driver} relation`);
       const result = deriveFrozenDriverLayeredResult(source, groupFrozenDriverRelation(source));
       expect(evaluateFrozenDriverLayerEquivalence(result, driverPath(source.relation, driver))).toMatchObject({ status: "EQUIVALENT", accepted: true });
-      const rival = driver === "Kimi Antonelli" ? "Sergio Perez" : "Kimi Antonelli";
+      const rival = driver === "Kimi Antonelli" ? "George Russell" : "Kimi Antonelli";
       expect(evaluateFrozenDriverLayerEquivalence(result, driverPath(source.relation, rival))).toMatchObject({ status: "EQUIVALENT", accepted: false });
     }
-    for (const team of ["Mercedes-AMG PETRONAS F1 Team", "Scuderia Ferrari HP", "Cadillac Formula 1 Team"]) {
+    for (const team of ["Mercedes-AMG PETRONAS F1 Team", "Scuderia Ferrari HP"]) {
       const source = buildApprovedFrozenConstructorRelation(constructorRequest(team));
       if (source.status !== "COMPLETE") throw new Error(`Expected complete ${team} relation`);
       const result = deriveFrozenConstructorLayeredResult(source, groupFrozenConstructorRelation(source));
       expect(evaluateFrozenConstructorLayerEquivalence(result, constructorPath(source.relation, team))).toMatchObject({ status: "EQUIVALENT", accepted: true });
-      const rival = team === "Mercedes-AMG PETRONAS F1 Team" ? "Cadillac Formula 1 Team" : "Mercedes-AMG PETRONAS F1 Team";
+      const rival = team === "Mercedes-AMG PETRONAS F1 Team" ? "Scuderia Ferrari HP" : "Mercedes-AMG PETRONAS F1 Team";
       expect(evaluateFrozenConstructorLayerEquivalence(result, constructorPath(source.relation, rival))).toMatchObject({ status: "EQUIVALENT", accepted: false });
     }
   });

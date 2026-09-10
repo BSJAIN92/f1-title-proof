@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-01/manifest.json";
+import manifest from "../../../data/frozen/2026-09-10/manifest.json";
 import { accumulateStandings } from "../standings/championship-standings";
 import { enumerateWinningRawOutcomes, type TinyChampionshipQuestion } from "../oracle/direct-enumerator";
 import { APPROVED_FROZEN_SNAPSHOT_FINGERPRINT, buildApprovedFrozenDriverRelation as buildDriverRelation, type FrozenDriverSymbolicRelation } from "../relations/frozen-driver-symbolic-relation";

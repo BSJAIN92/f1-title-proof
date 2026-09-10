@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-01/manifest.json";
+import manifest from "../../../data/frozen/2026-09-10/manifest.json";
 import { APPROVED_FROZEN_SNAPSHOT_FINGERPRINT, buildApprovedFrozenDriverRelation as buildDriverRelation, evaluateFrozenDriverRelation, type FrozenDriverSymbolicRelation, type FrozenRawPath } from "./frozen-driver-symbolic-relation";
 import { approvedSnapshotFixture } from "../../test/approved-frozen-fixture";
 
@@ -18,12 +18,12 @@ function path(relation: FrozenDriverSymbolicRelation, winner: string, dnsDriver:
 }
 
 describe("approved frozen 22-driver symbolic relation", () => {
-  it.each(["Kimi Antonelli", "George Russell", "Lando Norris", "Sergio Perez"])("constructs the complete finite constraint relation for %s when not ceiling-eliminated", (driver) => {
+  it.each(["Kimi Antonelli", "George Russell", "Lando Norris"])("constructs the complete finite constraint relation for %s when not ceiling-eliminated", (driver) => {
     const result = buildApprovedFrozenDriverRelation(request(driver));
     expect(result.status).toBe("COMPLETE");
     if (result.status !== "COMPLETE") return;
-    expect(result.certificate).toMatchObject({ approved: true, rosterSize: 22, sessionCount: 12 });
-    expect(result.relation.eventConstraints.filter(({ session }) => session === "race")).toHaveLength(11);
+    expect(result.certificate).toMatchObject({ approved: true, rosterSize: 22, sessionCount: 11 });
+    expect(result.relation.eventConstraints.filter(({ session }) => session === "race")).toHaveLength(10);
     expect(result.relation.eventConstraints.filter(({ session }) => session === "sprint")).toHaveLength(1);
     expect(result.relation.eventConstraints.every(({ entrantDriverIds }) => entrantDriverIds.length === 22)).toBe(true);
   });
@@ -34,11 +34,11 @@ describe("approved frozen 22-driver symbolic relation", () => {
     expect(result.relation.eventConstraints.map(({ sessionId }) => sessionId)).toEqual(manifest.remainingSessions.map((item) => `${item.date}:${item.event}:${item.type}`));
     expect(result.relation.roster.map(({ driverId }) => driverId)).not.toContain("Yuki Tsunoda");
     expect(result.relation.roster.map(({ driverId }) => driverId)).toHaveLength(22);
-    expect(result.relation.initialStandings.find(({ competitorId }) => competitorId === "Kimi Antonelli")?.points).toBe(242);
+    expect(result.relation.initialStandings.find(({ competitorId }) => competitorId === "Kimi Antonelli")?.points).toBe(267);
   });
 
   it("classifies full-length legal win and loss witnesses exactly", () => {
-    for (const driver of ["Kimi Antonelli", "Lando Norris", "Sergio Perez"]) {
+    for (const driver of ["Kimi Antonelli", "Lando Norris"]) {
       const result = buildApprovedFrozenDriverRelation(request(driver));
       if (result.status !== "COMPLETE") throw new Error(result.reason);
       const rival = driver === "Kimi Antonelli" ? "George Russell" : "Kimi Antonelli";
@@ -52,8 +52,8 @@ describe("approved frozen 22-driver symbolic relation", () => {
     const points = new Map(manifest.driverStandings.map(({ driver, points }) => [driver, points]));
     const leaderPoints = Math.max(...futureDrivers.map((driver) => points.get(driver)!));
     const remainingMaximum = manifest.remainingSessions.reduce((total, session) => total + (session.type === "race" ? 25 : 8), 0);
-    expect(remainingMaximum).toBe(283);
-    expect(leaderPoints - Math.min(...futureDrivers.map((driver) => points.get(driver)!))).toBe(242);
+    expect(remainingMaximum).toBe(258);
+    expect(leaderPoints - Math.min(...futureDrivers.map((driver) => points.get(driver)!))).toBe(267);
     for (const driver of futureDrivers) {
       const independentlyEliminated = points.get(driver)! + remainingMaximum < leaderPoints;
       expect(buildApprovedFrozenDriverRelation(request(driver)).status).toBe(independentlyEliminated ? "ELIMINATED" : "COMPLETE");

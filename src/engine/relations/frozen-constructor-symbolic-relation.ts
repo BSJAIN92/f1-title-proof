@@ -11,7 +11,7 @@ export interface FrozenConstructorSymbolicRelation {
   readonly finalPredicate: { readonly operation: "STRICTLY_AHEAD_OF_EVERY_CONSTRUCTOR_USING_M3"; readonly bothCarsScore: true; readonly sprintCountbackExcluded: true; readonly unresolvedEqualityIsWin: false };
 }
 export type ConstructorRelationResult =
-  | { readonly status: "COMPLETE"; readonly relation: FrozenConstructorSymbolicRelation; readonly certificate: { readonly kind: "COMPOSITIONAL_EXACT_CONSTRUCTOR_RELATION_PROOF"; readonly dataVersion: string; readonly ruleVersion: string; readonly snapshotFingerprint: string; readonly selectedConstructorId: string; readonly rosterSize: 22; readonly constructorCount: 11; readonly sessionCount: 12; readonly obligations: readonly string[] } }
+  | { readonly status: "COMPLETE"; readonly relation: FrozenConstructorSymbolicRelation; readonly certificate: { readonly kind: "COMPOSITIONAL_EXACT_CONSTRUCTOR_RELATION_PROOF"; readonly dataVersion: string; readonly ruleVersion: string; readonly snapshotFingerprint: string; readonly selectedConstructorId: string; readonly rosterSize: 22; readonly constructorCount: 11; readonly sessionCount: number; readonly obligations: readonly string[] } }
   | { readonly status: "ELIMINATED"; readonly reason: "MATHEMATICAL_CEILING"; readonly proof: PruningProof }
   | { readonly status: "CALCULATION_FAILURE"; readonly code: "STALE_SNAPSHOT" | "INVALID_SNAPSHOT" | "SELECTED_CONSTRUCTOR_ABSENT"; readonly reason: string };
 export interface ConstructorRelationRequest { readonly selectedConstructorId: string; readonly dataVersion: string; readonly ruleVersion: string; readonly snapshotFingerprint: string }
@@ -51,7 +51,7 @@ function buildApprovedFrozenConstructorRelationInternal(request: ConstructorRela
     roster: snapshot.roster.map((entry) => ({ ...entry })), initialStandings: standings.map((standing) => ({ ...standing, racePositions: { ...standing.racePositions }, qualifyingPositions: { ...standing.qualifyingPositions } })), eventConstraints: snapshot.sessions.map((session) => ({ sessionId: session.id, sequenceIndex: session.sequenceIndex, session: session.session, legalityPredicate: "M2_EXACT_FULL_POINTS_EVENT" as const, driverAssignments: snapshot.roster.map((entry) => ({ ...entry })) })),
     finalPredicate: { operation: "STRICTLY_AHEAD_OF_EVERY_CONSTRUCTOR_USING_M3", bothCarsScore: true, sprintCountbackExcluded: true, unresolvedEqualityIsWin: false } });
   genuineConstructorRelations.add(relation);
-  return { status: "COMPLETE", relation, certificate: deepFreeze({ kind: "COMPOSITIONAL_EXACT_CONSTRUCTOR_RELATION_PROOF", dataVersion: snapshot.dataVersion, ruleVersion: snapshot.ruleVersion, snapshotFingerprint: snapshot.fingerprint, selectedConstructorId: request.selectedConstructorId, rosterSize: 22, constructorCount: 11, sessionCount: 12,
+  return { status: "COMPLETE", relation, certificate: deepFreeze({ kind: "COMPOSITIONAL_EXACT_CONSTRUCTOR_RELATION_PROOF", dataVersion: snapshot.dataVersion, ruleVersion: snapshot.ruleVersion, snapshotFingerprint: snapshot.fingerprint, selectedConstructorId: request.selectedConstructorId, rosterSize: 22, constructorCount: 11, sessionCount: snapshot.sessions.length,
     obligations: ["EVERY_EVENT_IS_M2_LEGAL", "BOTH_FROZEN_ASSIGNED_CARS_SCORE", "ONLY_RACE_FINISHES_UPDATE_COUNTBACK", "M3_STRICT_CONSTRUCTOR_COMPARISON"] }) };
 }
 

@@ -2,14 +2,14 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-01/manifest.json";
-import countback from "../../../data/frozen/2026-09-01/countback.json";
-import sessionResults from "../../../data/frozen/2026-09-01/session-results.json";
+import manifest from "../../../data/frozen/2026-09-10/manifest.json";
+import countback from "../../../data/frozen/2026-09-10/countback.json";
+import sessionResults from "../../../data/frozen/2026-09-10/session-results.json";
 import { verifyFrozenDriverSnapshot, type FrozenSnapshotInputs } from "./verified-frozen-driver-snapshot";
 
 const clone = <T>(value: T): T => structuredClone(value);
 function inputs(): FrozenSnapshotInputs {
-  const base = resolve(process.cwd(), "data", "frozen", "2026-09-01");
+  const base = resolve(process.cwd(), "data", "frozen", "2026-09-10");
   return { manifestBytes: readFileSync(resolve(base, "manifest.json")), artifactBytes: {
     "session-results.json": readFileSync(resolve(base, "session-results.json")), "countback.json": readFileSync(resolve(base, "countback.json")), "source-documents.json": readFileSync(resolve(base, "source-documents.json")),
   } };
@@ -31,7 +31,7 @@ describe("verified frozen driver snapshot", () => {
   it("verifies bytes and reconstructs all 22 baseline standings", () => {
     const result = verifyFrozenDriverSnapshot(inputs());
     expect(result.status).toBe("VERIFIED");
-    if (result.status === "VERIFIED") expect(result.snapshot).toMatchObject({ fingerprint: expect.stringMatching(/^sha256-[0-9a-f]{64}$/), roster: { length: 22 }, sessions: { length: 12 }, standings: { length: 22 } });
+    if (result.status === "VERIFIED") expect(result.snapshot).toMatchObject({ fingerprint: expect.stringMatching(/^sha256-[0-9a-f]{64}$/), roster: { length: 22 }, sessions: { length: 11 }, standings: { length: 22 } });
   });
 
   it("rejects missing and duplicate standings drivers", () => {

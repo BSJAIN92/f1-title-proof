@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import classifiedRetirementFixture from "../../../data/frozen/2026-09-01/classified-retirement-fixture.json";
+import classifiedRetirementFixture from "../../../data/frozen/2026-09-10/classified-retirement-fixture.json";
 import {
   scoreAndValidateEvent,
   validateOfficialEvent,

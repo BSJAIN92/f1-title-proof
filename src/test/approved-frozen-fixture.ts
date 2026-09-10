@@ -1,10 +1,10 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import manifest from "../../data/frozen/2026-09-01/manifest.json";
+import manifest from "../../data/frozen/2026-09-10/manifest.json";
 import { verifyFrozenDriverSnapshot, type VerifiedFrozenDriverSnapshot } from "../engine/relations/verified-frozen-driver-snapshot";
 import type { ApprovedDatasetDocument } from "../convex/contracts";
 
-const base = resolve(process.cwd(), "data", "frozen", "2026-09-01");
+const base = resolve(process.cwd(), "data", "frozen", "2026-09-10");
 const read = (name: string) => readFileSync(resolve(base, name), "utf8");
 
 export function approvedDatasetFixture(): ApprovedDatasetDocument {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import frozen from "../../../data/frozen/2026-09-01/session-results.json";
-import countback from "../../../data/frozen/2026-09-01/countback.json";
+import frozen from "../../../data/frozen/2026-09-10/session-results.json";
+import countback from "../../../data/frozen/2026-09-10/countback.json";
 import type { ScoredEventResult } from "../events/event-outcome";
 import { accumulateStandings, compareStandings, type ChampionshipStanding } from "./championship-standings";
 

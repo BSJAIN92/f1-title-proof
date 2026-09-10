@@ -9,7 +9,7 @@ describe("Convex dataset runtime", () => {
     expect(verified.status).toBe("VERIFIED");
     if (verified.status !== "VERIFIED") return;
     const data = productDataFromSnapshot(verified.snapshot);
-    expect(data).toMatchObject({ dataVersion: "2026-09-01T21:14:22+05:30", remainingSessions: 12 });
+    expect(data).toMatchObject({ dataVersion: "2026-09-10T00:00:00+05:30", remainingSessions: 11 });
     expect(data.standings.driver).toHaveLength(22);
     expect(data.standings.constructor).toHaveLength(11);
   });
