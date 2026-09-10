@@ -34,14 +34,14 @@ export function GuaranteedScenariosWorkbench({ data }:{ data:ProductData }) {
     finally { if (id === requestId.current) setBusy(false); }
   }
 
-  function chooseContender(id:string) { setContenderId(id); void load(kind,id); }
+  function chooseContender(id:string) { setContenderId(id); void load(kind,id); if (window.matchMedia("(max-width: 760px)").matches) requestAnimationFrame(() => document.getElementById("scenario-workspace")?.scrollIntoView()); }
   function changeKind(next:ChampionshipKind) { requestId.current += 1; setKind(next); setContenderId(""); setPage(null); setError(null); setBusy(false); }
 
   return <div className="title-proof-app scenarios-app">
     <header className="product-bar"><div className="product-mark"><strong>Formula 1 Championship</strong><i>{season} Season</i></div><div className="season-summary"><span>Races remaining <b>{data.remaining.races}</b></span><span>Sprint remaining <b>{data.remaining.sprints}</b></span></div><Link href="/">Head-to-head</Link></header>
     <div className="championship-workbench">
       <StandingsPanel season={season} kind={kind} remaining={data.remaining} rows={rows} selectedId={contenderId} rivalId="" onKind={changeKind} onSelect={chooseContender}/>
-      <main className="scenario-workspace">
+      <main className="scenario-workspace" id="scenario-workspace">
         <header className="scenario-intro"><p className="eyebrow">Strict points guarantee</p><h2>Possible championship scenarios</h2><p>Choose a top {kind === "driver" ? "six driver" : "three team"} to see every grouped finish summary that guarantees the championship on points.</p></header>
         <section className="scenario-method"><div><span>Included</span><strong>Every matching finish-count summary</strong><p>All standings rivals are checked, including contenders outside this selector.</p></div><div><span>Ordering</span><strong>Fewest points first</strong><p>The Sprint is separate and every zero-point finish shares one bucket.</p></div><div><span>Not included</span><strong>Countback ties</strong><p>A scenario appears only when the contender must finish strictly ahead on points.</p></div></section>
         {!contenderId ? <section className="scenario-empty"><span aria-hidden="true">01 — 06</span><h3>Choose a contender</h3><p>Select a driver or constructor from the standings to load guaranteed scenarios.</p></section> : null}
