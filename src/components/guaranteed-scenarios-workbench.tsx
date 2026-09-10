@@ -30,6 +30,7 @@ export function GuaranteedScenariosWorkbench({ data }:{ data:ProductData }) {
       if (!parsed || parsed.kind !== nextKind || parsed.contenderId !== nextId || parsed.dataVersion !== data.dataVersion) throw new Error("The server returned stale or invalid scenarios.");
       if (id !== requestId.current) return;
       setPage(previous => cursor && previous ? { ...parsed, items:[...previous.items,...parsed.items] } : parsed);
+      if (!cursor && window.matchMedia("(max-width: 760px)").matches) requestAnimationFrame(() => document.getElementById("scenario-results")?.scrollIntoView({ block:"start", inline:"start" }));
     } catch (value) { if (id === requestId.current) setError(value instanceof Error ? value.message : "The scenarios could not be loaded."); }
     finally { if (id === requestId.current) setBusy(false); }
   }
@@ -47,7 +48,7 @@ export function GuaranteedScenariosWorkbench({ data }:{ data:ProductData }) {
         {!contenderId ? <section className="scenario-empty"><span aria-hidden="true">01 — 06</span><h3>Choose a contender</h3><p>Select a driver or constructor from the standings to load guaranteed scenarios.</p></section> : null}
         {busy && !page ? <section className="scenario-empty" role="status"><span aria-hidden="true">CALC</span><h3>Counting scenarios</h3><p>The first page may take a moment, especially for constructors.</p></section> : null}
         {error ? <section className="battle-error" role="alert"><div><p className="eyebrow">Scenarios unavailable</p><strong>{error}</strong></div><button onClick={() => void load(kind,contenderId,page?.nextCursor ?? undefined)}>Try again</button></section> : null}
-        {page ? <section className="scenario-results" aria-live="polite"><header><div><p className="eyebrow">Guaranteed on points</p><h3>{page.contenderId}</h3></div><p>Current points <b>{page.currentPoints}</b><span>Strongest current rival: {page.strongestRivalId}, {page.strongestRivalPoints} pts</span></p></header><GuaranteedScenarioList items={page.items}/>{page.nextCursor ? <button className="scenario-more" disabled={busy} onClick={() => void load(kind,contenderId,page.nextCursor!)}>{busy ? "Loading more…" : "Load 25 more scenarios"}</button> : <p className="scenario-end">Every matching scenario has been shown.</p>}</section> : null}
+        {page ? <section className="scenario-results" id="scenario-results" aria-live="polite"><header><div><p className="eyebrow">Guaranteed on points</p><h3>{page.contenderId}</h3></div><p>Current points <b>{page.currentPoints}</b><span>Strongest current rival: {page.strongestRivalId}, {page.strongestRivalPoints} pts</span></p></header><GuaranteedScenarioList items={page.items}/>{page.nextCursor ? <button className="scenario-more" disabled={busy} onClick={() => void load(kind,contenderId,page.nextCursor!)}>{busy ? "Loading more…" : "Load 25 more scenarios"}</button> : <p className="scenario-end">Every matching scenario has been shown.</p>}</section> : null}
       </main>
     </div>
   </div>;
