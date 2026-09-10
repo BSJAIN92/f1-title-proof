@@ -3,7 +3,7 @@ import path from "node:path";
 
 const artifacts = path.join(process.cwd(), "artifacts", "convex-history");
 const binding = {
-  dataVersion: "2026-09-10T00:00:00+05:30",
+  dataVersion: "2026-09-10T12:30:00+05:30",
   ruleVersion: "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points",
 };
 

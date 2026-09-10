@@ -1,21 +1,21 @@
 {
-  "dataVersion": "2026-09-10T00:00:00+05:30",
+  "dataVersion": "2026-09-10T12:30:00+05:30",
   "ruleVersion": "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points",
   "approval": {
     "status": "approved",
     "approvedBy": "product owner",
-    "approvedAt": "2026-09-10T00:00:00+05:30"
+    "approvedAt": "2026-09-10T12:30:00+05:30"
   },
   "cutoff": {
-    "local": "2026-09-10T00:00:00+05:30",
-    "utc": "2026-09-09T18:30:00Z",
+    "local": "2026-09-10T12:30:00+05:30",
+    "utc": "2026-09-10T07:00:00Z",
     "timeZone": "Asia/Calcutta",
     "windowsTimeZone": "India Standard Time"
   },
   "sourcePolicy": {
     "controllingResults": "FINAL FIA classification documents",
     "standingsCrossCheck": "Current Formula 1 standings pages",
-    "retrievedAt": "2026-09-10T00:00:00+05:30",
+    "retrievedAt": "2026-09-10T12:30:00+05:30",
     "sessionSourceLocations": "session-results.json sources map and countback.json qualifying_events source_url fields",
     "manualExtractionReview": "Italian race and qualifying were checked row-by-row against the official Formula 1 tables; official standings were reconciled to the post-Italy tables.",
     "freezePolicy": "Later corrections do not silently change this data version; they require a new version and approval."
@@ -410,7 +410,7 @@
     },
     "sourceDocuments": {
       "path": "source-documents.json",
-      "sha256": "D89BA1FB94DBD3E4974477E76ECD22F6A64E0E973065692B6A5A9AE40F59457D"
+      "sha256": "00087DD32AF90C702B5D464E94514C15466CF0DA9504840E974F01891E450877"
     }
   },
   "sources": {

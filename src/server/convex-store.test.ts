@@ -14,7 +14,7 @@ import {
 
 const hash = "a".repeat(64);
 const serverCredential = "server-test-credential".padEnd(32, "x");
-const selection = { kind: "driver" as const, contenderId: "Kimi Antonelli", dataVersion: "2026-09-10T00:00:00+05:30", ruleVersion: "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points" };
+const selection = { kind: "driver" as const, contenderId: "Kimi Antonelli", dataVersion: "2026-09-10T12:30:00+05:30", ruleVersion: "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points" };
 
 describe("Convex store bridge", () => {
   beforeEach(() => {
