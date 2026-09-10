@@ -99,11 +99,6 @@ export async function backfillDashboardActivity() {
   return mutate(() => fetchMutation(api.dashboard.backfillDailyActivity, { serverCredential: access.serverCredential }, { url: access.url }));
 }
 
-export async function purgeExpiredActivity() {
-  const access = options();
-  return mutate(() => fetchMutation(api.dashboard.purgeExpiredActivity, { serverCredential: access.serverCredential, now: Date.now() }, { url: access.url }));
-}
-
 export async function recordComparisonReturn(visitorHash: string, request: HeadToHeadRequest): Promise<void> {
   requireHash(visitorHash);
   const access = options();

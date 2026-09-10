@@ -36,23 +36,3 @@ export const backfillDailyActivity = mutation({
     return { backfilled: true, events: events.length };
   },
 });
-
-export const purgeExpiredActivity = mutation({
-  args: { serverCredential: v.string(), now: v.number() },
-  handler: async (ctx, args) => {
-    requireServerCredential(args.serverCredential);
-    const cutoff = args.now - 90 * 86_400_000; const cutoffDate = dateKey(cutoff); let deleted = 0;
-    const groups = await Promise.all([
-      ctx.db.query("visitorEvents").filter((q) => q.lt(q.field("occurredAt"), cutoff)).take(500),
-      ctx.db.query("calculationHistory").filter((q) => q.lt(q.field("requestedAt"), cutoff)).take(500),
-      ctx.db.query("comparisonHistory").filter((q) => q.lt(q.field("requestedAt"), cutoff)).take(500),
-      ctx.db.query("anonymousVisitors").filter((q) => q.lt(q.field("lastSeenAt"), cutoff)).take(500),
-      ctx.db.query("requestLimitBuckets").withIndex("by_expiry", (q) => q.lt("expiresAt", args.now)).take(500),
-      ctx.db.query("dailyVisitorActivity").withIndex("by_date", (q) => q.lt("date", cutoffDate)).take(500),
-      ctx.db.query("dailyMatchupActivity").withIndex("by_date", (q) => q.lt("date", cutoffDate)).take(500),
-      ctx.db.query("dailyActivityTotals").withIndex("by_date", (q) => q.lt("date", cutoffDate)).take(500),
-    ]);
-    for (const group of groups) for (const row of group) { await ctx.db.delete(row._id); deleted += 1; }
-    return { deleted, moreMayRemain: groups.some((group) => group.length === 500) };
-  },
-});

@@ -8,14 +8,14 @@
  * @module
  */
 
-import type * as dashboard from "../dashboard.js";
 import type * as activityAggregates from "../activityAggregates.js";
+import type * as dashboard from "../dashboard.js";
 import type * as datasets from "../datasets.js";
 import type * as history from "../history.js";
+import type * as security from "../security.js";
 import type * as seed from "../seed.js";
 import type * as seedNode from "../seedNode.js";
 import type * as serverAccess from "../serverAccess.js";
-import type * as security from "../security.js";
 
 import type {
   ApiFromModules,
@@ -28,10 +28,10 @@ declare const fullApi: ApiFromModules<{
   dashboard: typeof dashboard;
   datasets: typeof datasets;
   history: typeof history;
+  security: typeof security;
   seed: typeof seed;
   seedNode: typeof seedNode;
   serverAccess: typeof serverAccess;
-  security: typeof security;
 }>;
 
 /**
