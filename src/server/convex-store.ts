@@ -88,6 +88,7 @@ export async function recordAnonymousVisit(visitorHash: string, countryCode?: st
 
 export async function loadDashboardSnapshot(range: DashboardRange): Promise<DashboardSnapshot> {
   const access = options();
+  await mutate(() => fetchMutation(api.dashboard.backfillDailyActivity, { serverCredential: access.serverCredential }, { url: access.url }));
   const value = await query(() => fetchQuery(api.dashboard.getSnapshot, { serverCredential: access.serverCredential, ...range }, { url: access.url }));
   if (!value || typeof value !== "object" || !("uniqueVisitors" in value) || !("daily" in value)) throw new StoreFailure("INVALID_DATA", "The dashboard response is malformed.");
   return value as DashboardSnapshot;
