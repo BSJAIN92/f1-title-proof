@@ -24,4 +24,4 @@
 - [x] Add a protected Convex mutation and server bridge.
 - [x] Add a validated API route and non-blocking button call.
 - [x] Add tests and run all project checks.
-- [ ] Deploy and verify the production event record.
+- [x] Deploy and verify the production event record.
