@@ -49,6 +49,6 @@
 
 ### Task 3: Publish and verify
 
-- [ ] Commit and push to GitHub.
-- [ ] Deploy Convex and Vercel through the production deployment.
-- [ ] Verify all four tabs and the disclaimer on the live site.
+- [x] Commit and push to GitHub.
+- [x] Deploy Convex and Vercel through the production deployment.
+- [x] Verify all four tabs and the disclaimer on the live site.
