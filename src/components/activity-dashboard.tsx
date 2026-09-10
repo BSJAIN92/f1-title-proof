@@ -26,7 +26,7 @@ export function ActivityDashboard({ snapshot }: { snapshot: DashboardSnapshot })
   const countryTrackingPartial = snapshot.range.start < snapshot.countryTrackingStartedAt;
   return <main className="activity-dashboard">
     <header className="dashboard-header">
-      <div><p className="eyebrow">Title Proof · pit wall telemetry</p><h1>Activity dashboard</h1><p>Anonymous product usage. Times and day boundaries are shown in UTC.</p></div>
+      <div><p className="eyebrow">Formula 1 Championship · pit wall telemetry</p><h1>Activity dashboard</h1><p>Anonymous product usage. Times and day boundaries are shown in UTC.</p></div>
       <div className="dashboard-header__actions"><Link href="/">Open app ↗</Link><form action="/api/dashboard/logout" method="post"><button>Log out</button></form></div>
     </header>
 

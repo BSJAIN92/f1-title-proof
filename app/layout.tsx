@@ -8,7 +8,7 @@ import "@fontsource/source-sans-3/600.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Title Proof — F1 Championship Scenarios",
+  title: "Formula 1 Championship — 2026 Season",
   description: "Exact Formula 1 championship-winning conditions.",
 };
 

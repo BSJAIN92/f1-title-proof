@@ -9,7 +9,7 @@ export default async function DashboardLoginPage() {
   if (isDashboardSessionValid(cookieStore.get(DASHBOARD_COOKIE)?.value, process.env.DASHBOARD_SESSION_SECRET)) redirect("/dashboard");
   return <main className="dashboard-login">
     <section>
-      <p className="eyebrow">Title Proof · private telemetry</p>
+      <p className="eyebrow">Formula 1 Championship · private telemetry</p>
       <h1>Activity dashboard</h1>
       <p>Enter the private password to view visitor and comparison activity.</p>
       <DashboardLogin />
