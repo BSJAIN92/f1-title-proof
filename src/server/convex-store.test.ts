@@ -9,6 +9,7 @@ import {
   compareAndRecord,
   loadActiveProductData,
   loadAnonymousState,
+  recordComparisonReturn,
   reopenOwnedHistory,
   saveSelection,
 } from "./convex-store";
@@ -47,6 +48,21 @@ describe("Convex store bridge", () => {
     expect(convex.mutation.mock.calls[0][1]).not.toHaveProperty("targetId");
     convex.mutation.mockRejectedValueOnce(new Error("tracking offline"));
     await expect(compareAndRecord(hash, request)).resolves.toMatchObject({ status: "COMPLETE" });
+  });
+
+  it("records returning from a driver comparison with the selected and rival IDs", async () => {
+    const request = { kind: "driver" as const, targetId: "Kimi Antonelli", rivalId: "George Russell", dataVersion: selection.dataVersion, ruleVersion: selection.ruleVersion };
+    convex.mutation.mockResolvedValueOnce("event-id");
+    await expect(recordComparisonReturn(hash, request)).resolves.toBeUndefined();
+    expect(convex.mutation).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({
+      visitorHash: hash,
+      kind: "driver",
+      driverId: request.targetId,
+      rivalId: request.rivalId,
+      dataVersion: request.dataVersion,
+    }), expect.anything());
+    expect(convex.mutation.mock.calls[0][1]).not.toHaveProperty("targetId");
+    expect(convex.mutation.mock.calls[0][1]).not.toHaveProperty("constructorId");
   });
 
   it("saves a validated selection", async () => {

@@ -84,6 +84,15 @@ export async function recordAnonymousVisit(visitorHash: string): Promise<void> {
   await mutate(() => fetchMutation(api.history.recordVisit, { visitorHash, serverCredential: access.serverCredential, occurredAt: Date.now() }, { url: access.url }));
 }
 
+export async function recordComparisonReturn(visitorHash: string, request: HeadToHeadRequest): Promise<void> {
+  requireHash(visitorHash);
+  const access = options();
+  await mutate(() => fetchMutation(api.history.recordComparisonReturn, {
+    visitorHash, serverCredential: access.serverCredential, kind: request.kind, rivalId: request.rivalId, dataVersion: request.dataVersion, occurredAt: Date.now(),
+    ...(request.kind === "driver" ? { driverId: request.targetId } : { constructorId: request.targetId }),
+  }, { url: access.url }));
+}
+
 export async function compareAndRecord(visitorHash: string, request: HeadToHeadRequest): Promise<HeadToHeadResponse> {
   requireHash(visitorHash);
   const result = await compareActiveHeadToHead(request);

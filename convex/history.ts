@@ -68,6 +68,18 @@ export const recordVisit = mutation({
   },
 });
 
+export const recordComparisonReturn = mutation({
+  args: { serverCredential: v.string(), visitorHash: v.string(), kind: kindValidator, driverId: v.optional(v.string()), constructorId: v.optional(v.string()), rivalId: v.string(), dataVersion: v.string(), occurredAt: v.number() },
+  handler: async (ctx, args) => {
+    requireServerCredential(args.serverCredential); requireHash(args.visitorHash);
+    const selectedId = args.kind === "driver" ? args.driverId : args.constructorId;
+    if (!selectedId || !args.rivalId || selectedId === args.rivalId || !args.dataVersion || !Number.isFinite(args.occurredAt)) throw new Error("The comparison return event is invalid.");
+    await upsertVisitor(ctx, args.visitorHash, args.occurredAt);
+    const selectedField = args.kind === "driver" ? { driverId: selectedId } : { constructorId: selectedId };
+    return ctx.db.insert("visitorEvents", { visitorHash: args.visitorHash, eventType: "comparison_returned", kind: args.kind, ...selectedField, rivalId: args.rivalId, dataVersion: args.dataVersion, occurredAt: args.occurredAt });
+  },
+});
+
 export const recordComparison = mutation({
   args: { serverCredential: v.string(), visitorHash: v.string(), kind: kindValidator, driverId: v.optional(v.string()), constructorId: v.optional(v.string()), rivalId: v.string(), dataVersion: v.string(),
     ruleVersion: v.string(), resultStatus: comparisonStatusValidator, reason: v.optional(v.string()), requestedAt: v.number() },
