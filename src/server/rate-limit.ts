@@ -3,12 +3,11 @@ import { createHmac } from "node:crypto";
 import { fetchMutation } from "convex/nextjs";
 import { api } from "../../convex/_generated/api";
 
-export type LimitedAction = "login" | "visit" | "compare" | "calculate" | "selection" | "state" | "reopen" | "comparison_return" | "scenarios";
+export type LimitedAction = "login" | "visit" | "compare" | "calculate" | "selection" | "state" | "reopen" | "comparison_return";
 const limits: Record<LimitedAction, { limit: number; windowMs: number }> = {
   login: { limit: 5, windowMs: 15 * 60_000 }, visit: { limit: 30, windowMs: 60_000 }, compare: { limit: 20, windowMs: 60_000 },
   calculate: { limit: 10, windowMs: 60_000 }, selection: { limit: 30, windowMs: 60_000 }, state: { limit: 30, windowMs: 60_000 },
   reopen: { limit: 20, windowMs: 60_000 }, comparison_return: { limit: 30, windowMs: 60_000 },
-  scenarios: { limit: 30, windowMs: 60_000 },
 };
 
 export interface RateLimitDecision { readonly allowed: boolean; readonly retryAfterSeconds: number }
