@@ -12,6 +12,10 @@ describe("Convex dataset runtime", () => {
     expect(data).toMatchObject({ dataVersion: "2026-09-10T12:30:00+05:30", remainingSessions: 11 });
     expect(data.standings.driver).toHaveLength(22);
     expect(data.standings.constructor).toHaveLength(11);
+    expect(data.standings.driver.find(({ id }) => id === "Gabriel Bortoleto")?.eligible).toBe(true);
+    expect(data.standings.driver.find(({ id }) => id === "Nico Hulkenberg")?.eligible).toBe(false);
+    expect(data.standings.constructor.find(({ id }) => id === "BWT Alpine F1 Team")?.eligible).toBe(true);
+    expect(data.standings.constructor.find(({ id }) => id === "TGR Haas F1 Team")?.eligible).toBe(false);
   });
 
   it("rejects changed stored bytes", () => {

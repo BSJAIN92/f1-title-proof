@@ -33,6 +33,11 @@ function standings(rows: readonly { id: string; position: number; points: number
   return rows.map((row) => ({ ...row, gap: row.points - leader, eligible: row.points + maximum >= leader }));
 }
 
+function maximumRemainingPoints(snapshot: VerifiedFrozenDriverSnapshot, kind: "driver" | "constructor"): number {
+  const maximum = kind === "driver" ? { race: 25, sprint: 8 } : { race: 43, sprint: 15 };
+  return snapshot.sessions.reduce((total, session) => total + maximum[session.session], 0);
+}
+
 export function productDataFromSnapshot(snapshot: VerifiedFrozenDriverSnapshot): ProductData {
   return Object.freeze({
     dataVersion: snapshot.dataVersion,
@@ -42,8 +47,8 @@ export function productDataFromSnapshot(snapshot: VerifiedFrozenDriverSnapshot):
     assumptions: ["Every remaining race and Sprint awards full points.", "The regular 22-driver lineup stays fixed.", "Both entered cars score constructor points.", "Points ties use race finishes first, then qualifying results."],
     unsupported: [...snapshot.unsupported],
     standings: {
-      driver: standings(snapshot.standings.map((row) => ({ id: row.driverId, position: row.position, points: row.points })), 11 * 25 + 8),
-      constructor: standings(snapshot.constructorStandings.map((row) => ({ id: row.constructorId, position: row.position, points: row.points })), 11 * 43 + 15),
+      driver: standings(snapshot.standings.map((row) => ({ id: row.driverId, position: row.position, points: row.points })), maximumRemainingPoints(snapshot, "driver")),
+      constructor: standings(snapshot.constructorStandings.map((row) => ({ id: row.constructorId, position: row.position, points: row.points })), maximumRemainingPoints(snapshot, "constructor")),
     },
   });
 }
