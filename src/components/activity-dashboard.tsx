@@ -45,7 +45,7 @@ export function ActivityDashboard({ snapshot }: { snapshot: DashboardSnapshot })
 
     <section className="dashboard-panel telemetry-panel">
       <header><div><p className="eyebrow">Daily pace</p><h2>Visitors and comparison depth</h2></div><div className="telemetry-legend"><span>Visitors</span><span>Comparisons</span></div></header>
-      <div className="telemetry-chart">{snapshot.daily.map((day) => <article key={day.date} title={`${day.date}: ${day.visitors} visitors, ${day.comparisons} comparisons`}>
+      <div className="telemetry-chart" style={{ gridTemplateColumns: `repeat(${snapshot.daily.length}, minmax(46px, 1fr))`, minWidth: `${snapshot.daily.length * 52}px` }}>{snapshot.daily.map((day) => <article key={day.date} title={`${day.date}: ${day.visitors} visitors, ${day.comparisons} comparisons`}>
         <div className="telemetry-bars"><i style={{ height: `${Math.max(day.visitors / maxDaily * 100, day.visitors ? 4 : 0)}%` }} /><b style={{ height: `${Math.max(day.comparisons / maxDaily * 100, day.comparisons ? 4 : 0)}%` }} /></div>
         <strong>{number.format(day.averageComparisonsPerUser)}</strong><small>{dateLabel.format(new Date(`${day.date}T00:00:00Z`))}</small>
       </article>)}</div>
