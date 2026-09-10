@@ -18,7 +18,7 @@ function driverOutcomes(session: "race" | "sprint", target: string, rival: strin
   const finishes = [...points.map((value, index) => ({ position: index + 1, value })), { position: null, value: 0 }];
   return finishes.flatMap((a) => finishes.filter((b) => a.position === null || b.position === null || a.position !== b.position).map((b) => ({
     delta: a.value - b.value,
-    label: `${target}: ${a.position ? `P${a.position}` : "no points"} (${a.value}) · ${rival}: ${b.position ? `P${b.position}` : "no points"} (${b.value})`,
+    label: `${target}: ${a.position ? `P${a.position}` : session === "race" ? "P11+" : "P9+"} (${a.value}) · ${rival}: ${b.position ? `P${b.position}` : session === "race" ? "P11+" : "P9+"} (${b.value})`,
   })));
 }
 
@@ -39,7 +39,7 @@ function teamOutcomes(session: "race" | "sprint", target: string, rival: string)
   for (const a of scores) for (const b of scores) {
     const used = new Set(a.positions.filter((x): x is number => x !== null));
     if (b.positions.some((x) => x !== null && used.has(x))) continue;
-    const fmt = (positions: readonly (number | null)[]) => positions.map((x) => x ? `P${x}` : "no points").join(" + ");
+    const fmt = (positions: readonly (number | null)[]) => positions.map((x) => x ? `P${x}` : session === "race" ? "P11+" : "P9+").join(" + ");
     const outcome = { delta: a.score - b.score, label: `${target}: ${fmt(a.positions)} (${a.score}) · ${rival}: ${fmt(b.positions)} (${b.score})` };
     if (!byDelta.has(outcome.delta)) byDelta.set(outcome.delta, outcome);
   }
