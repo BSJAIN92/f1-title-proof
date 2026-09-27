@@ -1,0 +1,19 @@
+{
+  "fixtureType": "test-only",
+  "label": "Sample classified retirement that scores",
+  "officialSeasonResult": false,
+  "basis": "A driver may retire but still be classified and receive the points awarded to that final classification.",
+  "result": {
+    "driver": "Fixture Driver",
+    "constructor": "Fixture Constructor",
+    "classification": "10",
+    "position": 10,
+    "status": "DNF",
+    "awardedPoints": 1
+  },
+  "expected": {
+    "driverPoints": 1,
+    "constructorPoints": 1,
+    "mustNotInferZeroFromStatus": true
+  }
+}

@@ -111,7 +111,7 @@ export function verifyFrozenDriverSnapshot(input: FrozenSnapshotInputs): Snapsho
   }
   if (constructorPointMap.size !== 11 || [...constructorIds].some((id) => !constructorPointMap.has(id))) return fail("Constructor standings must exactly cover the 11 future teams.");
   const remaining = manifest.remainingSessions;
-  if (!Array.isArray(remaining) || remaining.length !== 11) return fail("The revised remaining schedule must contain exactly 11 sessions.");
+  if (!Array.isArray(remaining) || remaining.length !== 9) return fail("The revised remaining schedule must contain exactly 9 sessions.");
   const sessions: { id: string; session: "race" | "sprint"; sequenceIndex: number }[] = [];
   for (let index = 0; index < remaining.length; index += 1) {
     const item = obj(remaining[index]);
@@ -119,15 +119,15 @@ export function verifyFrozenDriverSnapshot(input: FrozenSnapshotInputs): Snapsho
     sessions.push({ id: `${item.date}:${item.event}:${item.type}`, session: item.type, sequenceIndex: index });
   }
   if (sessions.some((session, index) => index > 0 && session.id.slice(0, 10) < sessions[index - 1].id.slice(0, 10))) return fail("The revised remaining schedule is not in chronological order.");
-  if (new Set(sessions.map(({ id }) => id)).size !== 11 || sessions.filter(({ session }) => session === "race").length !== 10 || sessions.filter(({ session }) => session === "sprint").length !== 1) return fail("The revised schedule must have unique IDs, 10 races, and one Sprint.");
+  if (new Set(sessions.map(({ id }) => id)).size !== 9 || sessions.filter(({ session }) => session === "race").length !== 8 || sessions.filter(({ session }) => session === "sprint").length !== 1) return fail("The revised schedule must have unique IDs, 8 races, and one Sprint.");
   const raceHistograms = obj(countback.driver_race_finish_histograms), qualifyingHistograms = obj(countback.driver_qualifying_position_histograms);
   const constructorRaceHistograms = obj(countback.constructor_race_finish_histograms), constructorQualifyingHistograms = obj(countback.constructor_qualifying_position_histograms);
   if (!raceHistograms || !qualifyingHistograms || [...futureIds].some((id) => !validHistogram(raceHistograms[id]) || !validHistogram(qualifyingHistograms[id]))) return fail("Race and qualifying countback must contain well-formed coverage for every future driver.");
   if (!constructorRaceHistograms || !constructorQualifyingHistograms || [...constructorIds].some((id) => !validHistogram(constructorRaceHistograms[id]) || !validHistogram(constructorQualifyingHistograms[id]))) return fail("Constructor countback must contain well-formed coverage for every future team.");
-  if (!Array.isArray(countback.qualifying_events) || countback.qualifying_events.length !== 13) return fail("Exactly 13 completed qualifying events are required.");
+  if (!Array.isArray(countback.qualifying_events) || countback.qualifying_events.length !== 15) return fail("Exactly 15 completed qualifying events are required.");
   if (!Array.isArray(sessionResults.events)) return fail("Completed session results are missing.");
   const expectedQualifyingIds = sessionResults.events.filter((value) => obj(value)?.session === "race").map((value) => obj(value)?.event);
-  if (expectedQualifyingIds.length !== 13 || expectedQualifyingIds.some((id) => typeof id !== "string") || new Set(expectedQualifyingIds).size !== 13) return fail("Completed races do not define the expected 13 unique qualifying events.");
+  if (expectedQualifyingIds.length !== 15 || expectedQualifyingIds.some((id) => typeof id !== "string") || new Set(expectedQualifyingIds).size !== 15) return fail("Completed races do not define the expected 15 unique qualifying events.");
   const qualifyingEventIds = new Set<string>(), reconstructedQualifying = new Map<string, Record<string, number>>(), reconstructedConstructorQualifying = new Map<string, Record<string, number>>();
   for (const eventValue of countback.qualifying_events) {
     const event = obj(eventValue);

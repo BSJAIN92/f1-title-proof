@@ -9,13 +9,13 @@ describe("Convex dataset runtime", () => {
     expect(verified.status).toBe("VERIFIED");
     if (verified.status !== "VERIFIED") return;
     const data = productDataFromSnapshot(verified.snapshot);
-    expect(data).toMatchObject({ dataVersion: "2026-09-10T12:30:00+05:30", remainingSessions: 11, remaining: { races: 10, sprints: 1, maximumPoints: { driver: { races: 250, sprints: 8, total: 258 }, constructor: { races: 430, sprints: 15, total: 445 } } } });
+    expect(data).toMatchObject({ dataVersion: "2026-09-27T09:46:00+05:30", remainingSessions: 9, remaining: { races: 8, sprints: 1, maximumPoints: { driver: { races: 200, sprints: 8, total: 208 }, constructor: { races: 344, sprints: 15, total: 359 } } } });
     expect(data.standings.driver).toHaveLength(22);
     expect(data.standings.constructor).toHaveLength(11);
-    expect(data.standings.driver.find(({ id }) => id === "Gabriel Bortoleto")?.eligible).toBe(true);
-    expect(data.standings.driver.find(({ id }) => id === "Nico Hulkenberg")?.eligible).toBe(false);
-    expect(data.standings.constructor.find(({ id }) => id === "BWT Alpine F1 Team")?.eligible).toBe(true);
-    expect(data.standings.constructor.find(({ id }) => id === "TGR Haas F1 Team")?.eligible).toBe(false);
+    expect(data.standings.driver.find(({ id }) => id === "George Russell")?.eligible).toBe(true);
+    expect(data.standings.driver.find(({ id }) => id === "Pierre Gasly")?.eligible).toBe(false);
+    expect(data.standings.constructor.find(({ id }) => id === "Oracle Red Bull Racing")?.eligible).toBe(true);
+    expect(data.standings.constructor.find(({ id }) => id === "Visa Cash App Racing Bulls F1 Team")?.eligible).toBe(false);
   });
 
   it("rejects changed stored bytes", () => {
