@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import { randomBytes } from "node:crypto";
+import { readFile } from "node:fs/promises";
 
 const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
 if (!convexUrl) throw new Error("NEXT_PUBLIC_CONVEX_URL is missing. Configure a local Convex deployment first.");
@@ -26,21 +27,28 @@ function run(program, args) {
   });
 }
 
-function runHidden(program, args) {
-  return new Promise((resolve, reject) => {
-    const child = spawn(program, args, { stdio: "ignore", env: process.env, windowsHide: true });
-    children.add(child);
-    child.once("exit", (code) => {
-      children.delete(child);
-      if (code === 0) resolve();
-      else reject(new Error(`${program} exited with code ${code}.`));
-    });
-    child.once("error", reject);
-  });
+function startDirect(program, args) {
+  const child = spawn(program, args, { stdio: "inherit", env: process.env, windowsHide: true });
+  children.add(child);
+  child.once("exit", () => children.delete(child));
+  return child;
 }
 
 async function reachable() {
   try { await fetch(convexUrl); return true; } catch { return false; }
+}
+
+async function setLocalConvexEnvironment(changes) {
+  const config = JSON.parse(await readFile(".convex/local/default/config.json", "utf8"));
+  if (!Number.isInteger(config?.ports?.cloud) || typeof config?.adminKey !== "string" || !config.adminKey) throw new Error("The local Convex admin configuration is invalid.");
+  const localUrl = new URL(convexUrl);
+  if (!(["127.0.0.1", "localhost"].includes(localUrl.hostname)) || Number(localUrl.port) !== config.ports.cloud) throw new Error("The local Convex URL does not match its admin configuration.");
+  const response = await fetch(new URL("/api/update_environment_variables", localUrl), {
+    method: "POST",
+    headers: { Authorization: `Convex ${config.adminKey}`, "Content-Type": "application/json", "Convex-Client": "title-proof-test-launcher" },
+    body: JSON.stringify({ changes }),
+  });
+  if (!response.ok) throw new Error(`The local Convex environment update failed with status ${response.status}.`);
 }
 
 async function waitForConvex() {
@@ -54,12 +62,15 @@ async function waitForConvex() {
 
 let startedConvex = false;
 if (!await reachable()) {
-  start("npx", ["convex", "dev", "--typecheck", "disable", "--tail-logs", "disable"]);
+  startDirect(process.execPath, ["node_modules/convex/bin/main.js", "dev", "--typecheck", "disable", "--tail-logs", "disable"]);
   startedConvex = true;
 }
 await waitForConvex();
-await runHidden(process.execPath, ["node_modules/convex/bin/main.js", "env", "set", `CONVEX_SERVER_CREDENTIAL=${process.env.CONVEX_SERVER_CREDENTIAL}`]);
-await runHidden(process.execPath, ["node_modules/convex/bin/main.js", "env", "set", `CONVEX_SEED_CREDENTIAL=${process.env.CONVEX_SEED_CREDENTIAL}`]);
+await setLocalConvexEnvironment([
+  { name: "CONVEX_SERVER_CREDENTIAL", value: process.env.CONVEX_SERVER_CREDENTIAL },
+  { name: "CONVEX_SEED_CREDENTIAL", value: process.env.CONVEX_SEED_CREDENTIAL },
+]);
+await run("npm", ["run", "convex:migrate-comparison-ids"]);
 await run("npm", ["run", "convex:seed"]);
 await run("npm", ["run", "test:convex:security"]);
 

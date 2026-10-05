@@ -1,0 +1,415 @@
+{
+  "dataVersion": "2026-10-05T11:25:19+05:30",
+  "ruleVersion": "fia-2026-section-a-issue-03_section-b-issue-08_v1-full-points",
+  "approval": {
+    "status": "approved",
+    "approvedBy": "product owner",
+    "approvedAt": "2026-10-05T11:25:19+05:30"
+  },
+  "cutoff": {
+    "local": "2026-10-05T11:25:19+05:30",
+    "utc": "2026-10-05T05:55:19Z",
+    "timeZone": "Asia/Calcutta",
+    "windowsTimeZone": "India Standard Time"
+  },
+  "sourcePolicy": {
+    "controllingResults": "FINAL FIA classification documents",
+    "standingsCrossCheck": "Current Formula 1 standings pages",
+    "retrievedAt": "2026-10-05T11:25:19+05:30",
+    "sessionSourceLocations": "session-results.json sources map and countback.json qualifying_events source_url fields",
+    "manualExtractionReview": "Bahrain Grand Prix in Malaysia race and qualifying were checked row-by-row against FIA Docs 60 and 42. Driver and constructor standings were checked against FIA Doc 61. Doc 61 notes Audi's notice of intention to appeal an Italian Grand Prix decision.",
+    "freezePolicy": "Later corrections do not silently change this data version; they require a new version and approval."
+  },
+  "decisions": {
+    "futureLineup": "Regular 22-driver lineup",
+    "completedEventTeams": "Use the constructor entered for that session, including Dutch Grand Prix substitutes",
+    "calendar": "Revised 23-race calendar; Saudi Arabia cancelled; Bahrain Grand Prix hosted at Sepang",
+    "classifiedRetirementFixture": "A clearly labeled regulation-based test fixture is allowed if the frozen results contain no classified retirement that scored",
+    "realUserComprehensionGate": false
+  },
+  "scoring": {
+    "remainingSessionsAssumedFullPoints": true,
+    "race": [
+      25,
+      18,
+      15,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      1
+    ],
+    "sprint": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "constructor": "Both entered cars' awarded points count",
+    "countback": "Race finishes only: most first places, then seconds, thirds, and later positions; if still tied, apply the same comparison to qualifying results. Sprint positions do not count."
+  },
+  "futureLineup": [
+    {
+      "constructor": "McLaren Mastercard F1 Team",
+      "drivers": [
+        "Lando Norris",
+        "Oscar Piastri"
+      ]
+    },
+    {
+      "constructor": "Mercedes-AMG PETRONAS F1 Team",
+      "drivers": [
+        "George Russell",
+        "Kimi Antonelli"
+      ]
+    },
+    {
+      "constructor": "Scuderia Ferrari HP",
+      "drivers": [
+        "Charles Leclerc",
+        "Lewis Hamilton"
+      ]
+    },
+    {
+      "constructor": "Oracle Red Bull Racing",
+      "drivers": [
+        "Max Verstappen",
+        "Isack Hadjar"
+      ]
+    },
+    {
+      "constructor": "Visa Cash App Racing Bulls F1 Team",
+      "drivers": [
+        "Liam Lawson",
+        "Arvid Lindblad"
+      ]
+    },
+    {
+      "constructor": "BWT Alpine F1 Team",
+      "drivers": [
+        "Pierre Gasly",
+        "Franco Colapinto"
+      ]
+    },
+    {
+      "constructor": "TGR Haas F1 Team",
+      "drivers": [
+        "Esteban Ocon",
+        "Oliver Bearman"
+      ]
+    },
+    {
+      "constructor": "Audi Revolut F1 Team",
+      "drivers": [
+        "Nico Hulkenberg",
+        "Gabriel Bortoleto"
+      ]
+    },
+    {
+      "constructor": "Atlassian Williams F1 Team",
+      "drivers": [
+        "Alexander Albon",
+        "Carlos Sainz"
+      ]
+    },
+    {
+      "constructor": "Aston Martin Aramco F1 Team",
+      "drivers": [
+        "Fernando Alonso",
+        "Lance Stroll"
+      ]
+    },
+    {
+      "constructor": "Cadillac Formula 1 Team",
+      "drivers": [
+        "Sergio Perez",
+        "Valtteri Bottas"
+      ]
+    }
+  ],
+  "driverStandings": [
+    {
+      "position": 1,
+      "driver": "Kimi Antonelli",
+      "points": 320
+    },
+    {
+      "position": 2,
+      "driver": "George Russell",
+      "points": 236
+    },
+    {
+      "position": 3,
+      "driver": "Lewis Hamilton",
+      "points": 214
+    },
+    {
+      "position": 4,
+      "driver": "Charles Leclerc",
+      "points": 191
+    },
+    {
+      "position": 5,
+      "driver": "Lando Norris",
+      "points": 188
+    },
+    {
+      "position": 6,
+      "driver": "Max Verstappen",
+      "points": 188
+    },
+    {
+      "position": 7,
+      "driver": "Oscar Piastri",
+      "points": 128
+    },
+    {
+      "position": 8,
+      "driver": "Isack Hadjar",
+      "points": 96
+    },
+    {
+      "position": 9,
+      "driver": "Liam Lawson",
+      "points": 65
+    },
+    {
+      "position": 10,
+      "driver": "Pierre Gasly",
+      "points": 41
+    },
+    {
+      "position": 11,
+      "driver": "Arvid Lindblad",
+      "points": 38
+    },
+    {
+      "position": 12,
+      "driver": "Franco Colapinto",
+      "points": 27
+    },
+    {
+      "position": 13,
+      "driver": "Oliver Bearman",
+      "points": 20
+    },
+    {
+      "position": 14,
+      "driver": "Gabriel Bortoleto",
+      "points": 10
+    },
+    {
+      "position": 15,
+      "driver": "Nico Hulkenberg",
+      "points": 7
+    },
+    {
+      "position": 16,
+      "driver": "Esteban Ocon",
+      "points": 7
+    },
+    {
+      "position": 17,
+      "driver": "Fernando Alonso",
+      "points": 7
+    },
+    {
+      "position": 18,
+      "driver": "Carlos Sainz",
+      "points": 7
+    },
+    {
+      "position": 19,
+      "driver": "Alexander Albon",
+      "points": 5
+    },
+    {
+      "position": 20,
+      "driver": "Yuki Tsunoda",
+      "points": 1,
+      "seasonParticipantOnly": true
+    },
+    {
+      "position": 21,
+      "driver": "Lance Stroll",
+      "points": 0
+    },
+    {
+      "position": 22,
+      "driver": "Valtteri Bottas",
+      "points": 0
+    },
+    {
+      "position": 23,
+      "driver": "Sergio Perez",
+      "points": 0
+    }
+  ],
+  "constructorStandings": [
+    {
+      "position": 1,
+      "constructor": "Mercedes-AMG PETRONAS F1 Team",
+      "points": 556
+    },
+    {
+      "position": 2,
+      "constructor": "Scuderia Ferrari HP",
+      "points": 405
+    },
+    {
+      "position": 3,
+      "constructor": "McLaren Mastercard F1 Team",
+      "points": 316
+    },
+    {
+      "position": 4,
+      "constructor": "Oracle Red Bull Racing",
+      "points": 298
+    },
+    {
+      "position": 5,
+      "constructor": "Visa Cash App Racing Bulls F1 Team",
+      "points": 90
+    },
+    {
+      "position": 6,
+      "constructor": "BWT Alpine F1 Team",
+      "points": 68
+    },
+    {
+      "position": 7,
+      "constructor": "TGR Haas F1 Team",
+      "points": 27
+    },
+    {
+      "position": 8,
+      "constructor": "Audi Revolut F1 Team",
+      "points": 17
+    },
+    {
+      "position": 9,
+      "constructor": "Atlassian Williams F1 Team",
+      "points": 12
+    },
+    {
+      "position": 10,
+      "constructor": "Aston Martin Aramco F1 Team",
+      "points": 7
+    },
+    {
+      "position": 11,
+      "constructor": "Cadillac Formula 1 Team",
+      "points": 0
+    }
+  ],
+  "remainingSessions": [
+    {
+      "event": "Singapore",
+      "venue": "Singapore",
+      "date": "2026-10-10",
+      "type": "sprint"
+    },
+    {
+      "event": "Singapore",
+      "venue": "Singapore",
+      "date": "2026-10-11",
+      "type": "race"
+    },
+    {
+      "event": "United States",
+      "venue": "Austin",
+      "date": "2026-10-25",
+      "type": "race"
+    },
+    {
+      "event": "Mexico City",
+      "venue": "Mexico City",
+      "date": "2026-11-01",
+      "type": "race"
+    },
+    {
+      "event": "Sao Paulo",
+      "venue": "Sao Paulo",
+      "date": "2026-11-08",
+      "type": "race"
+    },
+    {
+      "event": "Las Vegas",
+      "venue": "Las Vegas",
+      "date": "2026-11-21",
+      "type": "race"
+    },
+    {
+      "event": "Qatar",
+      "venue": "Lusail",
+      "date": "2026-11-29",
+      "type": "race"
+    },
+    {
+      "event": "Abu Dhabi",
+      "venue": "Yas Marina",
+      "date": "2026-12-06",
+      "type": "race"
+    }
+  ],
+  "supported": [
+    "Driver championship",
+    "Constructor championship",
+    "Full-points races and Sprints",
+    "Classified finishes, DNF, and DNS using final classification and awarded points",
+    "Two-car constructor scoring",
+    "Official race-finish countback with qualifying fallback"
+  ],
+  "excluded": {
+    "permanent": [
+      "Shortened events",
+      "Reduced-point events",
+      "Zero-point events",
+      "Dead heats"
+    ],
+    "v1": [
+      "Penalties",
+      "Point deductions",
+      "Disqualifications as future hypothetical outcomes",
+      "Cancellations as future hypothetical outcomes",
+      "Driver-team changes after the cutoff"
+    ]
+  },
+  "artifacts": {
+    "sessionResults": {
+      "path": "session-results.json",
+      "sha256": "416536203CB1017E0602674C173A98B239FFBB8CF1EBDEA7B871E9C91849E9E5"
+    },
+    "countback": {
+      "path": "countback.json",
+      "sha256": "00DF3CDEE4717C9125957FB381FB9B12C592FDEA0F16983B327DAACA5CC8B78B"
+    },
+    "sourceDocuments": {
+      "path": "source-documents.json",
+      "sha256": "ED00D7FE265D06B9081120C196CAA7312C4F054FA24414557CDBE8F41FFF605B"
+    }
+  },
+  "sources": {
+    "fiaCalendar": "https://www.fia.com/events/fia-formula-one-world-championship/season-2026/2026-fia-formula-one-world-championship",
+    "fiaSprintCalendar": "https://www.fia.com/news/fia-and-formula-1-announce-2026-sprint-calendar",
+    "fiaRulesSectionA": {
+      "title": "2026 Formula 1 Regulations Section A — General Provisions",
+      "revision": "Issue 03, 2026-06-25",
+      "url": "https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_a_general_provisions_-_iss_03_-_2026-06-25.pdf"
+    },
+    "fiaRulesSectionB": {
+      "title": "2026 Formula 1 Regulations Section B — Sporting",
+      "revision": "Issue 08, 2026-08-05",
+      "url": "https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_b_sporting_-_iss_08_-_2026-08-05_7.pdf"
+    },
+    "f1DriverStandings": "https://www.formula1.com/en/results/2026/drivers",
+    "f1ConstructorStandings": "https://www.formula1.com/en/results/2026/team",
+    "f1RegularDrivers": "https://www.formula1.com/en/drivers"
+  }
+}

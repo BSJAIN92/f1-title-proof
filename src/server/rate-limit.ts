@@ -13,6 +13,7 @@ const limits: Record<LimitedAction, { limit: number; windowMs: number }> = {
 export interface RateLimitDecision { readonly allowed: boolean; readonly retryAfterSeconds: number }
 
 export async function checkRateLimit(request: Request, action: LimitedAction): Promise<RateLimitDecision> {
+  if (process.env.PLAYWRIGHT_TEST === "1" && ["127.0.0.1", "localhost"].includes(new URL(request.url).hostname)) return { allowed: true, retryAfterSeconds: 0 };
   const secret = process.env.RATE_LIMIT_SECRET;
   const url = process.env.NEXT_PUBLIC_CONVEX_URL;
   const serverCredential = process.env.CONVEX_SERVER_CREDENTIAL;

@@ -2,14 +2,14 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-27/manifest.json";
-import countback from "../../../data/frozen/2026-09-27/countback.json";
-import sessionResults from "../../../data/frozen/2026-09-27/session-results.json";
+import manifest from "../../../data/frozen/2026-10-05/manifest.json";
+import countback from "../../../data/frozen/2026-10-05/countback.json";
+import sessionResults from "../../../data/frozen/2026-10-05/session-results.json";
 import { verifyFrozenDriverSnapshot, type FrozenSnapshotInputs } from "./verified-frozen-driver-snapshot";
 
 const clone = <T>(value: T): T => structuredClone(value);
 function inputs(): FrozenSnapshotInputs {
-  const base = resolve(process.cwd(), "data", "frozen", "2026-09-27");
+  const base = resolve(process.cwd(), "data", "frozen", "2026-10-05");
   return { manifestBytes: readFileSync(resolve(base, "manifest.json")), artifactBytes: {
     "session-results.json": readFileSync(resolve(base, "session-results.json")), "countback.json": readFileSync(resolve(base, "countback.json")), "source-documents.json": readFileSync(resolve(base, "source-documents.json")),
   } };
@@ -34,7 +34,7 @@ describe("verified frozen driver snapshot", () => {
     if (result.status === "VERIFIED") {
       expect(result.snapshot.fingerprint).toMatch(/^sha256-[0-9a-f]{64}$/);
       expect(result.snapshot.roster).toHaveLength(22);
-      expect(result.snapshot.sessions).toHaveLength(9);
+      expect(result.snapshot.sessions).toHaveLength(8);
       expect(result.snapshot.standings).toHaveLength(22);
     }
   });

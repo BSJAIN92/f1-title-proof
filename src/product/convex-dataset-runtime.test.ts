@@ -9,7 +9,7 @@ describe("Convex dataset runtime", () => {
     expect(verified.status).toBe("VERIFIED");
     if (verified.status !== "VERIFIED") return;
     const data = productDataFromSnapshot(verified.snapshot);
-    expect(data).toMatchObject({ dataVersion: "2026-09-27T09:46:00+05:30", remainingSessions: 9, remaining: { races: 8, sprints: 1, maximumPoints: { driver: { races: 200, sprints: 8, total: 208 }, constructor: { races: 344, sprints: 15, total: 359 } } } });
+    expect(data).toMatchObject({ dataVersion: "2026-10-05T11:25:19+05:30", remainingSessions: 8, remaining: { races: 7, sprints: 1, maximumPoints: { driver: { races: 175, sprints: 8, total: 183 }, constructor: { races: 301, sprints: 15, total: 316 } } } });
     expect(data.standings.driver).toHaveLength(22);
     expect(data.standings.constructor).toHaveLength(11);
     expect(data.standings.driver.find(({ id }) => id === "George Russell")?.eligible).toBe(true);

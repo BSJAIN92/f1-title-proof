@@ -10,6 +10,7 @@
     "dev": "next dev",
     "convex:dev": "convex dev",
     "convex:seed": "tsx --env-file=.env.local scripts/seed-approved-dataset.ts",
+    "convex:migrate-comparison-ids": "tsx --env-file=.env.local scripts/migrate-comparison-ids.ts",
     "build:vercel": "convex deploy --cmd 'npm run build' --cmd-url-env-var-name NEXT_PUBLIC_CONVEX_URL",
     "build": "next build",
     "start": "next start",

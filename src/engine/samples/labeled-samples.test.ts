@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-27/manifest.json";
+import manifest from "../../../data/frozen/2026-10-05/manifest.json";
 import { analyzeBoundedGroupCoverage, createAuthenticatedBoundedGroupingFixture, groupFrozenConstructorRelation, groupFrozenDriverRelation } from "../groups/winning-groups";
 import { APPROVED_FROZEN_SNAPSHOT_FINGERPRINT, buildApprovedFrozenDriverRelation } from "../relations/frozen-driver-symbolic-relation";
 import { buildApprovedFrozenConstructorRelation } from "../relations/frozen-constructor-symbolic-relation";

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import manifest from "../../../data/frozen/2026-09-27/manifest.json";
+import manifest from "../../../data/frozen/2026-10-05/manifest.json";
 import { APPROVED_FROZEN_SNAPSHOT_FINGERPRINT } from "./frozen-driver-symbolic-relation";
 import { buildApprovedFrozenConstructorRelation as buildConstructorRelation, evaluateFrozenConstructorRelation, type FrozenConstructorSymbolicRelation } from "./frozen-constructor-symbolic-relation";
 import { approvedSnapshotFixture } from "../../test/approved-frozen-fixture";
@@ -16,11 +16,11 @@ function path(relation: FrozenConstructorSymbolicRelation, winningTeam: string) 
 }
 
 describe("approved frozen constructor symbolic relation", () => {
-  it("constructs for all 11 constructors and independently matches the 488-point ceiling", () => {
+  it("constructs for all 11 constructors and independently matches the 316-point ceiling", () => {
     const teams = manifest.futureLineup.map(({ constructor }) => constructor), points = new Map(manifest.constructorStandings.map(({ constructor, points }) => [constructor, points]));
     const leader = Math.max(...teams.map((team) => points.get(team)!));
     const maximum = manifest.remainingSessions.reduce((sum, session) => sum + (session.type === "race" ? 43 : 15), 0);
-    expect(maximum).toBe(359);
+    expect(maximum).toBe(316);
     for (const team of teams) expect(buildApprovedFrozenConstructorRelation(request(team)).status).toBe(points.get(team)! + maximum < leader ? "ELIMINATED" : "COMPLETE");
   });
 
@@ -32,10 +32,10 @@ describe("approved frozen constructor symbolic relation", () => {
     expect(evaluateFrozenConstructorRelation(result.relation, path(result.relation, rival))).toMatchObject({ status: "VALID", accepted: false });
   });
 
-  it("binds 22 regular drivers, 11 teams, 11 sessions, and both-car constraints", () => {
+  it("binds 22 regular drivers, 11 teams, 8 sessions, and both-car constraints", () => {
     const result = buildApprovedFrozenConstructorRelation(request("Mercedes-AMG PETRONAS F1 Team"));
     if (result.status !== "COMPLETE") throw new Error(result.reason);
-    expect(result.certificate).toMatchObject({ rosterSize: 22, constructorCount: 11, sessionCount: 9 });
+    expect(result.certificate).toMatchObject({ rosterSize: 22, constructorCount: 11, sessionCount: 8 });
     expect(result.relation.eventConstraints.every(({ driverAssignments }) => driverAssignments.length === 22)).toBe(true);
     expect(result.relation.finalPredicate).toMatchObject({ bothCarsScore: true, sprintCountbackExcluded: true, unresolvedEqualityIsWin: false });
   });

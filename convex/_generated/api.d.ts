@@ -9,6 +9,7 @@
  */
 
 import type * as activityAggregates from "../activityAggregates.js";
+import type * as comparisonMigration from "../comparisonMigration.js";
 import type * as dashboard from "../dashboard.js";
 import type * as datasets from "../datasets.js";
 import type * as history from "../history.js";
@@ -25,6 +26,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   activityAggregates: typeof activityAggregates;
+  comparisonMigration: typeof comparisonMigration;
   dashboard: typeof dashboard;
   datasets: typeof datasets;
   history: typeof history;

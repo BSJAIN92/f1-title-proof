@@ -2,6 +2,7 @@ import { mutation, query, type MutationCtx, type QueryCtx } from "./_generated/s
 import { v } from "convex/values";
 import { requireServerCredential } from "./serverAccess";
 import { updateDailyActivity } from "./activityAggregates";
+import { legacySelectionPatch } from "./comparisonMigration";
 
 const kindValidator = v.union(v.literal("driver"), v.literal("constructor"));
 const statusValidator = v.union(v.literal("COMPLETE"), v.literal("ELIMINATED"));
@@ -39,6 +40,25 @@ async function upsertVisitor(ctx: MutationCtx, visitorHash: string, now: number)
   }
   return ctx.db.insert("anonymousVisitors", { visitorHash, createdAt: now, lastSeenAt: now });
 }
+
+export const migrateLegacyComparisonIds = mutation({
+  args: { serverCredential: v.string(), batchSize: v.number() },
+  handler: async (ctx, args) => {
+    requireServerCredential(args.serverCredential);
+    if (!Number.isInteger(args.batchSize) || args.batchSize < 1 || args.batchSize > 100) throw new Error("The migration batch size must be an integer from 1 to 100.");
+    const comparisons = await ctx.db.query("comparisonHistory").filter((q) => q.neq(q.field("targetId"), undefined)).take(args.batchSize);
+    const events = await ctx.db.query("visitorEvents").filter((q) => q.neq(q.field("targetId"), undefined)).take(args.batchSize);
+    for (const row of comparisons) {
+      const patch = legacySelectionPatch(row);
+      if (patch) await ctx.db.patch(row._id, patch);
+    }
+    for (const row of events) {
+      const patch = legacySelectionPatch(row);
+      if (patch) await ctx.db.patch(row._id, patch);
+    }
+    return { comparisons: comparisons.length, events: events.length };
+  },
+});
 
 export const getState = query({
   args: { serverCredential: v.string(), visitorHash: v.string() },
